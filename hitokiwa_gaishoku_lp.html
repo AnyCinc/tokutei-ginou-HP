@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>特定技能（外食分野）外国人材 受け入れガイド｜株式会社ヒトキワ</title>
+<meta name="description" content="特定技能・外食分野の業務範囲、協議会加入、受入条件、採用フローを実務視点で解説。現在認定証明書交付停止中（2026年5月時点）。再開に備えた事前相談を受付中。株式会社ヒトキワ。">
+<style>
+  :root{
+    --red:#c8102e;
+    --red-2:#9d0a23;
+    --navy:#1a2a44;
+    --navy-2:#0f1c30;
+    --ivory:#faf7f2;
+    --gold:#c9a961;
+    --black:#1a1a1a;
+    --gray-700:#4a4f57;
+    --gray-500:#8a8f97;
+    --gray-200:#e5e7eb;
+    --gray-100:#f3f4f6;
+    --shadow-sm:0 2px 8px rgba(26,42,68,.06);
+    --shadow:0 4px 20px rgba(26,42,68,.08);
+    --sans:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP","Yu Gothic Medium","Meiryo",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--ivory);color:var(--black);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+
+  /* ===== Top bar ===== */
+  .topbar{background:#fff;border-bottom:1px solid var(--gray-200);position:sticky;top:0;z-index:100;box-shadow:var(--shadow-sm)}
+  .topbar-inner{max-width:800px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+  .logo{font-weight:900;font-size:20px;color:var(--navy);letter-spacing:.04em}
+  .logo span{color:var(--red)}
+  .top-cta{display:flex;gap:12px;align-items:center}
+  .top-tel{font-weight:900;color:var(--navy);font-size:16px;line-height:1.1}
+  .top-tel small{display:block;font-size:10px;color:var(--gray-500);font-weight:500;margin-top:2px}
+  .update-date{font-size:11px;color:var(--gray-500);text-align:right;line-height:1.3}
+  .update-date span{display:block;font-weight:700;color:var(--navy)}
+
+  /* ===== Warning banner ===== */
+  .warning-banner{
+    background:#fff3e0;
+    border-bottom:3px solid var(--red);
+    padding:24px;
+  }
+  .warning-inner{
+    max-width:800px;margin:0 auto;
+    background:#fff;
+    border:2px solid var(--red);
+    border-radius:8px;
+    padding:24px 28px;
+    box-shadow:var(--shadow-sm);
+    line-height:2.0;
+  }
+  .warning-inner .warning-title{
+    font-size:18px;
+    font-weight:900;
+    color:var(--red);
+    margin-bottom:8px;
+  }
+  .warning-inner p{
+    font-size:15px;
+    color:var(--black);
+    font-weight:700;
+  }
+
+  /* ===== Article container ===== */
+  .article{
+    max-width:800px;
+    margin:0 auto;
+    padding:0 24px;
+    font-size:16px;
+    line-height:2.0;
+    color:var(--black);
+  }
+
+  /* ===== Hero / Title area ===== */
+  .hero{
+    padding:64px 24px 48px;
+    background:linear-gradient(180deg,#fff 0%,var(--ivory) 100%);
+    text-align:center;
+  }
+  .hero-inner{max-width:800px;margin:0 auto}
+  .hero h1{
+    font-size:36px;font-weight:900;line-height:1.5;
+    color:var(--navy);margin-bottom:16px;
+  }
+  .hero .subtitle{
+    font-size:16px;color:var(--gray-700);line-height:2.0;font-weight:500;
+  }
+  .hero .suspended-badge{
+    display:inline-block;
+    background:var(--red);color:#fff;
+    padding:12px 32px;border-radius:6px;
+    font-size:16px;font-weight:900;
+    margin-top:28px;
+    letter-spacing:.04em;
+  }
+
+  /* ===== TOC ===== */
+  .toc{
+    background:#fff;border:1px solid var(--gray-200);
+    border-radius:8px;padding:32px;margin:40px 0 56px;
+  }
+  .toc h2{font-size:16px;font-weight:900;color:var(--navy);margin-bottom:16px;text-align:center;letter-spacing:.08em}
+  .toc ol{
+    columns:2;column-gap:32px;
+    list-style:none;counter-reset:toc;
+    padding:0;
+  }
+  .toc ol li{
+    counter-increment:toc;
+    padding:6px 0;font-size:14px;font-weight:700;
+    color:var(--navy);break-inside:avoid;
+  }
+  .toc ol li::before{
+    content:counter(toc) ". ";
+    color:var(--red);font-weight:900;
+  }
+  .toc ol li a{color:var(--navy);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
+  .toc ol li a:hover{border-bottom-color:var(--red)}
+
+  /* ===== Section headings ===== */
+  .article h2{
+    font-size:26px;font-weight:900;color:var(--navy);
+    margin:72px 0 24px;padding-bottom:12px;
+    border-bottom:3px solid var(--red);
+    line-height:1.6;
+  }
+  .article h2 .num{
+    display:inline-block;
+    background:var(--navy);color:#fff;
+    width:36px;height:36px;border-radius:50%;
+    text-align:center;line-height:36px;
+    font-size:16px;margin-right:10px;
+    vertical-align:middle;
+  }
+  .article h3{
+    font-size:20px;font-weight:900;color:var(--navy);
+    margin:32px 0 16px;line-height:1.6;
+  }
+
+  /* ===== Paragraph ===== */
+  .article p{
+    margin-bottom:20px;
+    text-align:justify;
+    text-justify:inter-ideograph;
+  }
+  .article a.common-link{color:var(--red);font-weight:700;text-decoration:underline}
+
+  /* ===== Inline notice boxes ===== */
+  .notice{
+    background:#fff;border:1px solid var(--gray-200);
+    border-left:5px solid var(--red);
+    border-radius:6px;padding:20px 24px;
+    margin:24px 0;font-size:15px;
+    line-height:2.0;
+  }
+  .notice.gold{border-left-color:var(--gold)}
+  .notice.navy{border-left-color:var(--navy)}
+  .notice strong{color:var(--red)}
+
+  /* ===== Table ===== */
+  .article table{
+    width:100%;border-collapse:collapse;
+    margin:24px 0;font-size:14px;
+  }
+  .article table th,.article table td{
+    padding:14px 16px;border:1px solid var(--gray-200);
+    text-align:left;vertical-align:top;line-height:1.8;
+  }
+  .article table thead th{
+    background:var(--navy);color:#fff;font-weight:900;
+    text-align:center;font-size:14px;
+  }
+  .article table thead th:first-child{background:var(--gray-100);color:var(--navy)}
+  .article table tbody th{
+    background:var(--gray-100);font-weight:900;color:var(--navy);
+    white-space:nowrap;font-size:13px;
+  }
+  .article table tbody td{background:#fff;color:var(--gray-700)}
+  .article table .hl{background:#fdf2f3;font-weight:700;color:var(--red)}
+
+  /* ===== FAQ ===== */
+  .faq-item{
+    background:#fff;border:1px solid var(--gray-200);
+    border-radius:8px;margin:16px 0;overflow:hidden;
+  }
+  .faq-q{
+    padding:20px 24px;font-weight:900;color:var(--navy);
+    cursor:pointer;display:flex;gap:12px;align-items:center;
+    font-size:16px;line-height:1.6;
+  }
+  .faq-q::before{
+    content:"Q";background:var(--red);color:#fff;
+    width:32px;height:32px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:14px;font-weight:900;flex-shrink:0;
+  }
+  .faq-q::after{
+    content:"+";color:var(--red);font-size:24px;font-weight:300;
+    margin-left:auto;flex-shrink:0;transition:transform .2s;
+  }
+  .faq-a{
+    padding:0 24px 24px 68px;color:var(--gray-700);
+    font-size:15px;line-height:2.0;display:none;
+  }
+  details[open] .faq-q::after{content:"\2212"}
+  details[open] .faq-a{display:block}
+  details summary{list-style:none}
+  details summary::-webkit-details-marker{display:none}
+
+  /* ===== CTA ===== */
+  .cta-section{
+    background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);
+    color:#fff;padding:64px 24px;text-align:center;
+    margin-top:72px;position:relative;
+  }
+  .cta-section::before{
+    content:"";position:absolute;top:0;left:0;right:0;
+    height:4px;background:var(--gold);
+  }
+  .cta-section h2{
+    font-size:28px;font-weight:900;margin-bottom:16px;
+    border:none;color:#fff;padding:0;
+  }
+  .cta-section .cta-lead{
+    font-size:16px;color:rgba(255,255,255,.8);margin-bottom:32px;font-weight:500;
+  }
+  .cta-contacts{
+    display:flex;gap:24px;flex-wrap:wrap;
+    align-items:center;justify-content:center;
+  }
+  .cta-tel{
+    display:flex;align-items:center;gap:10px;
+    background:rgba(255,255,255,.1);padding:16px 24px;
+    border-radius:8px;
+  }
+  .cta-tel .lbl{
+    background:#fff;color:var(--navy);
+    font-size:11px;font-weight:900;padding:4px 10px;border-radius:3px;
+  }
+  .cta-tel .num{font-size:24px;font-weight:900;letter-spacing:.04em}
+  .cta-tel .note{font-size:11px;color:rgba(255,255,255,.7);margin-left:6px}
+  .cta-company{margin-top:20px;font-size:13px;color:rgba(255,255,255,.6)}
+
+  /* ===== Footer ===== */
+  footer{background:var(--navy-2);color:rgba(255,255,255,.6);padding:32px 24px;text-align:center;font-size:12px;line-height:2.0}
+  footer .company-info{margin-bottom:12px}
+
+  /* ===== Mobile ===== */
+  @media(max-width:600px){
+    .topbar-inner{padding:10px 16px}
+    .top-tel{display:none}
+    .hero{padding:40px 16px 32px}
+    .hero h1{font-size:24px}
+    .article{padding:0 16px}
+    .article h2{font-size:20px;margin:48px 0 16px}
+    .toc ol{columns:1}
+    .warning-inner{padding:16px 18px}
+    .cta-section{padding:48px 16px}
+    .cta-section h2{font-size:22px}
+    .cta-tel .num{font-size:20px}
+  }
+  .cta-btn{display:inline-block;background:#c8102e;color:#fff;padding:18px 48px;border-radius:8px;font-weight:900;font-size:17px;letter-spacing:.04em;box-shadow:0 4px 20px rgba(200,16,46,.3);transition:all .2s;margin-top:24px;text-decoration:none}
+  .cta-btn:hover{background:#9d0a23;transform:translateY(-2px);color:#fff}
+</style>
+</head>
+<body>
+
+<!-- ===== TOP BAR ===== -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="logo">hito<span>kiwa</span></div>
+    <div class="top-cta">
+      <div class="update-date"><span>2026年6月12日</span>最終更新</div>
+      <div class="top-tel">03-6842-0293</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== WARNING BANNER ===== -->
+<div class="warning-banner">
+  <div class="warning-inner">
+    <div class="warning-title">&#9888; 外食分野の特定技能は現在、一部申請が停止されています（2026年5月19日時点）</div>
+    <p>
+      <strong>■ 在留資格認定証明書交付申請：交付停止中</strong><br>
+      <strong>■ 在留資格変更許可申請：</strong><br>
+      　(1) 技能実習（医療・福祉施設給食製造作業）からの変更 → 受付日が令和8年4月12日までの申請に限り処理<br>
+      　(2) 外食業分野に係る特定活動（特定技能1号移行準備）からの変更 → 初回受付日が令和8年2月11日までの申請に限り処理<br>
+      　(3) 特定技能1号（外食業分野）からの変更申請（外食業分野内での転職） → 全ての申請OK<br>
+      <strong>■ 在留期間更新許可申請：通常どおり処理中</strong><br><br>
+      本記事は制度の概要解説としてご参照ください。再開時期が公表され次第、速やかに採用手続きを開始できるよう、事前の情報収集と準備体制の構築をお勧めいたします。株式会社ヒトキワでは、再開に備えた事前相談を随時受け付けております。
+    </p>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-inner">
+    <h1>特定技能（外食分野）<br>外国人材 受け入れガイド</h1>
+    <p class="subtitle">飲食店・外食産業の実務ガイド ── 現在認定証明書交付停止中・変更申請一部制限中（2026年5月時点）</p>
+    <div class="suspended-badge">&#9888; 認定証明書交付停止中・変更申請一部制限中（2026年5月19日時点）</div>
+  </div>
+</section>
+
+<!-- ===== ARTICLE BODY ===== -->
+<div class="article">
+
+  <!-- TOC -->
+  <nav class="toc">
+    <h2>-- 目 次 --</h2>
+    <ol>
+      <li><a href="#sec1">はじめに</a></li>
+      <li><a href="#sec2">この分野の特徴</a></li>
+      <li><a href="#sec3">協議会への加入</a></li>
+      <li><a href="#sec4">業務範囲</a></li>
+      <li><a href="#sec5">受け入れまでの流れ</a></li>
+      <li><a href="#sec6">受入企業の要件</a></li>
+      <li><a href="#sec7">よくあるご質問（FAQ）</a></li>
+    </ol>
+  </nav>
+
+  <!-- ===== 1. はじめに ===== -->
+  <h2 id="sec1"><span class="num">1</span>はじめに</h2>
+
+  <p>外食産業は、調理・接客の現場を中心に恒常的な人材不足が事業継続上の最大の課題となっている業界です。少子高齢化に伴う国内労働力の減少により、従来の採用手法だけでは十分な人材確保が困難な状況が続いています。特定技能「外食業」は、一定の技能水準と日本語能力を有する外国人材を即戦力として受け入れるための制度ですが、<strong>現在は受入れ見込数の上限に近づいたため、在留資格認定証明書の交付が停止中</strong>です（2026年5月19日時点）。</p>
+
+  <p>本記事は、再開時に迅速な採用活動を開始するための事前準備の参考資料としてご活用ください。特定技能制度の基本については<a href="hitokiwa_tokutei_common.html" class="common-link">こちら</a>をご覧ください。</p>
+
+  <!-- ===== 2. この分野の特徴 ===== -->
+  <h2 id="sec2"><span class="num">2</span>この分野の特徴</h2>
+
+  <p>外食分野には、他の特定技能分野とは異なる固有の特徴やルールがあります。</p>
+
+  <h3>風俗営業施設での就労禁止</h3>
+  <p>風営法第2条第1項に規定する風俗営業および同条第5項に規定する性風俗関連特殊営業を営む営業所での就労は禁止されています。スナック、キャバクラ、ホストクラブ等は対象外です。一般的な居酒屋での料理・飲料の提供や通常の接客サービスは問題ありません。</p>
+
+  <h3>「接待」の禁止</h3>
+  <p>風営法第2条第3項に規定する「接待」（歓楽的雰囲気を醸し出す方法により客をもてなすこと）を行わせることは禁止されています。</p>
+
+  <h3>特定業務への専従が可能</h3>
+  <p>宿泊分野とは異なり、外食分野では<strong>調理のみ、接客のみといった特定業務への専従が認められています</strong>。ただし、外食業に関する業務が主たる業務であることが前提であり、清掃や事務作業のみに従事させることは不可です。</p>
+
+  <h3>2号への移行要件</h3>
+  <p>外食分野は2023年に2号の対象分野に追加されました。2号への移行には、外食業特定技能2号技能測定試験の合格、<strong>日本語能力試験N3以上</strong>、および<strong>副店長・サブマネージャー等としての実務経験</strong>（複数のアルバイト従業員や特定技能外国人等を指導・監督しながら接客を含む作業に従事し、店舗管理を補助する者）が求められます。</p>
+
+  <h3>直接雇用のみ（派遣不可）</h3>
+  <p>受入企業との直接雇用のみが認められており、派遣形態での就労は不可です。</p>
+
+  <h3>個人事業主も受入可能</h3>
+  <p>法人に限定されるものではなく、個人事業主であっても全ての要件を満たすことを条件に受入が可能です。</p>
+
+  <!-- ===== 3. 協議会への加入 ===== -->
+  <h2 id="sec3"><span class="num">3</span>協議会への加入</h2>
+
+  <table>
+    <tbody>
+      <tr>
+        <th>正式名称</th>
+        <td><strong>食品産業特定技能協議会</strong></td>
+      </tr>
+      <tr>
+        <th>設置省庁</th>
+        <td>農林水産省</td>
+      </tr>
+      <tr>
+        <th>加入費用</th>
+        <td><strong>無料</strong></td>
+      </tr>
+      <tr>
+        <th>加入時期</th>
+        <td>初めて特定技能外国人を受け入れた日から<strong>4か月以内</strong>に加入手続きを完了する必要がある。期限内に加入しない場合は、在留資格の取消事由に該当する可能性がある。</td>
+      </tr>
+      <tr>
+        <th>加入方法</th>
+        <td>農林水産省の所定の手続きに従いオンラインで申請。</td>
+      </tr>
+      <tr>
+        <th>義務内容</th>
+        <td>構成員に対する情報提供・法令遵守の啓発活動への参加、受入状況の把握への協力、協議会が行う調査・指導への協力義務を負う。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ===== 4. 業務範囲 ===== -->
+  <h2 id="sec4"><span class="num">4</span>業務範囲</h2>
+
+  <p>外食分野における特定技能外国人の業務範囲は、以下の6つのカテゴリーに大別されます。複数カテゴリーにまたがる業務への従事も、特定カテゴリーへの専従も、いずれも認められています。</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>業務区分</th>
+        <th>主な内容</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>飲食物調理</th>
+        <td>食材の仕込み・下処理、加熱調理、盛り付け、食品の衛生管理・品質管理</td>
+      </tr>
+      <tr>
+        <th>接客</th>
+        <td>客席への案内、注文受付、配膳・下膳、会計・レジ業務、顧客対応全般</td>
+      </tr>
+      <tr>
+        <th>店舗管理</th>
+        <td>シフト管理・勤怠管理、食材の発注・在庫管理、清掃・環境整備、売上管理補助</td>
+      </tr>
+      <tr>
+        <th>デリバリー</th>
+        <td>テイクアウト商品の準備・梱包、配達業務、デリバリーサービスの受注対応</td>
+      </tr>
+      <tr>
+        <th>ドリンク調製</th>
+        <td>非アルコール飲料の調製、アルコール類の提供、ドリンクメニューの管理</td>
+      </tr>
+      <tr>
+        <th>企画・販促</th>
+        <td>メニュー開発への参画、SNS販促活動、季節メニュー・イベントの企画立案</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="notice gold">
+    <strong>留意事項：</strong>主たる業務として外食業に関する業務に従事することが前提であり、付随的な業務（清掃、事務作業等）のみに従事させることは認められません。
+  </div>
+
+  <!-- ===== 5. 受け入れまでの流れ ===== -->
+  <h2 id="sec5"><span class="num">5</span>受け入れまでの流れ</h2>
+
+  <p>現在は一部申請が停止中ですが、再開後の手続きの流れとして以下をご参照ください。</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ステップ</th>
+        <th>内容</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>1. ヒアリング</th>
+        <td>業態、必要な人材像、採用予定人数、希望条件等を確認。受入機関としての基本要件（営業許可、社会保険等）も確認。</td>
+      </tr>
+      <tr>
+        <th>2. 候補者選定</th>
+        <td>条件に合致する候補者を選定し、履歴書・試験合格証明書等の情報を提供。</td>
+      </tr>
+      <tr>
+        <th>3. 面接・選考</th>
+        <td>対面またはオンラインにて面接。技能水準、日本語コミュニケーション能力等を確認。</td>
+      </tr>
+      <tr>
+        <th>4. 雇用契約締結</th>
+        <td>労働条件を明記した雇用契約書を作成・締結。外国人材が理解できる言語での翻訳版も交付。</td>
+      </tr>
+      <tr>
+        <th>5. 支援計画策定</th>
+        <td>1号特定技能外国人支援計画を策定。登録支援機関への委託も可能。</td>
+      </tr>
+      <tr>
+        <th>6. 在留資格申請</th>
+        <td>国内変更申請で1〜2か月、認定証明書交付申請で1〜3か月が審査期間の目安。</td>
+      </tr>
+      <tr>
+        <th>7. 入国・生活環境整備</th>
+        <td>住居手配、住民登録、銀行口座・携帯電話の契約支援等。</td>
+      </tr>
+      <tr>
+        <th>8. 就業開始・定着支援</th>
+        <td>定期面談、相談対応、日本語学習支援。協議会への加入も受入開始後4か月以内に完了。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="notice gold">
+    <strong>所要期間の目安：</strong>国内在住者の場合は概ね1.5か月から3か月、海外在住者の場合は3か月から5か月が標準的です。
+  </div>
+
+  <!-- ===== 6. 受入企業の要件 ===== -->
+  <h2 id="sec6"><span class="num">6</span>受入企業の要件</h2>
+
+  <p>外食分野で特定技能外国人を受け入れる企業には、以下の要件が求められます。</p>
+
+  <h3>食品衛生法に基づく営業許可</h3>
+  <p>飲食店営業その他の食品衛生法に基づく営業許可を取得していることが必須です。許可の有効期限が切れている場合や未取得の事業所では受入不可です。</p>
+
+  <h3>HACCPに沿った衛生管理</h3>
+  <p>「HACCPの考え方を取り入れた衛生管理」への対応が義務化されています。衛生管理計画の策定・実施・記録の保存が必要です。</p>
+
+  <h3>報酬の同等性</h3>
+  <p>日本人が従事する場合の報酬と同等額以上の支払いが必要です。最低賃金を下回ることは認められません。</p>
+
+  <h3>社会保険・労働保険の適用</h3>
+  <p>健康保険、厚生年金保険、雇用保険、労災保険のすべてに適正に加入していること。</p>
+
+  <h3>キャリアアッププランの設定</h3>
+  <p>外食分野固有の義務として、特定技能外国人に対するキャリアアッププランの事前設定・書面説明が求められます。また、求めに応じて実務経験証明書を交付する義務があります。</p>
+
+  <h3>風営法の制限に該当しないこと</h3>
+  <p>風俗営業や性風俗関連特殊営業を営む営業所でないこと。「接待」に該当する行為に従事させないこと。</p>
+
+  <!-- ===== 7. FAQ ===== -->
+  <h2 id="sec7"><span class="num">7</span>よくあるご質問（FAQ）</h2>
+
+  <details class="faq-item">
+    <summary class="faq-q">調理業務のみに従事させることはできますか？</summary>
+    <div class="faq-a">はい、可能です。外食分野では調理のみ、接客のみといった特定業務への専従が認められています。ただし、外食業に関する業務が主たる業務であることが前提です。</div>
+  </details>
+
+  <details class="faq-item">
+    <summary class="faq-q">デリバリー専門の業態でも受入可能ですか？</summary>
+    <div class="faq-a">はい、食品衛生法に基づく営業許可を取得していれば可能です。ゴーストキッチン（実店舗を持たないデリバリー専用調理施設）であっても、営業許可があれば対象となります。</div>
+  </details>
+
+  <details class="faq-item">
+    <summary class="faq-q">居酒屋でも受入可能ですか？風営法との関係は？</summary>
+    <div class="faq-a">一般的な居酒屋であれば受入可能です。ただし、風営法上の風俗営業の許可を受けて営業している店舗（スナック、キャバクラ等）は対象外です。また、「接待」を行わせることも禁止されています。</div>
+  </details>
+
+  <details class="faq-item">
+    <summary class="faq-q">個人事業主でも受け入れられますか？</summary>
+    <div class="faq-a">はい、可能です。ただし法人と同様に、営業許可、社会保険、報酬の同等性、支援計画等すべての要件を満たす必要があります。</div>
+  </details>
+
+  <details class="faq-item">
+    <summary class="faq-q">複数の店舗で働かせることはできますか？</summary>
+    <div class="faq-a">同一の受入企業が運営する複数の店舗であれば可能です。ただし、雇用契約書にすべての勤務場所を記載する必要があります。異なる法人が運営する店舗での勤務は認められません。</div>
+  </details>
+
+  <details class="faq-item">
+    <summary class="faq-q">受け入れにかかる費用はどのくらいですか？</summary>
+    <div class="faq-a">業種や採用ルートにより異なりますので、お気軽にお問い合わせください。</div>
+  </details>
+
+</div><!-- /.article -->
+
+<!-- ===== CTA ===== -->
+<div class="cta-section">
+  <h2>再開に備えて事前相談を受付中</h2>
+  <p class="cta-lead">制度の再開時にスムーズに採用を進められるよう、今から準備を始めましょう。</p>
+  <a href="https://hito-kiwa.co.jp/contact/" class="cta-btn" target="_blank">お問い合わせはこちら</a>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="company-info">
+    株式会社ヒトキワ｜〒102-0083 東京都千代田区麹町4丁目3-5｜TEL: 03-6842-0293<br>
+    有料職業紹介事業許可番号 13-ユ-316856｜登録支援機関登録番号 24登-010827
+  </div>
+  <div>&copy; 2026 hitokiwa Inc. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

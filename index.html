@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>特定技能 外国人採用なら株式会社ヒトキワ｜全16分野対応</title>
+<meta name="description" content="特定技能外国人材の採用をワンストップでサポート。全16分野対応、候補者紹介から定着支援まで。株式会社ヒトキワ。">
+<style>
+  :root{
+    --red:#c8102e;
+    --red-2:#9d0a23;
+    --navy:#1a2a44;
+    --navy-2:#0f1c30;
+    --ivory:#faf7f2;
+    --gold:#c9a961;
+    --black:#1a1a1a;
+    --gray-700:#4a4f57;
+    --gray-500:#8a8f97;
+    --gray-200:#e5e7eb;
+    --gray-100:#f3f4f6;
+    --sans:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP","Yu Gothic Medium","Meiryo",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:#fff;color:var(--black);font-family:var(--sans);line-height:1.8;-webkit-font-smoothing:antialiased;font-size:15px}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+
+  /* ===== Top bar ===== */
+  .topbar{background:#fff;border-bottom:1px solid var(--gray-200);position:sticky;top:0;z-index:100}
+  .topbar-inner{max-width:1000px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+  .logo{font-weight:900;font-size:20px;color:var(--navy);letter-spacing:.04em}
+  .logo span{color:var(--red)}
+  .top-cta{display:flex;gap:14px;align-items:center}
+  .top-tel{font-weight:900;color:var(--navy);font-size:16px}
+  .btn-contact{background:var(--navy);color:#fff;padding:10px 22px;border-radius:4px;font-weight:700;font-size:13px;transition:background .2s}
+  .btn-contact:hover{background:var(--navy-2)}
+
+  /* ===== Hero ===== */
+  .hero{padding:80px 24px 64px;text-align:center;background:var(--ivory);border-bottom:1px solid var(--gray-200)}
+  .hero-label{display:inline-block;font-size:12px;font-weight:700;color:var(--red);letter-spacing:.15em;border:1px solid var(--red);padding:6px 20px;border-radius:2px;margin-bottom:28px}
+  .hero h1{font-size:36px;font-weight:900;line-height:1.6;color:var(--navy);margin-bottom:20px}
+  .hero h1 em{font-style:normal;color:var(--red)}
+  .hero .lead{font-size:16px;color:var(--gray-700);line-height:2.0;max-width:640px;margin:0 auto 36px}
+  .hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn-main{background:var(--red);color:#fff;padding:16px 40px;border-radius:4px;font-weight:900;font-size:16px;transition:all .2s;display:inline-block}
+  .btn-main:hover{background:var(--red-2)}
+  .btn-sub{background:#fff;color:var(--navy);padding:16px 32px;border-radius:4px;font-weight:700;font-size:15px;border:1px solid var(--gray-200);transition:all .2s;display:inline-block}
+  .btn-sub:hover{background:var(--gray-100)}
+
+  /* ===== Video ===== */
+  .video-sec{padding:72px 0;background:#fff}
+  .video-sec h2{text-align:center;font-size:24px;font-weight:900;color:var(--navy);margin-bottom:12px}
+  .video-sec .sub{text-align:center;font-size:14px;color:var(--gray-500);margin-bottom:36px}
+  .video-wrap{max-width:720px;margin:0 auto;aspect-ratio:16/9;background:var(--navy-2);border-radius:6px;overflow:hidden}
+  .video-wrap iframe,.video-wrap video{width:100%;height:100%;border:none;display:block}
+  .video-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:14px;font-weight:700;letter-spacing:.1em}
+
+  /* ===== Numbers ===== */
+  .numbers{padding:56px 0;background:var(--ivory);border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200)}
+  .num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;max-width:800px;margin:0 auto}
+  .num-item{text-align:center;padding:20px 16px}
+  .num-item .val{font-size:40px;font-weight:900;color:var(--navy);line-height:1.2;letter-spacing:-.02em}
+  .num-item .val span{font-size:16px;font-weight:700;color:var(--gray-500);margin-left:2px}
+  .num-item .label{font-size:12px;color:var(--gray-500);margin-top:4px;font-weight:700;letter-spacing:.05em}
+
+  /* ===== Section ===== */
+  .sec{padding:80px 0}
+  .sec-label{font-size:11px;font-weight:700;color:var(--gray-500);letter-spacing:.2em;text-align:center;margin-bottom:10px}
+  .sec h2{text-align:center;font-size:26px;font-weight:900;color:var(--navy);line-height:1.5;margin-bottom:48px}
+  .sec h2 em{font-style:normal;color:var(--red)}
+
+  /* ===== Strengths ===== */
+  .strengths{background:#fff}
+  .str-list{display:grid;grid-template-columns:1fr;gap:0;max-width:720px;margin:0 auto}
+  .str-item{display:grid;grid-template-columns:64px 1fr;gap:24px;align-items:start;padding:32px 0;border-bottom:1px solid var(--gray-200)}
+  .str-item:last-child{border-bottom:none}
+  .str-num{font-size:32px;font-weight:900;color:var(--red);text-align:center;line-height:1}
+  .str-item h3{font-size:18px;font-weight:900;color:var(--navy);margin-bottom:8px;line-height:1.5}
+  .str-item p{font-size:14px;color:var(--gray-700);line-height:2.0}
+
+  /* ===== Fields ===== */
+  .fields{background:var(--ivory);border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200)}
+  .fields-inner{max-width:720px;margin:0 auto}
+  .fields-inner p{font-size:14px;color:var(--gray-700);line-height:2.0;text-align:center}
+  .field-tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:24px}
+  .field-tags a{display:inline-block;padding:8px 18px;font-size:13px;font-weight:700;color:var(--navy);background:#fff;border:1px solid var(--gray-200);border-radius:3px;transition:all .2s}
+  .field-tags a:hover{border-color:var(--red);color:var(--red)}
+
+  /* ===== Flow ===== */
+  .flow{background:#fff}
+  .flow-list{max-width:640px;margin:0 auto;counter-reset:step}
+  .flow-item{display:grid;grid-template-columns:48px 1fr;gap:20px;padding:24px 0;border-bottom:1px solid var(--gray-200);align-items:start}
+  .flow-item:last-child{border-bottom:none}
+  .flow-item::before{counter-increment:step;content:counter(step);font-size:20px;font-weight:900;color:#fff;background:var(--navy);width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .flow-item:last-child::before{background:var(--red)}
+  .flow-item h4{font-size:16px;font-weight:900;color:var(--navy);margin-bottom:4px}
+  .flow-item p{font-size:13px;color:var(--gray-700);line-height:1.8}
+
+  /* ===== Support ===== */
+  .support{background:var(--ivory);border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200)}
+  .support-box{max-width:640px;margin:0 auto;background:#fff;border:1px solid var(--gray-200);border-radius:6px;padding:36px 32px;text-align:center}
+  .support-box h3{font-size:20px;font-weight:900;color:var(--navy);margin-bottom:20px;line-height:1.6}
+  .support-box h3 em{font-style:normal;color:var(--red)}
+  .support-tags{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+  .support-tags span{font-size:14px;font-weight:700;color:var(--navy);padding:10px 20px;background:var(--ivory);border-radius:3px}
+
+  /* ===== FAQ ===== */
+  .faq{background:#fff}
+  .faq-list{max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:8px}
+  .faq-item{border:1px solid var(--gray-200);border-radius:4px;overflow:hidden}
+  .faq-q{padding:18px 20px;font-weight:700;color:var(--navy);cursor:pointer;display:flex;gap:14px;align-items:center;font-size:14px;line-height:1.6}
+  .faq-q::before{content:"Q";background:var(--navy);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;flex-shrink:0}
+  .faq-q::after{content:"+";color:var(--gray-500);font-size:20px;font-weight:300;margin-left:auto;flex-shrink:0}
+  .faq-a{padding:0 20px 18px 62px;color:var(--gray-700);font-size:14px;line-height:2.0;display:none}
+  details[open] .faq-q::after{content:"\2212"}
+  details[open] .faq-a{display:block}
+  details summary{list-style:none}
+  details summary::-webkit-details-marker{display:none}
+
+  /* ===== CTA bottom ===== */
+  .cta-bottom{background:var(--navy);color:#fff;padding:72px 0;text-align:center}
+  .cta-bottom h2{font-size:26px;font-weight:900;line-height:1.6;margin-bottom:12px;color:#fff}
+  .cta-bottom .sub{font-size:14px;color:rgba(255,255,255,.6);margin-bottom:32px}
+  .cta-bottom .btn-main{background:var(--red);font-size:17px;padding:18px 48px}
+  .cta-bottom .btn-main:hover{background:var(--red-2)}
+
+  /* ===== Footer ===== */
+  footer{background:var(--navy-2);color:rgba(255,255,255,.6);padding:40px 0 20px;font-size:12px}
+  .foot-inner{max-width:1000px;margin:0 auto;padding:0 24px}
+  .foot-grid{display:grid;grid-template-columns:2fr 1fr;gap:48px;margin-bottom:28px}
+  .foot-grid h6{color:#fff;font-size:13px;margin-bottom:10px;font-weight:900}
+  .foot-grid p{font-size:11px;line-height:1.9;color:rgba(255,255,255,.5)}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:16px;text-align:center;font-size:11px;color:rgba(255,255,255,.4)}
+
+  /* ===== Floating CTA ===== */
+  .float-cta{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--gray-200);padding:10px 14px;display:none;z-index:99;box-shadow:0 -2px 12px rgba(0,0,0,.06)}
+  .float-cta a{display:block;text-align:center;background:var(--red);color:#fff;padding:14px;border-radius:4px;font-weight:900;font-size:14px}
+
+  /* ===== Mobile ===== */
+  @media(max-width:768px){
+    .topbar-inner{padding:10px 16px}
+    .top-tel{display:none}
+    .hero{padding:56px 20px 48px}
+    .hero h1{font-size:24px}
+    .hero .lead{font-size:14px}
+    .num-grid{grid-template-columns:repeat(2,1fr)}
+    .num-item .val{font-size:30px}
+    .sec{padding:56px 0}
+    .sec h2{font-size:21px;margin-bottom:36px}
+    .str-item{grid-template-columns:48px 1fr;gap:16px;padding:24px 0}
+    .str-num{font-size:26px}
+    .field-tags{gap:6px}
+    .field-tags a{padding:6px 14px;font-size:12px}
+    .flow-list{margin:0 auto}
+    .support-box{padding:28px 20px}
+    .cta-bottom h2{font-size:21px}
+    .float-cta{display:block}
+    body{padding-bottom:72px}
+    .foot-grid{grid-template-columns:1fr;gap:24px}
+    .video-sec h2{font-size:20px}
+  }
+</style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="logo">hito<span>kiwa</span></div>
+    <div class="top-cta">
+      <div class="top-tel">03-6842-0293</div>
+      <a href="https://hito-kiwa.co.jp/contact/" class="btn-contact" target="_blank">お問い合わせ</a>
+    </div>
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-label">特定技能 外国人材 採用支援</div>
+  <h1>人手不足を解決する<br><em>外国人材の採用</em>を、ワンストップで。</h1>
+  <p class="lead">候補者のご紹介から、ビザ申請、入社後の定着支援まで。<br>特定技能 全16分野に対応しています。</p>
+  <div class="hero-cta">
+    <a href="https://hito-kiwa.co.jp/contact/" class="btn-main" target="_blank">まずは無料で相談する</a>
+    <a href="#flow" class="btn-sub">サービスの流れを見る</a>
+  </div>
+</section>
+
+<!-- Video -->
+<section class="video-sec">
+  <h2>ヒトキワの採用支援</h2>
+  <p class="sub">3分でわかるサービス紹介</p>
+  <div class="wrap">
+    <div class="video-wrap">
+      <!-- YouTube埋め込み例：下のコメントを外してsrc=にURLを入れてください -->
+      <!-- <iframe src="https://www.youtube.com/embed/動画ID" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+      <!-- MP4直接埋め込み例 -->
+      <!-- <video controls poster="thumbnail.jpg"><source src="video.mp4" type="video/mp4"></video> -->
+      <div class="video-placeholder">動画準備中 ── YouTube URLまたはMP4ファイルを設定してください</div>
+    </div>
+  </div>
+</section>
+
+<!-- Numbers -->
+<div class="numbers">
+  <div class="wrap">
+    <div class="num-grid">
+      <div class="num-item"><div class="val">126<span>社</span></div><div class="label">送り出し機関 提携</div></div>
+      <div class="num-item"><div class="val">5,000<span>+</span></div><div class="label">登録候補者数</div></div>
+      <div class="num-item"><div class="val">1,500<span>+</span></div><div class="label">受入企業実績</div></div>
+      <div class="num-item"><div class="val">90<span>%</span></div><div class="label">1年定着率</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Strengths -->
+<section class="sec strengths">
+  <div class="wrap">
+    <div class="sec-label">STRENGTHS</div>
+    <h2>選ばれる<em>3つの理由</em></h2>
+    <div class="str-list">
+      <div class="str-item">
+        <div class="str-num">01</div>
+        <div>
+          <h3>常時5,000名以上の候補者からスピード紹介</h3>
+          <p>126社の送り出し機関と提携し、常に候補者が待機しています。お声がけから最短2週間で面接を設定。複数名の一括採用にも対応可能です。</p>
+        </div>
+      </div>
+      <div class="str-item">
+        <div class="str-num">02</div>
+        <div>
+          <h3>採用が決まるまで費用ゼロの完全成功報酬</h3>
+          <p>候補者のご提案・面接調整はすべて無料。採用が決まって初めて費用が発生します。費用の詳細はお問い合わせください。</p>
+        </div>
+      </div>
+      <div class="str-item">
+        <div class="str-num">03</div>
+        <div>
+          <h3>入社後の定着まで伴走するサポート体制</h3>
+          <p>年4回の定期面談、日本語学習支援、行政手続の代行など、入社後の定着までしっかりサポート。企業様に安心して受入れいただける体制を整えています。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Fields -->
+<section class="sec fields">
+  <div class="wrap">
+    <div class="sec-label">FIELDS</div>
+    <h2>特定技能 <em>全16分野</em>に対応</h2>
+    <div class="fields-inner">
+      <p>業種ごとに異なる制度要件・協議会加入・試験要件など、各分野の専門知識を持ったスタッフが対応します。詳しくは各分野のガイドページをご覧ください。</p>
+      <div class="field-tags">
+        <a href="hitokiwa_kaigo_lp.html">介護</a>
+        <a href="hitokiwa_kensetsu_lp.html">建設</a>
+        <a href="hitokiwa_nogyo_lp.html">農業</a>
+        <a href="hitokiwa_shukuhaku_lp.html">宿泊</a>
+        <a href="hitokiwa_gaishoku_lp.html">外食</a>
+        <a href="hitokiwa_jidosha_lp.html">自動車整備</a>
+        <a href="hitokiwa_cleaning_lp.html">ビルクリーニング</a>
+        <a href="hitokiwa_unso_lp.html">自動車運送業</a>
+        <a href="#">製造業</a>
+        <a href="#">飲食料品製造</a>
+        <a href="#">漁業</a>
+        <a href="#">造船・舶用工業</a>
+        <a href="#">航空</a>
+        <a href="#">素形材・産業機械・電気電子</a>
+        <a href="#">林業</a>
+        <a href="#">木材産業</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Flow -->
+<section class="sec flow" id="flow">
+  <div class="wrap">
+    <div class="sec-label">FLOW</div>
+    <h2>ご相談から<em>定着</em>までの流れ</h2>
+    <div class="flow-list">
+      <div class="flow-item">
+        <div>
+          <h4>無料相談・ヒアリング</h4>
+          <p>採用要件・人数・時期をお伺いし、最適なプランをご提案します。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div>
+          <h4>候補者のご紹介</h4>
+          <p>条件に合った候補者をご紹介。経歴書・動画面談など複数の方法でご確認いただけます。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div>
+          <h4>面接・採用決定</h4>
+          <p>オンラインまたは現地での面接を設定。通訳も手配いたします。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div>
+          <h4>ビザ申請・入社準備</h4>
+          <p>在留資格申請、雇用契約書作成、支援計画策定など行政手続をすべて代行します。</p>
+        </div>
+      </div>
+      <div class="flow-item">
+        <div>
+          <h4>入社・定着サポート</h4>
+          <p>入国対応から生活支援、定期面談まで。企業様に行っていただくのは住居の準備だけです。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Support -->
+<section class="sec support">
+  <div class="wrap">
+    <div class="support-box">
+      <h3>企業様にお願いするのは<em>「住居の準備」</em>だけ</h3>
+      <div class="support-tags">
+        <span>ビザ申請代行</span>
+        <span>空港送迎</span>
+        <span>生活オリエンテーション</span>
+        <span>日本語学習支援</span>
+        <span>定期面談</span>
+        <span>行政届出代行</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec faq">
+  <div class="wrap">
+    <div class="sec-label">FAQ</div>
+    <h2>よくあるご質問</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary class="faq-q">採用が決まらなかった場合、費用はかかりますか？</summary>
+        <div class="faq-a">完全成功報酬型のため、内定受諾までは一切費用が発生しません。候補者のご提案・面接調整もすべて無料です。</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">採用までどのくらいの期間がかかりますか？</summary>
+        <div class="faq-a">最短2週間で面接機会をご提供できます。内定から入社までは、ビザ申請の関係で4〜6ヶ月が目安です。</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">初めて外国人を採用するのですが大丈夫ですか？</summary>
+        <div class="faq-a">はい、初めての企業様も多数ご支援しています。受入体制の構築から行政手続、社内ガイダンスまで、専任チームが伴走しますのでご安心ください。</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">対応している業種を教えてください。</summary>
+        <div class="faq-a">特定技能の対象16分野すべてに対応しています。介護、建設、製造、宿泊、農業、外食、飲食料品製造、自動車整備、ビルクリーニング、自動車運送業ほか。</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">費用はいくらですか？</summary>
+        <div class="faq-a">業種や採用条件によって異なります。まずはお気軽にお問い合わせください。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-bottom">
+  <div class="wrap">
+    <h2>特定技能の採用について<br>お気軽にご相談ください</h2>
+    <p class="sub">制度の基本的なご質問から、具体的な採用計画のご相談まで対応いたします。</p>
+    <a href="https://hito-kiwa.co.jp/contact/" class="btn-main" target="_blank">お問い合わせはこちら</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-grid">
+      <div>
+        <h6>株式会社ヒトキワ</h6>
+        <p>〒102-0083 東京都千代田区麹町4丁目3-5 7階<br>TEL: 03-6842-0293　／　MAIL: hitokiwa.info@gmail.com</p>
+        <p style="margin-top:10px">有料職業紹介事業許可番号 13-ユ-316856<br>登録支援機関登録番号 24登-010827</p>
+      </div>
+      <div>
+        <h6>サービス</h6>
+        <p>特定技能人材紹介<br>登録支援業務<br>ビザ申請サポート<br>定着支援プログラム</p>
+      </div>
+    </div>
+    <div class="foot-bottom">&copy; 2026 hitokiwa Inc. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- Floating CTA (mobile) -->
+<div class="float-cta">
+  <a href="https://hito-kiwa.co.jp/contact/" target="_blank">お問い合わせはこちら</a>
+</div>
+
+</body>
+</html>

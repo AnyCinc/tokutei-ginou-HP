@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>特定技能制度 共通ガイド｜株式会社ヒトキワ</title>
+<meta name="description" content="特定技能制度の全体像を徹底解説。1号・2号の違い、全16分野の一覧、受入企業の義務、支援計画、登録支援機関の役割まで網羅する共通ガイド。">
+<style>
+  :root{
+    --red:#c8102e;--red-2:#9d0a23;--red-soft:#fdf2f3;
+    --navy:#1a2a44;--navy-2:#0f1c30;
+    --ivory:#faf7f2;--gold:#c9a961;
+    --black:#1a1a1a;--gray-700:#4a4f57;--gray-500:#8a8f97;--gray-300:#cdd1d6;--gray-200:#e5e7eb;--gray-100:#f3f4f6;
+    --shadow-sm:0 2px 8px rgba(26,42,68,.06);--shadow:0 4px 20px rgba(26,42,68,.08);--shadow-lg:0 12px 40px rgba(26,42,68,.12);
+    --sans:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP","Yu Gothic Medium","Meiryo",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--ivory);color:var(--black);font-family:var(--sans);line-height:1.8;-webkit-font-smoothing:antialiased;font-size:15px}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+
+  /* ===== Sticky top bar ===== */
+  .topbar{background:#fff;border-bottom:1px solid var(--gray-200);position:sticky;top:0;z-index:100;box-shadow:var(--shadow-sm)}
+  .topbar-inner{max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+  .logo{font-weight:900;font-size:22px;color:var(--navy);letter-spacing:.04em}
+  .logo span{color:var(--red)}
+  .top-cta{display:flex;gap:12px;align-items:center}
+  .top-tel{font-weight:900;color:var(--navy);font-size:18px;line-height:1.1}
+  .top-tel small{display:block;font-size:10px;color:var(--gray-500);font-weight:500;margin-top:2px}
+  .btn-primary{background:var(--red);color:#fff;padding:12px 24px;border-radius:6px;font-weight:900;font-size:14px;box-shadow:var(--shadow-sm);transition:all .2s;display:inline-block;border:none;cursor:pointer}
+  .btn-primary:hover{background:var(--red-2);transform:translateY(-1px);box-shadow:var(--shadow)}
+
+  /* ===== Article Header ===== */
+  .article-header{
+    background:#fff;
+    border-bottom:1px solid var(--gray-200);
+    padding:64px 24px 48px;
+    text-align:center;
+  }
+  .article-header .category-tag{
+    display:inline-block;
+    background:var(--red);
+    color:#fff;
+    font-size:13px;
+    font-weight:900;
+    padding:6px 20px;
+    border-radius:3px;
+    letter-spacing:.1em;
+    margin-bottom:24px;
+  }
+  .article-header h1{
+    font-size:36px;
+    font-weight:900;
+    color:var(--navy);
+    line-height:1.5;
+    margin-bottom:20px;
+    max-width:800px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .article-header .subtitle{
+    font-size:16px;
+    color:var(--gray-700);
+    line-height:1.9;
+    max-width:700px;
+    margin:0 auto 24px;
+  }
+  .article-header .author-line{
+    font-size:13px;
+    color:var(--gray-500);
+    font-weight:700;
+    letter-spacing:.05em;
+  }
+
+  /* ===== TOC ===== */
+  .toc-section{
+    background:#fff;
+    border-bottom:1px solid var(--gray-200);
+    padding:40px 24px;
+  }
+  .toc-inner{
+    max-width:800px;
+    margin:0 auto;
+    background:var(--gray-100);
+    border:1px solid var(--gray-200);
+    border-radius:8px;
+    padding:32px 40px;
+  }
+  .toc-inner h2{
+    font-size:16px;
+    font-weight:900;
+    color:var(--navy);
+    margin-bottom:16px;
+    padding-bottom:12px;
+    border-bottom:2px solid var(--navy);
+  }
+  .toc-list{
+    list-style:none;
+    padding:0;
+    margin:0;
+    columns:2;
+    column-gap:32px;
+  }
+  .toc-list li{
+    padding:6px 0;
+    break-inside:avoid;
+  }
+  .toc-list a{
+    font-size:14px;
+    font-weight:700;
+    color:var(--navy);
+    transition:color .2s;
+    display:flex;
+    align-items:baseline;
+    gap:8px;
+    line-height:1.6;
+  }
+  .toc-list a:hover{color:var(--red)}
+  .toc-list .num{
+    color:var(--red);
+    font-weight:900;
+    font-size:14px;
+    flex-shrink:0;
+    min-width:24px;
+  }
+
+  /* ===== Article Body ===== */
+  .article-body{
+    max-width:800px;
+    margin:0 auto;
+    padding:0 24px 80px;
+    background:#fff;
+  }
+  .article-body-wrap{
+    background:#fff;
+  }
+  .article-body h2{
+    font-size:24px;
+    font-weight:900;
+    color:var(--navy);
+    border-left:5px solid var(--red);
+    padding-left:16px;
+    margin:64px 0 24px;
+    line-height:1.5;
+  }
+  .article-body h3{
+    font-size:18px;
+    font-weight:900;
+    color:var(--navy);
+    margin:40px 0 16px;
+    line-height:1.5;
+  }
+  .article-body p{
+    font-size:16px;
+    line-height:2.0;
+    color:var(--black);
+    margin-bottom:24px;
+    text-align:justify;
+  }
+  .article-body ul,.article-body ol{
+    font-size:16px;
+    line-height:2.0;
+    color:var(--black);
+    margin-bottom:24px;
+    padding-left:1.5em;
+  }
+  .article-body li{
+    margin-bottom:8px;
+  }
+  .article-body table{
+    width:100%;
+    border-collapse:collapse;
+    margin:24px 0;
+    font-size:14px;
+  }
+  .article-body th{
+    background:var(--navy);
+    color:#fff;
+    padding:12px 16px;
+    text-align:left;
+    font-weight:900;
+    font-size:14px;
+  }
+  .article-body td{
+    padding:12px 16px;
+    border-bottom:1px solid var(--gray-200);
+    color:var(--gray-700);
+    line-height:1.7;
+    vertical-align:top;
+  }
+  .article-body tr:nth-child(even) td{background:var(--gray-100)}
+  .article-body .table-wrap{
+    overflow-x:auto;
+    margin:24px 0;
+    -webkit-overflow-scrolling:touch;
+  }
+  .article-body .table-wrap table{
+    min-width:700px;
+    margin:0;
+  }
+  .article-body .table-note{
+    margin-top:12px;
+    padding:16px 20px;
+    background:var(--red-soft);
+    border:1px solid #f5c6cb;
+    border-radius:6px;
+    font-size:14px;
+    color:var(--red-2);
+    font-weight:700;
+    line-height:1.8;
+  }
+  .article-body .note-box{
+    margin:24px 0;
+    padding:20px 24px;
+    background:var(--ivory);
+    border:1px solid var(--gray-200);
+    border-left:4px solid var(--red);
+    border-radius:6px;
+    font-size:15px;
+    color:var(--gray-700);
+    line-height:1.9;
+  }
+  .article-body .note-box b{color:var(--navy)}
+
+  /* ===== Numbered list for support plan ===== */
+  .support-list{
+    counter-reset:support;
+    list-style:none;
+    padding-left:0;
+  }
+  .support-list li{
+    counter-increment:support;
+    padding:12px 0 12px 48px;
+    position:relative;
+    border-bottom:1px solid var(--gray-200);
+  }
+  .support-list li::before{
+    content:counter(support);
+    position:absolute;
+    left:0;top:12px;
+    width:32px;height:32px;
+    background:var(--red);
+    color:#fff;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:14px;font-weight:900;
+  }
+  .support-list li:last-child{border-bottom:none}
+
+  /* ===== Flow Steps ===== */
+  .flow-step{
+    display:flex;
+    align-items:flex-start;
+    gap:16px;
+    margin-bottom:16px;
+  }
+  .flow-arrow{
+    text-align:center;
+    color:var(--red);
+    font-size:24px;
+    margin:4px 0 12px 14px;
+  }
+  .flow-num{
+    flex-shrink:0;
+    width:36px;height:36px;
+    background:var(--red);
+    color:#fff;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:14px;font-weight:900;
+    margin-top:2px;
+  }
+  .flow-text{
+    font-size:15px;
+    line-height:1.8;
+    color:var(--gray-700);
+  }
+  .flow-text strong{color:var(--navy)}
+
+  /* ===== FAQ ===== */
+  .faq-list{
+    margin-top:24px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .faq-item{
+    background:var(--gray-100);
+    border:1px solid var(--gray-200);
+    border-radius:8px;
+    overflow:hidden;
+  }
+  .faq-q{
+    padding:20px 24px;
+    font-weight:900;
+    color:var(--navy);
+    cursor:pointer;
+    display:grid;
+    grid-template-columns:32px 1fr 24px;
+    gap:12px;
+    align-items:center;
+    font-size:15px;
+    line-height:1.6;
+  }
+  .faq-q::before{
+    content:"Q";
+    background:var(--red);color:#fff;
+    width:32px;height:32px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:13px;font-weight:900;
+  }
+  .faq-q::after{
+    content:"+";color:var(--red);
+    font-size:28px;font-weight:300;text-align:right;
+    transition:transform .2s;
+  }
+  .faq-a{
+    padding:0 24px 24px 68px;
+    color:var(--gray-700);
+    font-size:15px;
+    line-height:2.0;
+    display:none;
+    text-align:justify;
+  }
+  details[open] .faq-q::after{content:"\2212"}
+  details[open] .faq-a{display:block}
+  details summary{list-style:none}
+  details summary::-webkit-details-marker{display:none}
+
+  /* ===== CTA BOTTOM ===== */
+  .s-cta{
+    background:linear-gradient(135deg,var(--red) 0%,var(--red-2) 100%);
+    color:#fff;
+    padding:72px 24px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .s-cta::before{
+    content:"";position:absolute;top:-50%;right:-20%;
+    width:600px;height:600px;
+    background:radial-gradient(circle,rgba(255,255,255,.1) 0%,transparent 60%);
+    pointer-events:none;
+  }
+  .s-cta::after{
+    content:"";position:absolute;top:0;left:0;right:0;
+    height:4px;background:var(--gold);
+  }
+  .cta-eyebrow{
+    font-size:13px;font-weight:900;color:var(--gold);
+    letter-spacing:.2em;margin-bottom:12px;position:relative;
+  }
+  .s-cta h2{
+    font-size:32px;font-weight:900;line-height:1.5;
+    margin-bottom:32px;position:relative;
+  }
+  .s-cta h2 .gold{
+    color:var(--navy);background:var(--gold);
+    padding:4px 18px;border-radius:4px;display:inline-block;
+  }
+  .cta-contacts{
+    display:flex;gap:32px;flex-wrap:wrap;
+    align-items:center;justify-content:center;
+    position:relative;
+  }
+  .cta-tel,.cta-mail{
+    display:flex;align-items:center;gap:10px;
+    background:rgba(255,255,255,.1);
+    padding:14px 24px;border-radius:8px;
+    backdrop-filter:blur(10px);
+  }
+  .cta-tel .lbl,.cta-mail .lbl{
+    background:#fff;color:var(--red);
+    font-size:11px;font-weight:900;
+    padding:4px 10px;border-radius:3px;
+  }
+  .cta-tel .num{font-size:28px;font-weight:900;letter-spacing:.04em;line-height:1}
+  .cta-tel .note{font-size:11px;color:rgba(255,255,255,.78);margin-left:8px}
+  .cta-mail .addr{font-size:16px;font-weight:700;letter-spacing:.02em}
+
+  /* ===== Footer ===== */
+  footer{background:var(--navy-2);color:rgba(255,255,255,.7);padding:48px 0 24px;font-size:13px}
+  .foot-inner{max-width:1080px;margin:0 auto;padding:0 24px}
+  .foot-grid{display:grid;grid-template-columns:2fr 1fr;gap:48px;margin-bottom:32px}
+  .foot-grid h6{color:#fff;font-size:14px;margin-bottom:12px;font-weight:900}
+  .foot-grid p{font-size:12px;line-height:1.9;color:rgba(255,255,255,.6)}
+  .foot-bottom{
+    border-top:1px solid rgba(255,255,255,.1);
+    padding-top:20px;text-align:center;
+    font-size:11px;color:rgba(255,255,255,.5);
+  }
+
+  /* ===== Floating CTA (mobile) ===== */
+  .float-cta{
+    position:fixed;bottom:0;left:0;right:0;
+    background:#fff;border-top:1px solid var(--gray-200);
+    padding:10px 14px;display:none;z-index:99;
+    box-shadow:0 -4px 20px rgba(0,0,0,.1);
+  }
+  .float-cta a{
+    display:block;text-align:center;
+    background:var(--red);color:#fff;
+    padding:14px;border-radius:8px;font-weight:900;
+  }
+  .update-date{font-size:11px;color:var(--gray-500);text-align:right;line-height:1.3}
+  .update-date span{display:block;font-weight:700;color:var(--navy)}
+
+  /* ===== CTA Button ===== */
+  .cta-btn{display:inline-block;background:var(--red);color:#fff;padding:18px 48px;border-radius:8px;font-weight:900;font-size:17px;letter-spacing:.04em;box-shadow:0 4px 20px rgba(200,16,46,.3);transition:all .2s;margin-top:24px;text-decoration:none}
+  .cta-btn:hover{background:#9d0a23;transform:translateY(-2px);color:#fff}
+
+  /* ===== Mobile ===== */
+  @media(max-width:768px){
+    .topbar-inner{padding:10px 16px}
+    .top-tel{display:none}
+    .btn-primary{padding:10px 16px;font-size:13px}
+    .article-header{padding:40px 20px 32px}
+    .article-header h1{font-size:24px}
+    .article-header .subtitle{font-size:14px}
+    .toc-inner{padding:24px 20px}
+    .toc-list{columns:1}
+    .article-body{padding:0 20px 60px}
+    .article-body h2{font-size:20px;margin:48px 0 20px}
+    .article-body h3{font-size:16px}
+    .article-body p{font-size:15px}
+    .article-body table{font-size:13px}
+    .article-body th,.article-body td{padding:10px 12px}
+    .s-cta{padding:48px 20px}
+    .s-cta h2{font-size:22px}
+    .cta-tel,.cta-mail{padding:10px 16px}
+    .cta-tel .num{font-size:20px}
+    .float-cta{display:block}
+    body{padding-bottom:80px}
+    .foot-grid{grid-template-columns:1fr;gap:24px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== TOP BAR ===== -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="logo">hito<span>kiwa</span></div>
+    <div class="top-cta">
+      <div class="update-date"><span>2026年6月12日</span>最終更新</div>
+      <div class="top-tel">03-6842-0293</div>
+      <a href="#cta" class="btn-primary">無料相談する</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Article Header ===== -->
+<div class="article-header">
+  <span class="category-tag">特定技能制度 共通</span>
+  <h1>特定技能制度 共通ガイド</h1>
+  <p class="subtitle">全16分野に共通する制度の仕組み・要件・手続きを網羅的に解説 ── 受入企業が知っておくべき基礎知識の決定版</p>
+  <p class="author-line">株式会社ヒトキワ ｜ 国際人材紹介事業</p>
+</div>
+
+<!-- ===== Table of Contents ===== -->
+<div class="toc-section">
+  <div class="toc-inner">
+    <h2>目次</h2>
+    <ol class="toc-list">
+      <li><a href="#sec1"><span class="num">1.</span>はじめに</a></li>
+      <li><a href="#sec2"><span class="num">2.</span>特定技能とは — ビザの概要</a></li>
+      <li><a href="#sec3"><span class="num">3.</span>特定技能1号と2号の違い</a></li>
+      <li><a href="#sec4"><span class="num">4.</span>全16分野と受入れ見込数</a></li>
+      <li><a href="#sec5"><span class="num">5.</span>外国人材に求められる共通要件</a></li>
+      <li><a href="#sec6"><span class="num">6.</span>受入企業の共通義務</a></li>
+      <li><a href="#sec7"><span class="num">7.</span>支援計画の10項目</a></li>
+      <li><a href="#sec8"><span class="num">8.</span>登録支援機関とは</a></li>
+      <li><a href="#sec9"><span class="num">9.</span>受け入れの一般的な流れ</a></li>
+      <li><a href="#sec10"><span class="num">10.</span>よくある質問（共通）</a></li>
+      <li><a href="#sec11"><span class="num">11.</span>おわりに</a></li>
+    </ol>
+  </div>
+</div>
+
+<!-- ===== Article Body ===== -->
+<div class="article-body-wrap">
+<div class="article-body">
+
+<!-- 1. はじめに -->
+<h2 id="sec1">1. はじめに</h2>
+<p>日本は少子高齢化の急速な進行により、多くの産業分野で深刻な人手不足に直面している。こうした状況を打開するため、2019年4月に新たな在留資格「特定技能」が創設された。従来の技能実習制度が「開発途上国への技能移転による国際貢献」を建前としていたのに対し、特定技能制度は「国内で十分な人材確保が困難な産業分野における外国人材の受入れ」を正面から目的に掲げている点が最大の特徴である。</p>
+<p>技能実習制度では、あくまで「実習」という位置づけであるがゆえに、就労先の変更（転職）が原則として認められず、労働者保護の観点から多くの課題が指摘されてきた。一方、特定技能制度では、一定の専門性・技能を有する外国人を「即戦力の労働者」として正面から受け入れる仕組みが整備されており、同一分野内での転職が認められるなど、外国人材の権利保護にも配慮した設計となっている。本ガイドでは、特定技能制度の全体像を分野横断的に解説し、受入企業が制度を正しく理解するための包括的な情報を提供する。</p>
+
+<!-- 2. 特定技能とは — ビザの概要 -->
+<h2 id="sec2">2. 特定技能とは — ビザの概要</h2>
+<p>「特定技能」は、出入国管理及び難民認定法（入管法）に基づく在留資格のひとつであり、一定の専門性・技能を有する外国人が、人手不足が深刻な特定の産業分野において就労することを目的として付与される。在留資格には「特定技能1号」と「特定技能2号」の2つの区分がある。</p>
+<p>制度創設当初（2019年4月）の対象は14分野であったが、2024年3月29日の閣議決定により、自動車運送業、鉄道、林業、木材産業の4分野が追加され、現在は全16分野に拡大されている。また、従来の「素形材産業」「産業機械製造業」「電気・電子情報関連産業」の3分野は「工業製品製造業」として統合された。</p>
+
+<h3>基本的な雇用条件</h3>
+<ul>
+  <li><strong>雇用形態：</strong>原則として直接雇用。派遣形態が認められるのは農業分野と漁業分野のみである。</li>
+  <li><strong>勤務形態：</strong>フルタイム勤務が原則。パートタイムやアルバイトでの受入れは認められない。</li>
+  <li><strong>報酬：</strong>日本人と同等以上の報酬を支払うことが義務付けられている。基本給のみならず、賞与・各種手当を含めた総合的な処遇における同等性が求められる。</li>
+  <li><strong>所管省庁：</strong>出入国在留管理庁が制度全体を統括し、各分野の所管省庁（厚生労働省、経済産業省、国土交通省、農林水産省等）が分野固有の運用基準を定めている。</li>
+</ul>
+
+<!-- 3. 特定技能1号と2号の違い -->
+<h2 id="sec3">3. 特定技能1号と2号の違い</h2>
+<p>特定技能1号と2号は、求められる技能水準、在留期間、家族帯同の可否など、多くの点で異なる。受入企業および外国人材双方にとって、両者の違いを正確に理解することが極めて重要である。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="min-width:140px">比較項目</th>
+      <th style="background:var(--red)">特定技能1号</th>
+      <th>特定技能2号</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>在留期間</strong></td>
+      <td>通算5年（更新は1年・6ヶ月・4ヶ月単位）</td>
+      <td>上限なし（3年・1年・6ヶ月単位で更新）</td>
+    </tr>
+    <tr>
+      <td><strong>家族帯同</strong></td>
+      <td style="color:var(--red);font-weight:700">不可</td>
+      <td style="color:#2e7d4f;font-weight:700">可能（配偶者・子）</td>
+    </tr>
+    <tr>
+      <td><strong>永住申請</strong></td>
+      <td>1号の期間は永住要件に算入されない</td>
+      <td>可能（在留10年等の要件を満たした場合）</td>
+    </tr>
+    <tr>
+      <td><strong>転職</strong></td>
+      <td>同一分野内で可能</td>
+      <td>同一分野内で可能</td>
+    </tr>
+    <tr>
+      <td><strong>日本語要件</strong></td>
+      <td>JLPT N4以上 または JFT-Basic（分野により追加要件あり）</td>
+      <td>試験での確認は不要（1号からの移行が前提）</td>
+    </tr>
+    <tr>
+      <td><strong>技能水準</strong></td>
+      <td>各分野の技能評価試験合格（相当程度の知識又は経験）</td>
+      <td>各分野の2号技能評価試験合格（熟練した技能）</td>
+    </tr>
+    <tr>
+      <td><strong>支援計画</strong></td>
+      <td>策定・実施が義務</td>
+      <td>不要</td>
+    </tr>
+    <tr>
+      <td><strong>対象分野数</strong></td>
+      <td>16分野</td>
+      <td>11分野（介護・自動車運送業・鉄道・林業・木材産業を除く）</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>特定技能1号は通算5年という在留期間の上限があり、家族の帯同も認められない。一方、特定技能2号は在留期間の上限がなく、配偶者と子の帯同が可能であるため、外国人材にとっては日本での長期的な生活設計が可能になる。受入企業にとっても、優秀な人材を長期にわたって確保し続けられるという大きなメリットがある。ただし、2号は全ての分野で設定されているわけではなく、介護分野など一部の分野には2号が存在しない点に注意が必要である。</p>
+
+<!-- 4. 全16分野と受入れ見込数 -->
+<h2 id="sec4">4. 全16分野と受入れ見込数</h2>
+<p>2024年3月の閣議決定により、特定技能の対象分野は16分野に拡大された。以下に全分野の一覧を示す。受入れ見込数は、2024年度からの5年間における最大受入れ見込み人数である。</p>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr>
+      <th>分野</th>
+      <th>受入れ見込数（5年間最大）</th>
+      <th>所管省庁</th>
+      <th>2号</th>
+      <th>備考</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>介護</strong></td>
+      <td>135,000人</td>
+      <td>厚生労働省</td>
+      <td style="color:var(--red);font-weight:700">なし</td>
+      <td>在留資格「介護」へ移行可</td>
+    </tr>
+    <tr>
+      <td><strong>ビルクリーニング</strong></td>
+      <td>37,000人</td>
+      <td>厚生労働省</td>
+      <td style="color:#2e7d4f;font-weight:700">あり</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><strong>工業製品製造業</strong></td>
+      <td>—</td>
+      <td>経済産業省</td>
+      <td style="color:#2e7d4f;font-weight:700">あり</td>
+      <td>旧：素形材・産業機械・電気電子</td>
+    </tr>
+    <tr>
+      <td><strong>建設</strong></td>
+      <td>80,000人</td>
+      <td>国土交通省</td>
+      <td style="color:#2e7d4f;font-weight:700">あり</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><strong>造船・舶用工業</strong></td>
+      <td>—</td>
+      <td>国土交通省</td>
+      <td style="color:#2e7d4f;font-weight:700">あり</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><strong>自動車整備</strong></td>
+      <td>10,000人</td>
+      <td>国土交通省</td>
+      <td style="color:#2e7d4f;font-weight:700">あり</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><strong>航空</strong></td>
+      <td>—</td>
+      <td>国土交通省</td>
+      <td style="color:#2e7d4f;font-weight:700">あり</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><strong>宿泊</strong></td>
+      <td>23,000人</td>
+      <td>国土交通省（観光庁）</td>
+      <td style="color:#2e7d4f;font-weight:700">あり</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><strong>自動車運送業</strong></td>
+      <td>24,500人</td>
+      <td>国土交通省</td>
+      <td style="color:var(--red);font-weight:700">なし</td>
+      <td>2024年新設</td>
+    </tr>
+    <tr>
+      <td><strong>鉄道</strong></td>
+      <td>—</td>
+      <td>国土交通省</td>
+      <td style="color:var(--red);font-weight:700">なし</td>
+      <td>2024年新設</td>
+    </tr>
+    <tr>
+      <td><strong>農業</strong></td>
+      <td>78,000人</td>
+      <td>農林水産省</td>
+      <td style="color:#2e7d4f;font-weight:700">あり</td>
+      <td>派遣可</td>
+    </tr>
+    <tr>
+      <td><strong>漁業</strong></td>
+      <td>—</td>
+      <td>農林水産省</td>
+      <td style="color:#2e7d4f;font-weight:700">あり</td>
+      <td>派遣可</td>
+    </tr>
+    <tr>
+      <td><strong>飲食料品製造業</strong></td>
+      <td>—</td>
+      <td>農林水産省</td>
+      <td style="color:#2e7d4f;font-weight:700">あり</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><strong>外食業</strong></td>
+      <td>53,000人</td>
+      <td>農林水産省</td>
+      <td style="color:#2e7d4f;font-weight:700">あり</td>
+      <td>認定証明書交付停止中</td>
+    </tr>
+    <tr>
+      <td><strong>林業</strong></td>
+      <td>—</td>
+      <td>農林水産省</td>
+      <td style="color:var(--red);font-weight:700">なし</td>
+      <td>2024年新設</td>
+    </tr>
+    <tr>
+      <td><strong>木材産業</strong></td>
+      <td>—</td>
+      <td>農林水産省</td>
+      <td style="color:var(--red);font-weight:700">なし</td>
+      <td>2024年新設</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="table-note">※ 受入れ見込数が「—」の分野は、最新の閣議決定における正確な数値をご確認ください。上記は2024年3月閣議決定時点の情報に基づいています。</div>
+
+<!-- 5. 外国人材に求められる共通要件 -->
+<h2 id="sec5">5. 外国人材に求められる共通要件</h2>
+<p>特定技能1号の在留資格を取得するためには、外国人本人が以下の要件を満たしている必要がある。これらは全16分野に共通する基本要件であり、分野によっては追加の要件が課される場合がある。</p>
+
+<h3>（1）技能試験の合格</h3>
+<p>各分野の所管省庁が定める技能評価試験に合格する必要がある。試験は分野ごとに内容が異なり、当該分野で即戦力として業務に従事できる水準の知識・技能が問われる。試験は国内外の試験会場で実施されており、海外在住者は母国で受験することも可能である。</p>
+
+<h3>（2）日本語能力の証明</h3>
+<p>日本語能力試験（JLPT）N4以上、または国際交流基金日本語基礎テスト（JFT-Basic）に合格していることが求められる。N4は「基本的な日本語を理解することができる」水準であり、日常生活に必要な基本的なコミュニケーションが可能なレベルに相当する。なお、介護分野では上記に加えて「介護日本語評価試験」への合格が必要であるなど、分野によっては追加の日本語要件が設けられている。</p>
+
+<h3>（3）技能実習2号修了者の免除規定</h3>
+<p>技能実習2号を良好に修了した者は、技能試験および日本語試験が免除される。ただし、免除が適用されるのは、技能実習で従事した職種・作業と特定技能で従事する分野との間に関連性がある場合に限られる。異なる分野への移行を希望する場合は、移行先分野の技能試験に合格する必要がある（日本語試験は職種を問わず免除される）。</p>
+
+<h3>（4）その他の要件</h3>
+<ul>
+  <li><strong>年齢：</strong>18歳以上であること。</li>
+  <li><strong>健康状態：</strong>業務に従事するために必要な健康状態であること。</li>
+  <li><strong>退去強制歴等：</strong>過去に退去強制令書の発付を受けたことがないこと、刑罰法令に違反して懲役・禁錮等に処せられたことがないこと等。</li>
+  <li><strong>保証金等：</strong>保証金の徴収や違約金契約を締結していないこと。</li>
+</ul>
+
+<!-- 6. 受入企業の共通義務 -->
+<h2 id="sec6">6. 受入企業の共通義務</h2>
+<p>特定技能外国人を受け入れる企業（特定技能所属機関）には、外国人材が安心して就労・生活できる環境を整備するための複数の義務が課されている。以下は全分野に共通する主要な義務である。</p>
+
+<h3>（1）同等報酬の支払い</h3>
+<p>日本人が従事する場合と同等以上の報酬を支払わなければならない。これは基本給のみならず、賞与・各種手当を含めた総合的な処遇における同等性が求められるものであり、外国人であることを理由とした不利益な取扱いは禁止されている。</p>
+
+<h3>（2）社会保険・労働保険の加入</h3>
+<p>健康保険・厚生年金保険・雇用保険・労災保険への加入は法律上の義務である。社会保険の未加入は在留資格の申請が不許可となる原因にもなるため、確実に手続きを行う必要がある。</p>
+
+<h3>（3）各分野の協議会への加入</h3>
+<p>各分野の所管省庁が設置する「特定技能に関する協議会」への加入が義務付けられている。加入時期は分野によって異なるが、多くの場合、特定技能外国人の入社後4ヶ月以内に手続きを完了する必要がある。協議会の構成員としては、情報共有や必要な措置への協力義務が発生する。</p>
+
+<h3>（4）1号特定技能外国人支援計画の作成・実施</h3>
+<p>特定技能1号外国人を受け入れる場合、法令で定められた10項目の支援を含む「1号特定技能外国人支援計画」を作成し、確実に実施しなければならない。自社で支援体制を整えることが難しい場合は、登録支援機関に支援業務の全部を委託することが認められている。なお、特定技能2号外国人については支援計画の策定は不要である。</p>
+
+<h3>（5）届出義務</h3>
+<p>受入企業は、出入国在留管理庁に対して各種届出を行う義務がある。雇用契約の変更・終了、支援計画の変更、受入れ困難時の届出（随時届出）に加え、受入状況、支援実施状況、活動状況に関する定期届出（四半期ごと）が求められる。届出を怠った場合は罰則の対象となるため、適切な管理体制を構築しておくことが重要である。</p>
+
+<!-- 7. 支援計画の10項目 -->
+<h2 id="sec7">7. 支援計画の10項目</h2>
+<p>1号特定技能外国人支援計画には、以下の10項目の義務的支援を盛り込む必要がある。いずれの項目も省略は認められず、外国人材が本人の十分に理解できる言語で支援を受けられるようにしなければならない。</p>
+
+<ol class="support-list">
+  <li><strong>事前ガイダンス</strong><br>労働条件・業務内容・入国手続き・日本での生活に関する情報を、雇用契約締結後・入国前（在留資格変更前）に対面またはオンラインで実施する。3時間以上が目安。文書の交付のみでは不十分であり、双方向のコミュニケーションが必要。</li>
+  <li><strong>出入国時の送迎</strong><br>入国時の空港等から事業所または住居への送迎、帰国時の空港等への送迎を行う。出国が確認できるまで同行することが求められる。</li>
+  <li><strong>住居確保・生活に必要な契約支援</strong><br>社宅の提供、物件の紹介・契約手続きへの同行、連帯保証人となる等の方法により適切な住居を確保する。併せて、銀行口座の開設や携帯電話の契約など、生活に必要な契約手続きも支援する。</li>
+  <li><strong>生活オリエンテーション</strong><br>入国後（在留資格変更後）速やかに、8時間以上の生活オリエンテーションを実施する。日本のルール・マナー、公共交通機関の利用方法、医療機関の受診方法、災害時の対応、相談先の案内等を含む。</li>
+  <li><strong>公的手続等への同行</strong><br>市区町村での住民登録、社会保障・税に関する手続き等、必要な行政手続きへの同行および書類作成の補助を行う。</li>
+  <li><strong>日本語学習の機会の提供</strong><br>日本語教室や日本語学習教材に関する情報提供、日本語学習機会の確保に向けた支援を行う。受講費用の補助や学習時間の確保など、実効的な支援が求められる。</li>
+  <li><strong>相談・苦情への対応</strong><br>職場上・生活上の相談や苦情に対し、本人が十分に理解できる言語で適切に対応する体制を整備する。必要に応じて関係行政機関への案内やその他の適切な対応を行う。</li>
+  <li><strong>日本人との交流促進</strong><br>地域住民との交流の場（自治会・地域行事等）の案内、各種交流促進活動への参加支援を行う。日本社会への適応を促進する目的がある。</li>
+  <li><strong>転職支援（非自発的離職時）</strong><br>受入企業の都合による雇用契約の解除等、本人の責めに帰すべき事由によらない離職の場合に、新たな就職先を探すための情報提供や推薦状の作成等の支援を行う。求職活動のための有給休暇の付与等も含まれる。</li>
+  <li><strong>定期的な面談・行政機関への通報</strong><br>支援責任者または支援担当者が、3ヶ月に1回以上、外国人本人およびその監督者と定期的な面談を実施する。労働関連法令違反等を知ったときは、労働基準監督署やその他の関係行政機関に通報しなければならない。</li>
+</ol>
+
+<!-- 8. 登録支援機関とは -->
+<h2 id="sec8">8. 登録支援機関とは</h2>
+<p>登録支援機関とは、出入国在留管理庁長官の登録を受けた機関であり、特定技能所属機関（受入企業）から委託を受けて、1号特定技能外国人支援計画に定められた支援業務の全部を実施する機関である。受入企業が自社で支援体制を構築することが困難な場合に、登録支援機関に支援業務を委託することで、法令上の義務を適切に果たすことが可能となる。</p>
+
+<h3>登録支援機関の主な役割</h3>
+<ul>
+  <li>支援計画の作成補助</li>
+  <li>事前ガイダンスの実施</li>
+  <li>出入国時の送迎</li>
+  <li>住居確保・生活支援</li>
+  <li>生活オリエンテーションの実施</li>
+  <li>公的手続きへの同行</li>
+  <li>日本語学習機会の提供</li>
+  <li>相談・苦情への対応</li>
+  <li>日本人との交流促進</li>
+  <li>定期面談の実施・報告</li>
+  <li>各種届出の支援</li>
+</ul>
+
+<div class="note-box">
+  <b>ヒトキワは登録支援機関として全面サポートいたします。</b><br>
+  株式会社ヒトキワは、出入国在留管理庁の登録を受けた登録支援機関として、支援計画の策定から日常の支援業務まで一貫したサポートを提供しています。多言語対応のスタッフが、外国人材と受入企業双方の立場に立ったきめ細かな支援を行います。費用やサービス内容の詳細については、お気軽にお問い合わせください。
+</div>
+
+<!-- 9. 受け入れの一般的な流れ -->
+<h2 id="sec9">9. 受け入れの一般的な流れ</h2>
+<p>特定技能外国人の受入れプロセスは、対象者の所在地（海外または国内）によって手続きが異なる。以下に、それぞれの一般的な流れを示す。</p>
+
+<h3>（1）海外から新規に呼び寄せる場合</h3>
+<div class="flow-step"><span class="flow-num">1</span><span class="flow-text"><strong>求人・募集</strong> — 人材紹介会社や海外の送出機関を通じて候補者を募集する。</span></div>
+<div class="flow-arrow">&#9660;</div>
+<div class="flow-step"><span class="flow-num">2</span><span class="flow-text"><strong>面接・選考</strong> — オンラインまたは現地で面接を実施し、技能水準・人柄・日本語力を評価する。</span></div>
+<div class="flow-arrow">&#9660;</div>
+<div class="flow-step"><span class="flow-num">3</span><span class="flow-text"><strong>雇用契約の締結</strong> — 内定後、労働条件を明示した雇用契約書を締結する。</span></div>
+<div class="flow-arrow">&#9660;</div>
+<div class="flow-step"><span class="flow-num">4</span><span class="flow-text"><strong>支援計画の策定</strong> — 1号特定技能外国人支援計画を作成する（登録支援機関への委託も可）。</span></div>
+<div class="flow-arrow">&#9660;</div>
+<div class="flow-step"><span class="flow-num">5</span><span class="flow-text"><strong>在留資格認定証明書の申請</strong> — 出入国在留管理庁に申請。審査期間は約1〜3ヶ月。</span></div>
+<div class="flow-arrow">&#9660;</div>
+<div class="flow-step"><span class="flow-num">6</span><span class="flow-text"><strong>ビザ取得・入国</strong> — 認定証明書をもとに在外公館でビザを取得し、日本に入国する。</span></div>
+<div class="flow-arrow">&#9660;</div>
+<div class="flow-step"><span class="flow-num">7</span><span class="flow-text"><strong>就労開始</strong> — 住居確保・生活オリエンテーション等の支援を経て、就労を開始する。</span></div>
+
+<h3>（2）国内在住者を採用する場合</h3>
+<div class="flow-step"><span class="flow-num">1</span><span class="flow-text"><strong>求人・募集</strong> — 国内在住の外国人材（留学生、技能実習修了者等）に対して求人を行う。</span></div>
+<div class="flow-arrow">&#9660;</div>
+<div class="flow-step"><span class="flow-num">2</span><span class="flow-text"><strong>面接・選考</strong> — 対面またはオンラインで面接を実施し、選考を行う。</span></div>
+<div class="flow-arrow">&#9660;</div>
+<div class="flow-step"><span class="flow-num">3</span><span class="flow-text"><strong>雇用契約の締結</strong> — 労働条件を明示した雇用契約書を締結する。</span></div>
+<div class="flow-arrow">&#9660;</div>
+<div class="flow-step"><span class="flow-num">4</span><span class="flow-text"><strong>支援計画の策定</strong> — 1号特定技能外国人支援計画を作成する。</span></div>
+<div class="flow-arrow">&#9660;</div>
+<div class="flow-step"><span class="flow-num">5</span><span class="flow-text"><strong>在留資格変更許可申請</strong> — 出入国在留管理庁に申請。審査期間は約1〜2ヶ月。</span></div>
+<div class="flow-arrow">&#9660;</div>
+<div class="flow-step"><span class="flow-num">6</span><span class="flow-text"><strong>許可・就労開始</strong> — 変更許可後、就労を開始する。</span></div>
+
+<h3>（3）技能実習からの移行</h3>
+<p>技能実習2号を良好に修了した者は、技能試験・日本語試験が免除されるため、在留資格変更許可申請のみで特定技能1号への移行が可能である（同一分野への移行の場合）。技能実習の在留期間満了前に、余裕をもって雇用契約の締結と在留資格変更許可申請の準備を進めることが重要である。移行にあたっては、技能実習評価試験（専門級）の合格、または技能実習2号の良好な修了を証明する書類（実習実施者の評価調書等）が必要となる。</p>
+
+<!-- 10. よくある質問（共通） -->
+<h2 id="sec10">10. よくある質問（共通）</h2>
+<div class="faq-list">
+  <details class="faq-item">
+    <summary class="faq-q">特定技能と技能実習の違いは何ですか？</summary>
+    <div class="faq-a">最も大きな違いは制度の目的です。技能実習制度は「開発途上国への技能移転による国際貢献」を目的としているのに対し、特定技能制度は「国内の人材不足を補うための外国人材の受入れ」を正面から目的に掲げています。実務的な違いとしては、特定技能では同一分野内での転職が認められている点、人員配置基準の算定対象となる点（介護分野等）、受入人数枠が比較的柔軟である点などが挙げられます。また、特定技能は雇用関係に基づく在留資格であるため、外国人材は労働者としての権利が明確に保護されています。</div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-q">特定技能外国人は転職できますか？</summary>
+    <div class="faq-a">はい、特定技能1号・2号ともに、同一の産業分野内であれば転職が可能です。これは技能実習制度と大きく異なる点であり、外国人材の権利保護の観点から重要な制度設計です。転職にあたっては、新たな受入企業との雇用契約の締結と、在留資格変更許可申請（または指定書の変更）の手続きが必要です。なお、異なる分野への転職を希望する場合は、移行先分野の技能試験に合格する必要があります。</div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-q">家族を日本に呼ぶことはできますか？</summary>
+    <div class="faq-a">特定技能1号の在留資格では、原則として家族帯同は認められていません。一方、特定技能2号に移行した場合は、配偶者と子に限り家族滞在の在留資格で呼び寄せることが可能です。なお、介護分野には特定技能2号が存在しませんが、介護福祉士国家試験に合格して在留資格「介護」に移行すれば家族帯同が認められます。家族帯同が可能になることは、外国人材の定着意欲を高める大きな要因となるため、受入企業としても2号移行や資格取得の支援を積極的に検討することが重要です。</div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-q">特定技能1号の5年が終わったらどうなりますか？</summary>
+    <div class="faq-a">特定技能1号の通算在留期間は5年が上限であり、5年に達した時点で在留資格の更新はできなくなります。その後の選択肢としては、（1）特定技能2号への移行（2号が設定されている分野の場合）、（2）他の在留資格への変更（介護分野であれば在留資格「介護」への移行等）、（3）帰国、のいずれかとなります。2号への移行には各分野の2号技能評価試験への合格が必要です。受入企業としては、5年間のうちに外国人材が次のステップへ進めるよう、計画的な支援を行うことが望まれます。</div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-q">登録支援機関への委託は必須ですか？</summary>
+    <div class="faq-a">登録支援機関への委託は必須ではありません。受入企業が自社で支援体制を整え、支援計画に定められた10項目の義務的支援を適切に実施できるのであれば、登録支援機関に委託する必要はありません。ただし、自社で支援を行うためには、過去2年間に中長期在留者の受入れ実績があること、支援責任者・支援担当者を選任すること等の要件を満たす必要があります。初めて外国人材を受け入れる企業や、多言語対応が難しい企業の場合は、登録支援機関への委託を強くお勧めします。</div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-q">費用はどのくらいかかりますか？</summary>
+    <div class="faq-a">特定技能外国人の受入れにかかる費用は、業種、採用ルート（海外からの新規呼び寄せか国内在住者の採用か）、登録支援機関への委託の有無、人材紹介会社の利用の有無等によって大きく異なります。主な費用項目としては、人材紹介手数料、在留資格申請に関する費用、渡航費用（海外からの場合）、住居確保費用、登録支援機関への委託費用などが挙げられます。具体的な費用については、業種や採用ルートにより異なりますので、お気軽にお問い合わせください。</div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-q">何人まで受け入れられますか？</summary>
+    <div class="faq-a">特定技能外国人の受入人数の上限は、分野によって異なります。多くの分野では受入人数に明確な上限は設けられていませんが、介護分野では事業所単位で日本人等の常勤介護職員の総数が上限となっています。建設分野では、常勤職員の総数が上限となるほか、1号特定技能外国人の数が常勤職員の総数を超えてはならないという規定があります。各分野の具体的な上限については、所管省庁の運用要領を確認するか、お気軽にご相談ください。</div>
+  </details>
+</div>
+
+<!-- 11. おわりに -->
+<h2 id="sec11">11. おわりに</h2>
+<p>特定技能制度は、日本の産業界が直面する深刻な人手不足に対する実効的な解決策として、年々その重要性を増している。2024年の閣議決定による16分野への拡大は、制度に対する産業界の期待と需要の高さを如実に表している。受入企業にとっては、制度の正確な理解と適切な準備が、外国人材の円滑な受入れと長期的な定着を実現するための鍵となる。</p>
+<p>株式会社ヒトキワは、登録支援機関・有料職業紹介事業者として、特定技能外国人材の受入れに関するあらゆる場面をサポートしている。採用計画の策定、候補者の紹介、在留資格申請の支援、支援計画の策定・実施、入社後の定着支援まで、一貫した伴走型のサポートを提供する。どの分野で、どのような人材を、どのように受け入れればよいか ── まずはお気軽にご相談いただきたい。</p>
+
+</div>
+</div>
+
+<!-- ===== CTA ===== -->
+<div class="s-cta" id="cta">
+  <div class="cta-eyebrow">CONTACT US</div>
+  <h2>特定技能のお悩み、<br><span class="gold">まずは無料相談</span>ください</h2>
+  <a href="https://hito-kiwa.co.jp/contact/" class="cta-btn" target="_blank">お問い合わせはこちら</a>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-grid">
+      <div>
+        <h6>株式会社ヒトキワ</h6>
+        <p>〒102-0083 東京都千代田区麹町4丁目3-5 7階<br>TEL: 03-6842-0293 ／ MAIL: hitokiwa.info@gmail.com</p>
+        <p style="margin-top:12px">有料職業紹介事業許可番号 13-ユ-316441<br>登録支援機関登録番号 24登-009587</p>
+      </div>
+      <div>
+        <h6>サービス</h6>
+        <p>特定技能人材紹介<br>登録支援業務<br>ビザ申請サポート<br>定着支援プログラム</p>
+      </div>
+    </div>
+    <div class="foot-bottom">&copy; 2026 hitokiwa Inc. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- ===== FLOATING CTA (mobile) ===== -->
+<div class="float-cta">
+  <a href="https://hito-kiwa.co.jp/contact/" target="_blank">お問い合わせはこちら</a>
+</div>
+
+</body>
+</html>

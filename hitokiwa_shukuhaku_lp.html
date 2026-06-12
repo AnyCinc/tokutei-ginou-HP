@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>特定技能（宿泊分野）外国人材 受け入れガイド｜株式会社ヒトキワ</title>
+<meta name="description" content="特定技能（宿泊分野）の業務範囲・協議会加入・法令要件・採用フローを実務視点で解説。ホテル・旅館のインバウンド対応から採用・定着まで、株式会社ヒトキワがサポート。">
+<style>
+  :root{
+    --red:#c8102e;
+    --navy:#1a2a44;
+    --ivory:#faf7f2;
+    --gold:#c9a961;
+    --black:#1a1a1a;
+    --gray-700:#4a4f57;
+    --gray-500:#6b7280;
+    --gray-200:#e5e7eb;
+    --sans:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP","Yu Gothic Medium","Meiryo",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--ivory);color:var(--black);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+
+  /* ===== Top bar ===== */
+  .topbar{background:#fff;border-bottom:1px solid var(--gray-200);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(26,42,68,.06)}
+  .topbar-inner{max-width:800px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+  .logo{font-weight:900;font-size:20px;color:var(--navy);letter-spacing:.04em}
+  .logo span{color:var(--red)}
+  .top-cta{display:flex;gap:12px;align-items:center}
+  .top-tel{font-weight:900;color:var(--navy);font-size:16px;line-height:1.1}
+  .top-tel small{display:block;font-size:10px;color:var(--gray-700);font-weight:500;margin-top:2px}
+  .update-date{font-size:11px;color:var(--gray-500);text-align:right;line-height:1.3}
+  .update-date span{display:block;font-weight:700;color:var(--navy)}
+
+  /* ===== Hero ===== */
+  .hero{padding:72px 24px 56px;background:var(--navy);text-align:center;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--gold)}
+  .hero h1{font-size:32px;font-weight:900;line-height:1.6;color:#fff;letter-spacing:.02em;margin-bottom:16px}
+  .hero .subtitle{font-size:16px;color:rgba(255,255,255,.8);line-height:1.9;font-weight:500}
+
+  /* ===== Article body ===== */
+  .article{max-width:800px;margin:0 auto;padding:0 24px;font-size:16px;line-height:2.0;color:var(--black)}
+
+  /* ===== TOC ===== */
+  .toc{background:#fff;border:1px solid var(--gray-200);border-radius:8px;padding:32px 36px;margin:48px 0}
+  .toc-heading{font-size:16px;font-weight:900;color:var(--navy);margin-bottom:20px;text-align:center}
+  .toc ol{padding-left:24px;columns:2;column-gap:32px}
+  .toc ol li{font-size:14px;color:var(--gray-700);line-height:2.4;break-inside:avoid}
+  .toc ol li a{color:var(--navy);font-weight:700;transition:color .2s}
+  .toc ol li a:hover{color:var(--red)}
+
+  /* ===== Section heading ===== */
+  .article h2{
+    font-size:22px;font-weight:900;color:var(--navy);
+    border-left:5px solid var(--red);padding:8px 0 8px 20px;
+    margin:64px 0 28px;line-height:1.5;
+  }
+  .article h3{
+    font-size:18px;font-weight:900;color:var(--navy);
+    margin:36px 0 16px;line-height:1.5;
+  }
+
+  /* ===== Prose ===== */
+  .article p{margin-bottom:20px;color:var(--gray-700);text-align:justify}
+  .article p strong{color:var(--black);font-weight:700}
+  .article p .red{color:var(--red);font-weight:700}
+  .article a.common-link{color:var(--red);font-weight:700;text-decoration:underline}
+
+  /* ===== Table ===== */
+  .article table{width:100%;border-collapse:collapse;margin:28px 0 32px;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 2px 12px rgba(26,42,68,.06)}
+  .article table th,.article table td{padding:14px 18px;text-align:left;font-size:14px;line-height:1.7;border-bottom:1px solid var(--gray-200)}
+  .article table thead th{background:var(--navy);color:#fff;font-weight:900;font-size:14px}
+  .article table tbody th{background:#f3f4f6;font-weight:900;color:var(--navy);width:22%}
+  .article table tbody td{color:var(--gray-700)}
+  .article table tbody td strong{color:var(--navy)}
+
+  /* ===== Note box ===== */
+  .note-box{background:#fdf2f3;border:1px solid var(--red);border-left:5px solid var(--red);border-radius:6px;padding:20px 24px;margin:24px 0 28px;font-size:15px;color:#9d0a23;font-weight:600;line-height:1.9}
+
+  /* ===== Info box ===== */
+  .info-box{background:#fff;border:1px solid var(--gray-200);border-left:5px solid var(--navy);border-radius:6px;padding:20px 24px;margin:24px 0 28px;font-size:15px;color:var(--gray-700);line-height:1.9}
+  .info-box strong{color:var(--navy)}
+
+  /* ===== FAQ ===== */
+  .faq-item{background:#fff;border:1px solid var(--gray-200);border-radius:8px;margin-bottom:16px;overflow:hidden}
+  .faq-q{padding:20px 24px;font-weight:900;color:var(--navy);cursor:pointer;display:flex;gap:14px;align-items:baseline;font-size:15px;line-height:1.6}
+  .faq-q::before{content:"Q";background:var(--red);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;flex-shrink:0}
+  .faq-q::after{content:"+";color:var(--red);font-size:24px;font-weight:300;margin-left:auto;flex-shrink:0;transition:transform .2s}
+  .faq-a{padding:0 24px 24px 66px;color:var(--gray-700);font-size:15px;line-height:2.0;display:none}
+  details[open] .faq-q::after{content:"\2212"}
+  details[open] .faq-a{display:block}
+  details summary{list-style:none}
+  details summary::-webkit-details-marker{display:none}
+
+  /* ===== CTA ===== */
+  .cta-section{background:var(--navy);padding:56px 24px;text-align:center;margin-top:64px}
+  .cta-section h2{color:#fff;font-size:24px;font-weight:900;margin-bottom:8px;border:none;padding:0}
+  .cta-section p{color:rgba(255,255,255,.75);font-size:15px;margin-bottom:28px}
+  .cta-box{display:inline-flex;gap:24px;align-items:center;flex-wrap:wrap;justify-content:center}
+  .cta-tel-block{background:rgba(255,255,255,.1);border-radius:8px;padding:16px 28px;color:#fff}
+  .cta-tel-block .label{font-size:11px;font-weight:900;color:var(--gold);letter-spacing:.1em;margin-bottom:4px}
+  .cta-tel-block .number{font-size:28px;font-weight:900;letter-spacing:.04em}
+  .cta-tel-block .hours{font-size:12px;color:rgba(255,255,255,.6);margin-top:2px}
+
+  /* ===== Footer ===== */
+  footer{background:#0f1c30;color:rgba(255,255,255,.6);padding:36px 24px 20px;font-size:12px;text-align:center;line-height:2.0}
+  footer strong{color:rgba(255,255,255,.85);font-size:13px}
+  footer .copy{margin-top:16px;font-size:11px;color:rgba(255,255,255,.4)}
+
+  /* ===== Mobile ===== */
+  @media(max-width:600px){
+    .hero{padding:48px 20px 40px}
+    .hero h1{font-size:22px}
+    .toc ol{columns:1}
+    .article h2{font-size:19px}
+    .top-tel{display:none}
+    .cta-tel-block .number{font-size:22px}
+    .cta-box{flex-direction:column}
+  }
+  .cta-btn{display:inline-block;background:#c8102e;color:#fff;padding:18px 48px;border-radius:8px;font-weight:900;font-size:17px;letter-spacing:.04em;box-shadow:0 4px 20px rgba(200,16,46,.3);transition:all .2s;margin-top:24px;text-decoration:none}
+  .cta-btn:hover{background:#9d0a23;transform:translateY(-2px);color:#fff}
+</style>
+</head>
+<body>
+
+<!-- ===== TOP BAR ===== -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="logo">hito<span>kiwa</span></div>
+    <div class="top-cta">
+      <div class="update-date"><span>2026年6月12日</span>最終更新</div>
+      <div class="top-tel">03-6842-0293</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <h1>特定技能（宿泊分野）外国人材<br>受け入れガイド</h1>
+  <p class="subtitle">ホテル・旅館のサービス品質向上 ── インバウンド対応から採用・定着まで</p>
+</section>
+
+<!-- ===== ARTICLE ===== -->
+<div class="article">
+
+  <!-- TOC -->
+  <nav class="toc">
+    <div class="toc-heading">目 次</div>
+    <ol>
+      <li><a href="#sec1">はじめに</a></li>
+      <li><a href="#sec2">この分野の特徴</a></li>
+      <li><a href="#sec3">協議会への加入</a></li>
+      <li><a href="#sec4">業務範囲</a></li>
+      <li><a href="#sec5">受け入れまでの流れ</a></li>
+      <li><a href="#sec6">受入企業の要件</a></li>
+      <li><a href="#sec7">よくある質問（FAQ）</a></li>
+    </ol>
+  </nav>
+
+  <!-- 1. はじめに -->
+  <h2 id="sec1">1. はじめに</h2>
+
+  <p>宿泊業界は、インバウンド需要の急拡大と少子高齢化による国内労働力の減少が重なり、フロント・接客・レストランサービスなど対人業務を中心に深刻な人手不足が続いています。政府が2030年に訪日旅行者6,000万人の目標を掲げるなか、多言語対応力と専門的な接客技能を備えた人材の確保は、もはや経営上の必須課題となっています。</p>
+
+  <p>特定技能（宿泊分野）は、こうした課題に対応するために設けられた在留資格であり、一定の技能と日本語能力を有する外国人材を即戦力として受け入れることができます。特定技能制度の基本については<a href="hitokiwa_tokutei_common.html" class="common-link">こちら</a>をご覧ください。</p>
+
+  <!-- 2. この分野の特徴 -->
+  <h2 id="sec2">2. この分野の特徴</h2>
+
+  <p>宿泊分野には、他の特定技能分野にはない固有のルールや特徴があります。受入を検討される際には、以下の点を十分にご理解ください。</p>
+
+  <h3>旅館業法上の営業許可が必須</h3>
+  <p>受入企業は、旅館業法に基づく<strong>「旅館・ホテル営業」の許可</strong>を取得した施設を運営していることが必須要件です。簡易宿所営業や下宿営業の許可のみでは対象外となります。また、住宅宿泊事業法（民泊新法）に基づく届出のみで営業している施設も対象外です。</p>
+
+  <h3>客室清掃のみへの専従は不可</h3>
+  <p>特定技能（宿泊分野）は、宿泊サービス全般に従事することを前提とした在留資格です。<strong>客室清掃のみに専従させることは明確に禁止</strong>されています。清掃業務は、フロント・接客・レストランサービス等に従事するなかで付随的に行う場合に限り認められます。清掃専門の人材が必要な場合は、ビルクリーニング分野の特定技能をご検討ください。</p>
+
+  <h3>風営法による制限</h3>
+  <p>風営法第2条第6項第4号に規定する施設（いわゆるラブホテル等）は受入対象外です。また、風営法第2条第3項に規定する「接待」（歓楽的雰囲気を醸し出す方法により客をもてなす行為）に外国人材を従事させることも認められていません。</p>
+
+  <h3>直接雇用のみ（派遣不可）</h3>
+  <p>宿泊分野では、受入機関との<strong>直接雇用のみ</strong>が認められており、労働者派遣による受入は一切不可です。人材紹介会社を通じた候補者の紹介を受け、受入企業が直接雇用する形態は適法です。</p>
+
+  <h3>2号への移行が可能</h3>
+  <p>2023年の閣議決定により、宿泊分野でも特定技能2号の受入が開始されました。2号評価試験の合格と、複数の従業員を指導しながら宿泊サービスの提供に係る業務に従事した実務経験が必要です。2号は在留期間の上限がなく、家族帯同（配偶者・子）も可能です。</p>
+
+  <!-- 3. 協議会への加入 -->
+  <h2 id="sec3">3. 協議会への加入</h2>
+
+  <table>
+    <tbody>
+      <tr>
+        <th>正式名称</th>
+        <td><strong>宿泊分野特定技能協議会</strong></td>
+      </tr>
+      <tr>
+        <th>設置省庁</th>
+        <td>国土交通省（観光庁）</td>
+      </tr>
+      <tr>
+        <th>加入費用</th>
+        <td><strong>無料</strong></td>
+      </tr>
+      <tr>
+        <th>加入時期</th>
+        <td><strong class="red">在留資格の申請前に加入を完了していることが必須</strong>（2024年6月15日以降の申請が対象）。従来は初回受入後でよいとされていたが、制度運用の厳格化に伴い申請前の加入が要件化された。</td>
+      </tr>
+      <tr>
+        <th>加入方法</th>
+        <td>オンラインで申請。審査に一定の期間を要する場合があるため、受入検討段階で早期に手続きを開始することが望ましい。</td>
+      </tr>
+      <tr>
+        <th>義務内容</th>
+        <td>構成員として、受入状況に関する情報提供、各種調査への協力、協議会の活動に対する必要な協力を行う義務を負う。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="note-box">
+    <strong>重要：</strong>2024年6月15日以降に在留資格の申請を行う場合は、申請前に協議会への加入を完了していることが必須です。受入を検討する段階で早期に手続きを開始してください。
+  </div>
+
+  <!-- 4. 業務範囲 -->
+  <h2 id="sec4">4. 業務範囲</h2>
+
+  <p>特定技能（宿泊分野）で従事可能な業務は、宿泊施設における宿泊サービスの提供に係る幅広い領域に及びます。以下のような業務を適切に組み合わせ、外国人材が宿泊サービス全般に関与する形での就労が求められます。</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>業務区分</th>
+        <th>主な内容</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>フロント業務</th>
+        <td>チェックイン・チェックアウト、料金精算・会計、予約受付・確認・変更対応、館内施設・周辺情報の案内</td>
+      </tr>
+      <tr>
+        <th>接客サービス</th>
+        <td>客室への案内・設備説明、観光案内・コンシェルジュ業務、各種リクエスト対応、クレーム対応</td>
+      </tr>
+      <tr>
+        <th>レストランサービス</th>
+        <td>配膳・下膳、オーダーテイク、料理・ドリンクの説明、アレルギー対応、テーブルセッティング（※宿泊施設の付帯施設としてのレストランに限る）</td>
+      </tr>
+      <tr>
+        <th>客室管理</th>
+        <td>備品の点検・補充、忘れ物の確認・管理、設備不具合の発見と報告、清掃状態の確認（※清掃のみへの専従は不可）</td>
+      </tr>
+      <tr>
+        <th>予約管理</th>
+        <td>電話・メール・OTA等の予約受付・変更・キャンセル処理、予約データ入力・管理、空室状況の把握</td>
+      </tr>
+      <tr>
+        <th>企画・広報</th>
+        <td>宿泊プランの企画・立案、SNS・ウェブサイトの情報発信、インバウンド向けプロモーション、多言語パンフレット制作</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 5. 受け入れまでの流れ -->
+  <h2 id="sec5">5. 受け入れまでの流れ</h2>
+
+  <p>特定技能（宿泊分野）の外国人材を採用し、就労を開始するまでの標準的な流れは以下のとおりです。</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ステップ</th>
+        <th>内容</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>1. 受入計画の策定</th>
+        <td>必要人数、業務範囲、求める語学力・経験、雇用開始時期等を整理。登録支援機関や人材紹介会社への相談を開始。</td>
+      </tr>
+      <tr>
+        <th>2. 協議会への加入</th>
+        <td>宿泊分野特定技能協議会に加入（在留資格の申請前に完了が必須）。</td>
+      </tr>
+      <tr>
+        <th>3. 候補者の選定</th>
+        <td>国内在住者（留学生・技能実習修了者等）または海外からの呼び寄せ。人材紹介会社等を活用して候補者を選定。</td>
+      </tr>
+      <tr>
+        <th>4. 面接の実施</th>
+        <td>技能水準、日本語能力、接客適性、就労意欲等を総合的に評価。海外在住の場合はオンライン面接。</td>
+      </tr>
+      <tr>
+        <th>5. 雇用契約の締結</th>
+        <td>業務内容、就業場所、労働時間、報酬額等を明記した特定技能雇用契約を締結。母語等による雇用条件書を交付。</td>
+      </tr>
+      <tr>
+        <th>6. 支援計画の策定</th>
+        <td>1号の場合、法令に基づく支援計画を策定。登録支援機関への委託も可能。</td>
+      </tr>
+      <tr>
+        <th>7. 在留資格の申請</th>
+        <td>出入国在留管理庁に対して認定証明書交付申請（海外）または在留資格変更許可申請（国内）を行う。</td>
+      </tr>
+      <tr>
+        <th>8. 入国・入社準備</th>
+        <td>ビザ発給手続き・渡航手配（海外の場合）、住居確保、銀行口座開設支援、事前ガイダンスの実施。</td>
+      </tr>
+      <tr>
+        <th>9. 就労開始</th>
+        <td>生活オリエンテーション、定期面談、日本語学習の機会提供等、継続的な定着支援を実施。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="info-box">
+    <strong>所要期間の目安：</strong>国内在住者の場合は採用決定から就労開始まで概ね1.5か月から3か月、海外からの呼び寄せの場合は3か月から5か月程度を見込む必要があります。
+  </div>
+
+  <!-- 6. 受入企業の要件 -->
+  <h2 id="sec6">6. 受入企業の要件</h2>
+
+  <p>宿泊分野で特定技能外国人を受け入れる企業には、以下の要件が求められます。</p>
+
+  <h3>旅館業法の営業許可</h3>
+  <p>旅館業法に基づく<strong>「旅館・ホテル営業」の許可</strong>を取得した施設を運営していることが必須です。簡易宿所営業や民泊新法の届出のみでは対象外となります。</p>
+
+  <h3>風営法の制限に該当しないこと</h3>
+  <p>風営法第2条第6項第4号に規定する施設（ラブホテル等）に該当しないこと。「接待」に該当する行為に外国人材を従事させないこと。</p>
+
+  <h3>報酬の同等性</h3>
+  <p>日本人が従事する場合の報酬と同等額以上の報酬を支払うことが法令上の義務です。基本給のみならず、各種手当や賞与を含めた総合的な報酬水準の均衡が求められます。</p>
+
+  <h3>社会保険の加入</h3>
+  <p>健康保険、厚生年金保険、雇用保険、労災保険について法令に基づく適正な加入が必要です。</p>
+
+  <h3>宿泊分野特定技能協議会への加入</h3>
+  <p>在留資格の申請前に加入を完了していることが必須です（詳細は「3. 協議会への加入」を参照）。</p>
+
+  <!-- 7. FAQ -->
+  <h2 id="sec7">7. よくある質問（FAQ）</h2>
+
+  <details class="faq-item">
+    <summary class="faq-q">客室清掃のみの業務に従事させることは可能ですか。</summary>
+    <div class="faq-a">認められていません。特定技能（宿泊分野）は、宿泊サービス全般に従事することを前提とした在留資格であり、客室清掃のみに専従させることは制度の趣旨に反します。清掃を主たる業務とする人材が必要な場合は、ビルクリーニング分野の特定技能をご検討ください。</div>
+  </details>
+
+  <details class="faq-item">
+    <summary class="faq-q">レストラン業務のみに配置することはできますか。</summary>
+    <div class="faq-a">宿泊施設内のレストランにおけるサービス業務は認められていますが、あくまで宿泊サービス全般に従事することが前提です。レストラン業務のみに専従させることは望ましい運用ではありません。なお、宿泊施設から独立した飲食店舗での業務は、外食業分野の特定技能が適切な在留資格となります。</div>
+  </details>
+
+  <details class="faq-item">
+    <summary class="faq-q">民泊（住宅宿泊事業）でも外国人材を受け入れられますか。</summary>
+    <div class="faq-a">住宅宿泊事業法（民泊新法）に基づく届出のみで営業している施設は対象外です。旅館業法に基づく「旅館・ホテル営業」の許可が必須要件です。民泊施設であっても別途「旅館・ホテル営業」許可を取得している場合は対象となり得ますので、個別にご確認ください。</div>
+  </details>
+
+  <details class="faq-item">
+    <summary class="faq-q">夜勤シフトに外国人材を配置することは可能ですか。</summary>
+    <div class="faq-a">可能です。ただし、午後10時から翌午前5時までの深夜労働に対しては25%以上の割増賃金を支払う義務があります。十分な休息時間の確保やシフト間のインターバル確保にも配慮が必要です。</div>
+  </details>
+
+  <details class="faq-item">
+    <summary class="faq-q">同一法人が運営する複数のホテルで働かせることはできますか。</summary>
+    <div class="faq-a">雇用契約書および在留資格の申請書類において就業場所として各施設が明記されていることを条件に、認められます。ただし、異なる法人の施設に配置することは派遣に該当するため不可です。</div>
+  </details>
+
+  <details class="faq-item">
+    <summary class="faq-q">受け入れにかかる費用はどのくらいですか。</summary>
+    <div class="faq-a">業種や採用ルートにより異なりますので、お気軽にお問い合わせください。</div>
+  </details>
+
+</div>
+
+<!-- ===== CTA ===== -->
+<section class="cta-section">
+  <h2>外国人材の採用に関するご相談</h2>
+  <p>特定技能（宿泊分野）の受入に関するお問い合わせはお気軽にどうぞ。</p>
+  <a href="https://hito-kiwa.co.jp/contact/" class="cta-btn" target="_blank">お問い合わせはこちら</a>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <strong>株式会社ヒトキワ</strong><br>
+  〒102-0083 東京都千代田区麹町4丁目3-5<br>
+  TEL: 03-6842-0293<br>
+  有料職業紹介事業 許可番号: 13-ユー316856 ／ 登録支援機関 登録番号: 24登ー010827
+  <div class="copy">&copy; 2024 株式会社ヒトキワ All Rights Reserved.</div>
+</footer>
+
+</body>
+</html>
