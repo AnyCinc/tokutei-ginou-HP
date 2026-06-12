@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>特定技能 全16分野ガイド一覧｜株式会社ヒトキワ</title>
+<meta name="description" content="特定技能制度の全16分野それぞれの受入要件・協議会・業務範囲を解説。各業種の詳細ガイドページへのリンク一覧。">
+<style>
+  :root{
+    --red:#c8102e;
+    --red-2:#9d0a23;
+    --navy:#1a2a44;
+    --navy-2:#0f1c30;
+    --ivory:#faf7f2;
+    --gold:#c9a961;
+    --black:#1a1a1a;
+    --gray-700:#4a4f57;
+    --gray-500:#8a8f97;
+    --gray-200:#e5e7eb;
+    --gray-100:#f3f4f6;
+    --sans:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP","Yu Gothic Medium","Meiryo",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#fff;color:var(--black);font-family:var(--sans);line-height:1.8;font-size:15px;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+
+  /* Top bar */
+  .topbar{background:#fff;border-bottom:1px solid var(--gray-200);position:sticky;top:0;z-index:100}
+  .topbar-inner{max-width:1000px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+  .logo{font-weight:900;font-size:20px;color:var(--navy);letter-spacing:.04em}
+  .logo span{color:var(--red)}
+  .top-cta{display:flex;gap:14px;align-items:center}
+  .top-tel{font-weight:900;color:var(--navy);font-size:16px}
+  .btn-contact{background:var(--navy);color:#fff;padding:10px 22px;border-radius:4px;font-weight:700;font-size:13px;transition:background .2s}
+  .btn-contact:hover{background:var(--navy-2)}
+
+  /* Hero */
+  .hero{padding:64px 24px 48px;text-align:center;background:var(--ivory);border-bottom:1px solid var(--gray-200)}
+  .hero h1{font-size:30px;font-weight:900;color:var(--navy);line-height:1.6;margin-bottom:12px}
+  .hero h1 em{font-style:normal;color:var(--red)}
+  .hero p{font-size:15px;color:var(--gray-700);max-width:600px;margin:0 auto}
+
+  /* Fields grid */
+  .fields-sec{max-width:1000px;margin:0 auto;padding:56px 24px 80px}
+  .fields-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .field-card{display:block;background:#fff;border:1px solid var(--gray-200);border-radius:6px;padding:28px 24px;transition:all .2s;position:relative}
+  .field-card:hover{border-color:var(--red);box-shadow:0 4px 16px rgba(200,16,46,.08);transform:translateY(-2px)}
+  .field-card h3{font-size:18px;font-weight:900;color:var(--navy);margin-bottom:6px}
+  .field-card p{font-size:13px;color:var(--gray-500);line-height:1.7}
+  .field-card .arrow{position:absolute;top:28px;right:20px;color:var(--gray-200);font-size:18px;transition:color .2s}
+  .field-card:hover .arrow{color:var(--red)}
+  .field-card.soon{opacity:.5;pointer-events:none}
+  .field-card.soon::after{content:"準備中";position:absolute;top:12px;right:16px;font-size:11px;font-weight:700;color:#fff;background:var(--gray-500);padding:2px 10px;border-radius:3px}
+  .field-card.soon .arrow{display:none}
+
+  /* Common link */
+  .common-link{max-width:1000px;margin:0 auto;padding:0 24px 56px}
+  .common-box{background:var(--ivory);border:1px solid var(--gray-200);border-radius:6px;padding:28px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .common-box h3{font-size:16px;font-weight:900;color:var(--navy)}
+  .common-box p{font-size:13px;color:var(--gray-500);margin-top:4px}
+  .common-box .btn{background:var(--navy);color:#fff;padding:12px 28px;border-radius:4px;font-weight:700;font-size:14px;white-space:nowrap;transition:background .2s}
+  .common-box .btn:hover{background:var(--navy-2)}
+
+  /* CTA */
+  .cta{background:var(--navy);color:#fff;padding:64px 24px;text-align:center}
+  .cta h2{font-size:24px;font-weight:900;margin-bottom:12px}
+  .cta p{font-size:14px;color:rgba(255,255,255,.6);margin-bottom:28px}
+  .btn-main{display:inline-block;background:var(--red);color:#fff;padding:16px 44px;border-radius:4px;font-weight:900;font-size:16px;transition:all .2s}
+  .btn-main:hover{background:var(--red-2)}
+
+  /* Footer */
+  footer{background:var(--navy-2);color:rgba(255,255,255,.5);padding:32px 24px 16px;font-size:11px;text-align:center;line-height:1.9}
+
+  /* Mobile */
+  @media(max-width:768px){
+    .hero{padding:48px 20px 36px}
+    .hero h1{font-size:22px}
+    .fields-grid{grid-template-columns:1fr}
+    .common-box{flex-direction:column;text-align:center}
+    .cta h2{font-size:20px}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="logo">hito<span>kiwa</span></div>
+    <div class="top-cta">
+      <div class="top-tel">03-6842-0293</div>
+      <a href="https://hito-kiwa.co.jp/contact/" class="btn-contact" target="_blank">お問い合わせ</a>
+    </div>
+  </div>
+</div>
+
+<section class="hero">
+  <h1>特定技能 <em>全16分野</em> ガイド一覧</h1>
+  <p>各分野の受入要件・協議会加入・業務範囲・受け入れまでの流れを業種別に解説しています。</p>
+</section>
+
+<div class="fields-sec">
+  <div class="fields-grid">
+
+    <a href="hitokiwa_kaigo_lp.html" class="field-card">
+      <span class="arrow">→</span>
+      <h3>介護</h3>
+      <p>身体介護・生活支援。訪問介護は対象外。協議会加入無料。</p>
+    </a>
+
+    <a href="hitokiwa_kensetsu_lp.html" class="field-card">
+      <span class="arrow">→</span>
+      <h3>建設</h3>
+      <p>土木・建築・ライフライン設備の3区分。CCUS・JAC加入必須。</p>
+    </a>
+
+    <a href="hitokiwa_nogyo_lp.html" class="field-card">
+      <span class="arrow">→</span>
+      <h3>農業</h3>
+      <p>耕種農業・畜産農業の2区分。派遣形態OK。</p>
+    </a>
+
+    <a href="hitokiwa_shukuhaku_lp.html" class="field-card">
+      <span class="arrow">→</span>
+      <h3>宿泊</h3>
+      <p>フロント・企画・広報・接客・レストランサービス。</p>
+    </a>
+
+    <a href="hitokiwa_gaishoku_lp.html" class="field-card">
+      <span class="arrow">→</span>
+      <h3>外食業</h3>
+      <p>飲食物調理・接客・店舗管理。※現在一部申請停止中。</p>
+    </a>
+
+    <a href="hitokiwa_jidosha_lp.html" class="field-card">
+      <span class="arrow">→</span>
+      <h3>自動車整備</h3>
+      <p>日常点検・定期点検・分解整備。認証工場が必須要件。</p>
+    </a>
+
+    <a href="hitokiwa_cleaning_lp.html" class="field-card">
+      <span class="arrow">→</span>
+      <h3>ビルクリーニング</h3>
+      <p>建築物内部の清掃。特定建築物が対象。</p>
+    </a>
+
+    <a href="hitokiwa_unso_lp.html" class="field-card">
+      <span class="arrow">→</span>
+      <h3>自動車運送業</h3>
+      <p>トラック・バス・タクシーの3区分。免許取得フローあり。</p>
+    </a>
+
+    <div class="field-card soon">
+      <h3>飲食料品製造業</h3>
+      <p>食料品・飲料の製造加工・安全衛生管理。</p>
+    </div>
+
+    <div class="field-card soon">
+      <h3>製造業（素形材・産業機械・電気電子）</h3>
+      <p>鋳造・鍛造・金属プレス・溶接・塗装・機械加工ほか。</p>
+    </div>
+
+    <div class="field-card soon">
+      <h3>漁業</h3>
+      <p>漁業・養殖業の2区分。派遣形態OK。</p>
+    </div>
+
+    <div class="field-card soon">
+      <h3>造船・舶用工業</h3>
+      <p>溶接・仕上げ・塗装・機械加工・電気機器組立て。</p>
+    </div>
+
+    <div class="field-card soon">
+      <h3>航空</h3>
+      <p>空港グランドハンドリング・航空機整備。</p>
+    </div>
+
+    <div class="field-card soon">
+      <h3>林業</h3>
+      <p>育林・素材生産等の林業作業全般。</p>
+    </div>
+
+    <div class="field-card soon">
+      <h3>木材産業</h3>
+      <p>製材・合板製造等の木材加工。</p>
+    </div>
+
+    <div class="field-card soon">
+      <h3>鉄道</h3>
+      <p>軌道整備・電気設備整備・車両整備。</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="common-link">
+  <a href="hitokiwa_tokutei_common.html" class="common-box">
+    <div>
+      <h3>特定技能制度 共通ガイド</h3>
+      <p>全分野に共通する制度概要・1号/2号の違い・支援計画・登録支援機関について</p>
+    </div>
+    <span class="btn">詳しく見る →</span>
+  </a>
+</div>
+
+<section class="cta">
+  <h2>どの分野でもお気軽にご相談ください</h2>
+  <p>制度の基本的なご質問から、具体的な採用計画のご相談まで対応いたします。</p>
+  <a href="https://hito-kiwa.co.jp/contact/" class="btn-main" target="_blank">お問い合わせはこちら</a>
+</section>
+
+<footer>
+  株式会社ヒトキワ｜〒102-0083 東京都千代田区麹町4丁目3-5 7階｜TEL: 03-6842-0293<br>
+  有料職業紹介事業許可番号 13-ユ-316856｜登録支援機関登録番号 24登-010827<br>
+  &copy; 2026 hitokiwa Inc. All rights reserved.
+</footer>
+
+</body>
+</html>
