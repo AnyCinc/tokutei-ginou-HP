@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>カテル｜カテゴリー2にあがって、厳格化に勝てる採用を｜株式会社ヒトキワ</title>
+<meta name="description" content="2026年4月の技人国ビザ厳格化に対応。カテゴリー2相当の申請体制を整え、N2不要・書類簡素化・審査迅速化を実現。株式会社ヒトキワ。">
+<style>
+  :root{
+    --red:#c8102e;
+    --red-2:#9d0a23;
+    --navy:#1a2a44;
+    --navy-2:#0f1c30;
+    --ivory:#faf7f2;
+    --black:#1a1a1a;
+    --gray-700:#4a4f57;
+    --gray-500:#8a8f97;
+    --gray-200:#e5e7eb;
+    --gray-100:#f3f4f6;
+    --sans:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP","Yu Gothic Medium","Meiryo",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#fff;color:var(--black);font-family:var(--sans);line-height:1.8;font-size:15px;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+
+  /* Top bar */
+  .topbar{background:#fff;border-bottom:1px solid var(--gray-200);position:sticky;top:0;z-index:100}
+  .topbar-inner{max-width:1000px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+  .logo{font-weight:900;font-size:20px;color:var(--navy);letter-spacing:.04em}
+  .logo span{color:var(--red)}
+  .top-cta{display:flex;gap:14px;align-items:center}
+  .top-tel{font-weight:900;color:var(--navy);font-size:16px}
+  .btn-contact{background:var(--navy);color:#fff;padding:10px 22px;border-radius:4px;font-weight:700;font-size:13px;transition:background .2s}
+  .btn-contact:hover{background:var(--navy-2)}
+
+  /* Hero */
+  .hero{padding:72px 24px 64px;max-width:800px;margin:0 auto}
+  .hero-top{display:flex;align-items:center;gap:16px;margin-bottom:40px}
+  .hero-service{font-size:32px;font-weight:900;color:var(--navy);letter-spacing:.06em}
+  .hero-dash{width:40px;height:2px;background:var(--gray-200)}
+  .hero-tagline-sm{font-size:12px;color:var(--gray-500);letter-spacing:.04em}
+  .hero h1{font-size:28px;font-weight:900;color:var(--black);line-height:1.7;margin-bottom:20px}
+  .hero-desc{font-size:15px;color:var(--gray-700);line-height:2;margin-bottom:36px}
+  .hero-desc strong{color:var(--navy)}
+  .btn-primary{display:inline-block;background:var(--red);color:#fff;padding:14px 40px;border-radius:4px;font-weight:700;font-size:15px;transition:background .2s;letter-spacing:.04em}
+  .btn-primary:hover{background:var(--red-2)}
+
+  /* Section base */
+  .sec{max-width:800px;margin:0 auto;padding:64px 24px}
+  .sec-bg{background:var(--ivory);border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200)}
+  .sec h2{font-size:20px;font-weight:900;color:var(--navy);margin-bottom:32px;line-height:1.6;letter-spacing:.02em}
+  .sec h2 .accent{color:var(--red)}
+  .sub-lead{font-size:14px;color:var(--gray-500);margin:-24px 0 32px;line-height:1.8}
+
+  /* Divider line */
+  .divider{border:none;border-top:1px solid var(--gray-200);margin:0}
+
+  /* Alert */
+  .alert{border-left:4px solid var(--red);padding:24px 28px;background:var(--ivory);margin-bottom:32px}
+  .alert h3{font-size:16px;font-weight:900;color:var(--red);margin-bottom:8px}
+  .alert p{font-size:14px;color:var(--gray-700);line-height:1.9}
+
+  /* Voice list */
+  .voice-list{margin:24px 0 0;display:flex;flex-direction:column;gap:8px}
+  .voice-item{padding:14px 20px;border:1px solid var(--gray-200);border-radius:4px;font-size:14px;color:var(--gray-700);background:#fff}
+  .voice-item::before{content:"\2014 \00a0";color:var(--gray-500)}
+
+  /* Connector */
+  .connector{text-align:center;padding:28px 20px;background:var(--navy);color:#fff;font-weight:700;font-size:15px;line-height:1.7;margin-top:32px}
+
+  /* Table */
+  .tbl{width:100%;border-collapse:collapse;font-size:13px;margin-top:4px}
+  .tbl th,.tbl td{border:1px solid var(--gray-200);padding:12px 14px;text-align:left;vertical-align:top}
+  .tbl thead th{background:var(--navy);color:#fff;font-weight:700;font-size:12px}
+  .tbl tbody th{background:var(--gray-100);font-weight:700;white-space:nowrap;width:100px}
+  .tbl .hl{background:rgba(200,16,46,.04);border:2px solid var(--red)}
+  .tbl .hl th{background:rgba(200,16,46,.08);color:var(--red)}
+  .badge{display:inline-block;background:var(--red);color:#fff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;margin-left:4px}
+
+  /* Callout box */
+  .callout{padding:16px 20px;background:var(--ivory);border:1px solid var(--gray-200);font-size:13px;color:var(--gray-700);line-height:1.8;margin-top:16px}
+  .callout strong{color:var(--navy)}
+
+  /* Merit */
+  .merit-primary{border-left:4px solid var(--red);padding:24px 28px;background:var(--ivory);margin-bottom:24px}
+  .merit-primary h4{font-size:16px;font-weight:900;color:var(--red);margin-bottom:8px}
+  .merit-primary p{font-size:14px;color:var(--gray-700);line-height:1.9}
+  .merit-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .merit-card{border:1px solid var(--gray-200);padding:20px;background:#fff}
+  .merit-card h4{font-size:14px;font-weight:900;color:var(--navy);margin-bottom:6px}
+  .merit-card p{font-size:13px;color:var(--gray-500);line-height:1.8}
+
+  /* Steps */
+  .steps{display:flex;flex-direction:column;gap:0;counter-reset:step}
+  .step{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid var(--gray-200)}
+  .step:last-child{border-bottom:none}
+  .step-num{flex-shrink:0;width:28px;height:28px;display:flex;align-items:center;justify-content:center;background:var(--navy);color:#fff;border-radius:50%;font-size:13px;font-weight:900;margin-top:2px}
+  .step h4{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:2px}
+  .step p{font-size:13px;color:var(--gray-700);line-height:1.7}
+
+  /* Price */
+  .price-block{text-align:center;padding:40px;border:1px solid var(--gray-200);background:#fff;margin-bottom:20px}
+  .price-label{font-size:13px;color:var(--gray-500);margin-bottom:8px}
+  .price-num{font-size:44px;font-weight:900;color:var(--navy);letter-spacing:.02em}
+  .price-num small{font-size:16px;font-weight:700}
+  .price-sub{font-size:13px;color:var(--gray-500);margin-top:8px}
+  .price-detail{font-size:12px;color:var(--gray-500);line-height:1.8;padding:16px 20px;background:var(--gray-100)}
+
+  /* FAQ */
+  .faq-item{border-bottom:1px solid var(--gray-200)}
+  .faq-item:first-of-type{border-top:1px solid var(--gray-200)}
+  .faq-q{padding:18px 36px 18px 0;font-size:14px;font-weight:700;color:var(--navy);cursor:pointer;list-style:none;position:relative;line-height:1.6}
+  .faq-q::after{content:"+";position:absolute;right:0;top:18px;font-size:18px;color:var(--gray-500)}
+  .faq-item[open] .faq-q::after{content:"\2212"}
+  .faq-q::-webkit-details-marker{display:none}
+  .faq-a{padding:0 0 20px;font-size:13px;color:var(--gray-700);line-height:1.9}
+  .faq-a p{margin-bottom:8px}
+  .faq-a ul{margin:8px 0 8px 20px}
+  .faq-a li{margin-bottom:4px}
+
+  /* CTA */
+  .cta{background:var(--navy);padding:56px 24px;text-align:center}
+  .cta-inner{max-width:560px;margin:0 auto}
+  .cta h2{font-size:20px;font-weight:900;color:#fff;margin-bottom:12px;line-height:1.7}
+  .cta p{font-size:14px;color:rgba(255,255,255,.55);margin-bottom:28px;line-height:1.8}
+  .cta .btn-primary{margin-bottom:16px}
+  .cta-tel{font-size:13px;color:rgba(255,255,255,.4)}
+  .cta-tel strong{color:#fff;font-size:18px}
+
+  /* Disclaimer */
+  .disclaimer{max-width:800px;margin:0 auto;padding:32px 24px;font-size:11px;color:var(--gray-500);line-height:1.8}
+
+  /* Footer */
+  footer{background:var(--navy-2);color:rgba(255,255,255,.5);padding:28px 24px 14px;font-size:11px;text-align:center;line-height:1.9}
+
+  /* Note */
+  .note{font-size:11px;color:var(--gray-500);margin-top:8px}
+
+  /* Mobile */
+  @media(max-width:768px){
+    .hero h1{font-size:22px}
+    .hero-service{font-size:26px}
+    .merit-pair{grid-template-columns:1fr}
+    .tbl{font-size:11px}
+    .tbl th,.tbl td{padding:8px 10px}
+    .price-num{font-size:36px}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="logo">hito<span>kiwa</span></div>
+    <div class="top-cta">
+      <div class="top-tel">03-6842-0293</div>
+      <a href="https://hito-kiwa.co.jp/contact/" class="btn-contact" target="_blank">お問い合わせ</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Hero ===== -->
+<section class="hero">
+  <div class="hero-top">
+    <div class="hero-service">カテル</div>
+    <div class="hero-dash"></div>
+    <div class="hero-tagline-sm">カテゴリー2にあがって、厳格化に<span style="color:var(--red);font-weight:700">勝てる</span>採用を</div>
+  </div>
+  <h1>技人国ビザが厳格化された今、<br>採用できる人材の幅を<br>狭めないための体制づくり。</h1>
+  <p class="hero-desc">2026年4月15日から、カテゴリー3・4の企業は対人業務の申請で<strong>N2相当の言語能力証明</strong>が必要に。カテルは、御社の申請体制をカテゴリー2相当に引き上げ、この追加要件の対象から外れる仕組みをつくります。</p>
+  <a href="https://hito-kiwa.co.jp/contact/" class="btn-primary" target="_blank">無料相談する</a>
+</section>
+
+<!-- ===== Video ===== -->
+<div class="sec" style="padding-bottom:0">
+  <div style="max-width:640px;margin:0 auto">
+    <div style="aspect-ratio:16/9;border-radius:6px;overflow:hidden;border:1px solid var(--gray-200)">
+      <iframe src="https://www.youtube-nocookie.com/embed/v-jVqY8f2mQ" title="カテル サービス紹介" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen style="width:100%;height:100%"></iframe>
+    </div>
+  </div>
+</div>
+
+<hr class="divider" style="max-width:800px;margin:48px auto 0">
+
+<!-- ===== What changed ===== -->
+<div class="sec">
+  <h2>何が変わったのか</h2>
+  <div class="alert">
+    <h3>カテゴリー3・4の企業に、N2相当の言語能力証明が追加</h3>
+    <p>通訳・ホテルフロント・接客など、主に日本語の言語能力を使う対人業務で技人国ビザを申請する場合、N2（CEFR B2相当）の証明が必要になりました。</p>
+  </div>
+  <p style="font-size:14px;color:var(--gray-700);line-height:2">しかし実際には、<strong>仕事上のコミュニケーションに問題がなくても、N2までは取得していない方が非常に多い</strong>のが現状です。その結果&#8212;</p>
+  <div class="voice-list">
+    <div class="voice-item">採用したい人がいるのに、ビザ申請が通らない</div>
+    <div class="voice-item">技人国で申請できず、採用を諦めるしかない</div>
+    <div class="voice-item">特定技能に変更したくても、仕事内容が対象外</div>
+    <div class="voice-item">求職者が日本での就職自体を諦めてしまう</div>
+  </div>
+  <div class="connector">この問題を解決する鍵が「カテゴリー2相当」の体制</div>
+</div>
+
+<hr class="divider">
+
+<!-- ===== Category ===== -->
+<div class="sec-bg">
+  <div class="sec">
+    <h2>企業カテゴリーと申請要件</h2>
+    <div style="overflow-x:auto">
+    <table class="tbl">
+      <thead>
+        <tr><th>区分</th><th>該当企業の例</th><th>添付書類</th><th>日本語要件（対人業務）</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>カテゴリー1</th>
+          <td>上場企業・国/自治体 など</td>
+          <td>大幅に簡素</td>
+          <td>原則不要</td>
+        </tr>
+        <tr class="hl">
+          <th>カテゴリー2 <span class="badge">狙い目</span></th>
+          <td>源泉徴収税額1,000万円以上／<strong>オンライン申請の利用承認を受けた機関</strong></td>
+          <td>簡素</td>
+          <td>原則不要</td>
+        </tr>
+        <tr>
+          <th>カテゴリー3</th>
+          <td>法定調書を提出した企業（1・2以外）</td>
+          <td>多い</td>
+          <td style="color:var(--red);font-weight:700">N2相当の立証が必要</td>
+        </tr>
+        <tr>
+          <th>カテゴリー4</th>
+          <td>新設等で法定調書の提出がない企業</td>
+          <td>最も多い</td>
+          <td style="color:var(--red);font-weight:700">最もハードルが高い</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="callout" style="margin-top:16px"><strong>中小企業でもカテゴリー2相当になれます。</strong>オンライン申請の利用承認を受けると、カテゴリー2と同様の添付資料で申請できる扱いになります。</div>
+    <p class="note">※ カテゴリー区分・添付書類の取扱いは企業状況・入管庁の判断によります。</p>
+  </div>
+</div>
+
+<!-- ===== Merit ===== -->
+<div class="sec">
+  <h2>カテルで得られる<span class="accent">3つのメリット</span></h2>
+  <div class="merit-primary">
+    <h4>採用できる人材の幅が広がる</h4>
+    <p>カテゴリー3・4に追加されたN2相当の言語能力証明が一律に求められる申請区分から外れるため、実務上の日本語力はあってもN2を取得していない方まで採用候補を広げられます。求職者側から見ても応募できる可能性が広がり、人材が集まりやすい会社になります。</p>
+  </div>
+  <div class="merit-pair">
+    <div class="merit-card">
+      <h4>申請書類を簡略化</h4>
+      <p>カテゴリー2と同様の添付資料で申請できるようになり、採用のたびに準備する書類が大幅に減ります。</p>
+    </div>
+    <div class="merit-card">
+      <h4>申請から入社までがスムーズに</h4>
+      <p>24時間オンラインで申請でき、追加資料にも素早く対応できるため、入社までの流れがスムーズになります。</p>
+    </div>
+    <div class="merit-card">
+      <h4>申請結果を自社で確認できる</h4>
+      <p>ビザ申請の進捗・結果を御社のパソコンからいつでも確認可能。行政書士を通さなくても、自社で状況を把握できます。</p>
+    </div>
+  </div>
+  <p class="note">※ 審査期間の短縮や許可を保証するものではありません。</p>
+</div>
+
+<hr class="divider">
+
+<!-- ===== Service ===== -->
+<div class="sec-bg">
+  <div class="sec">
+    <h2>サポート内容</h2>
+    <p class="sub-lead">申請の代行ではなく、御社が自社で回せる体制を一緒につくります。</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div><h4>現状診断</h4><p>現在のカテゴリー・採用状況を整理し、カテゴリー2相当を目指せるかを確認します。</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div><h4>必要書類の整理・ご案内</h4><p>カテゴリー2相当に必要な書類を一覧化し、準備をサポートします。</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div><h4>担当者の研修手配</h4><p>御社のスタッフに受講いただく研修をご案内します。基本的に1日で完了します。</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div><h4>申請手続のサポート</h4><p>カテゴリー2相当の体制を整えるために必要な各種手続をサポートします。</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div><h4>運用開始までの伴走</h4><p>審査・承認を経て、御社でオンラインでビザ申請ができる状態になるまで伴走します。</p></div>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:24px"><strong>導入期間の目安：</strong>全体で約2ヶ月程度。研修の日程や書類の準備状況により変動します。</div>
+  </div>
+</div>
+
+<!-- ===== Price ===== -->
+<div class="sec">
+  <h2>費用</h2>
+  <div class="price-block">
+    <div class="price-label">サポート料金（1社・税別）</div>
+    <div class="price-num"><small>&yen;</small>80,000</div>
+    <p class="price-sub">初期一括のみ。月額費用はかかりません。</p>
+  </div>
+  <div class="price-detail">
+    <strong>含まれるもの：</strong>現状診断／必要書類の整理・ご案内／担当者研修の手配／各種申請手続のサポート／運用開始までの伴走<br>
+    <strong>別途実費：</strong>研修の受講料・証明書取得費用・郵送費など<br>
+    <strong>別途費用：</strong>個別のビザ申請を行政書士へ依頼する場合の行政書士費用
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ===== FAQ ===== -->
+<div class="sec-bg">
+  <div class="sec">
+    <h2>よくあるご質問</h2>
+
+    <details class="faq-item">
+      <summary class="faq-q">カテゴリー2になれば、N2がなくても許可されますか？</summary>
+      <div class="faq-a">
+        <p>ビザの許可を保証するものではありません。正確には、カテゴリー3・4に追加されたN2相当の言語能力証明を一律に提出する申請区分から外れるということです。本人の学歴・職歴・業務内容・給与条件など、技人国本来の審査は引き続き行われます。</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">N2以外で日本語能力を証明する方法はありますか？</summary>
+      <div class="faq-a">
+        <p>N2だけが証明方法ではありません。以下もCEFR B2相当として認められます。</p>
+        <ul>
+          <li>BJTビジネス日本語能力テスト 400点以上</li>
+          <li>中長期在留者として20年以上日本に在留</li>
+          <li>日本の大学・高専・専門学校を卒業</li>
+          <li>日本の義務教育を修了し、高校を卒業</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">企業単位ですか？担当者単位ですか？</summary>
+      <div class="faq-a">
+        <p>両方です。カテゴリー2相当の体制は企業単位の取り組みですが、オンライン申請の操作権限は担当スタッフ個人に付与されます。御社のスタッフが研修を受講し、会社として審査を受ける流れです。詳しくはお問い合わせ時にご説明します。</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">研修を受ける担当者は社員である必要がありますか？</summary>
+      <div class="faq-a">
+        <p>はい。御社に在籍しているスタッフである必要があります。外部の方が御社の担当者としてオンライン申請を行うことはできません。</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">担当者が退職した場合は？</summary>
+      <div class="faq-a">
+        <p>新しい担当者を決め、研修の受講と所定の手続を行います。長期在籍予定の正社員や人事担当の方に受講いただくのがおすすめです。複数名を登録しておくことも可能です。</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">どのくらいの期間で利用開始できますか？</summary>
+      <div class="faq-a">
+        <p>約2ヶ月程度が目安です。研修の受講 → 必要な手続 → 審査 → 承認後、利用開始という流れです。研修の開催日や書類の準備状況により前後します。</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">今いる外国人社員の更新にも関係しますか？</summary>
+      <div class="faq-a">
+        <p>同じ会社で同じ業務を継続している通常の更新であれば、直ちに全員がN2を求められるわけではありません。ただし、新規採用・転職入社・業務内容変更・接客業務への配置変更などは対象になる可能性があります。今後に備える仕組みとして整えておくメリットがあります。</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">行政書士は必要ですか？</summary>
+      <div class="faq-a">
+        <p>カテルで体制を整えた後は、御社のスタッフが自社でオンラインでビザ申請を行えます。ただし、初めての申請、専攻と業務の関連性が弱い場合、過去に不許可がある場合などは行政書士への依頼をおすすめします。カテルは申請体制をつくるサポートであり、個別のビザ申請の代行とは別のサービスです。</p>
+      </div>
+    </details>
+
+    <details class="faq-item">
+      <summary class="faq-q">利用期間に期限はありますか？</summary>
+      <div class="faq-a">
+        <p>承認日から3年間です。継続利用する場合は、期限前に更新手続が必要です。</p>
+      </div>
+    </details>
+
+  </div>
+</div>
+
+<!-- ===== CTA ===== -->
+<section class="cta">
+  <div class="cta-inner">
+    <h2>まずは御社のカテゴリーを確認しませんか</h2>
+    <p>現在のカテゴリーと必要書類を確認し、どのくらいのメリットがあるかを具体的にご提案します。</p>
+    <a href="https://hito-kiwa.co.jp/contact/" class="btn-primary" target="_blank">無料相談する</a>
+    <div class="cta-tel"><br>TEL: <strong>03-6842-0293</strong></div>
+  </div>
+</section>
+
+<!-- ===== Disclaimer ===== -->
+<div class="disclaimer">
+  <p><strong>出典：</strong>出入国在留管理庁 公表資料（在留資格「技術・人文知識・国際業務」カテゴリー区分・添付資料、オンライン申請手続に関するQ&A 等）</p>
+  <p><strong>注意事項：</strong>カテゴリー2相当の取扱い・承認の可否は、企業状況・提出資料・入管庁の審査により判断されます。ビザの許可を保証するものではありません。申請業務は必要に応じて行政書士等の専門家と連携します。</p>
+</div>
+
+<footer>
+  株式会社ヒトキワ｜〒102-0083 東京都千代田区麹町4丁目3-5 7階｜TEL: 03-6842-0293<br>
+  有料職業紹介事業許可番号 13-ユ-316856｜登録支援機関登録番号 24登-010827<br>
+  &copy; 2026 hitokiwa Inc. All rights reserved.
+</footer>
+
+</body>
+</html>
