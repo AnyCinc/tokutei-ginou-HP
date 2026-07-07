@@ -3,418 +3,960 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>カテル｜カテゴリー2にあがって、厳格化に勝てる採用を｜株式会社ヒトキワ</title>
-<meta name="description" content="2026年4月の技人国ビザ厳格化に対応。カテゴリー2相当の申請体制を整え、N2不要・書類簡素化・審査迅速化を実現。株式会社ヒトキワ。">
+<title>カテル｜技人国のオンライン申請・カテゴリー2相当化を支援｜株式会社ヒトキワ</title>
+<meta name="description" content="2026年4月15日からの技人国ビザ厳格化に対応。カテルは、中小企業が自社でオンライン申請を行える体制（カテゴリー2相当）づくりを支援します。無料カテゴリー診断はこちら。株式会社ヒトキワ。">
+<meta name="robots" content="index,follow">
+<meta name="format-detection" content="telephone=no">
+
+<!-- OGP -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="株式会社ヒトキワ">
+<meta property="og:title" content="カテル｜技人国のオンライン申請・カテゴリー2相当化を支援">
+<meta property="og:description" content="N2を持っていないだけで採用を諦めていませんか？自社でオンライン申請を行える体制づくりを支援します。">
+<meta property="og:locale" content="ja_JP">
+
 <style>
-  :root{
-    --red:#c8102e;
-    --red-2:#9d0a23;
-    --navy:#1a2a44;
-    --navy-2:#0f1c30;
-    --ivory:#faf7f2;
-    --black:#1a1a1a;
-    --gray-700:#4a4f57;
-    --gray-500:#8a8f97;
-    --gray-200:#e5e7eb;
-    --gray-100:#f3f4f6;
-    --sans:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP","Yu Gothic Medium","Meiryo",sans-serif;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{background:#fff;color:var(--black);font-family:var(--sans);line-height:1.8;font-size:15px;-webkit-font-smoothing:antialiased}
-  a{color:inherit;text-decoration:none}
+:root{
+  --navy:#1a2a44; --navy-2:#0f1c30; --navy-line:#27395a;
+  --red:#c8102e; --red-2:#9d0a23; --red-soft:#fdf2f3;
+  --ivory:#faf7f2; --ink:#222831;
+  --gray-700:#4a4f57; --gray-500:#7c828c; --gray-300:#cdd1d6; --gray-200:#e6e8ec; --gray-100:#f3f4f6; --gray-50:#f8f9fb;
+  --shadow-sm:0 1px 4px rgba(26,42,68,.06);
+  --shadow:0 6px 22px rgba(26,42,68,.10);
+  --shadow-lg:0 16px 44px rgba(26,42,68,.14);
+  --sans:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP","Yu Gothic Medium","Meiryo",sans-serif;
+  --radius:12px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --header-h:64px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#fff;color:var(--ink);font-family:var(--sans);line-height:1.85;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{font-family:inherit}
+:focus-visible{outline:3px solid #c9a961;outline-offset:2px;border-radius:3px}
 
-  /* Top bar */
-  .topbar{background:#fff;border-bottom:1px solid var(--gray-200);position:sticky;top:0;z-index:100}
-  .topbar-inner{max-width:1000px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
-  .logo{font-weight:900;font-size:20px;color:var(--navy);letter-spacing:.04em}
-  .logo span{color:var(--red)}
-  .top-cta{display:flex;gap:14px;align-items:center}
-  .top-tel{font-weight:900;color:var(--navy);font-size:16px}
-  .btn-contact{background:var(--navy);color:#fff;padding:10px 22px;border-radius:4px;font-weight:700;font-size:13px;transition:background .2s}
-  .btn-contact:hover{background:var(--navy-2)}
+/* ---------- layout ---------- */
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+.narrow{max-width:820px}
+.section{padding:76px 0}
+.section--ivory{background:var(--ivory)}
+.section--tint{background:var(--gray-50)}
+.section--navy{background:var(--navy);color:#fff}
+.eyebrow{display:inline-block;font-size:12.5px;font-weight:800;letter-spacing:.16em;color:var(--red);margin-bottom:12px}
+.section--navy .eyebrow{color:#e7c982}
+.sec-head{max-width:800px;margin:0 auto 44px;text-align:center}
+.sec-head h2{font-size:clamp(23px,3.4vw,32px);font-weight:900;color:var(--navy);line-height:1.45}
+.section--navy .sec-head h2{color:#fff}
+.sec-head h2 .accent{color:var(--red)}
+.sec-head p{margin-top:16px;font-size:15.5px;color:var(--gray-700);line-height:1.9}
+.section--navy .sec-head p{color:#d6dce6}
 
-  /* Hero */
-  .hero{padding:72px 24px 64px;max-width:800px;margin:0 auto}
-  .hero-top{display:flex;align-items:center;gap:16px;margin-bottom:40px}
-  .hero-service{font-size:32px;font-weight:900;color:var(--navy);letter-spacing:.06em}
-  .hero-dash{width:40px;height:2px;background:var(--gray-200)}
-  .hero-tagline-sm{font-size:12px;color:var(--gray-500);letter-spacing:.04em}
-  .hero h1{font-size:28px;font-weight:900;color:var(--black);line-height:1.7;margin-bottom:20px}
-  .hero-desc{font-size:15px;color:var(--gray-700);line-height:2;margin-bottom:36px}
-  .hero-desc strong{color:var(--navy)}
-  .btn-primary{display:inline-block;background:var(--red);color:#fff;padding:14px 40px;border-radius:4px;font-weight:700;font-size:15px;transition:background .2s;letter-spacing:.04em}
-  .btn-primary:hover{background:var(--red-2)}
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:800;font-size:15.5px;line-height:1.2;
+  padding:16px 28px;border-radius:10px;border:2px solid transparent;cursor:pointer;text-align:center;
+  transition:transform .18s var(--ease),background .18s var(--ease),box-shadow .18s var(--ease),color .18s var(--ease)}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn--red{background:var(--red);color:#fff;box-shadow:var(--shadow-sm)}
+.btn--red:hover{background:var(--red-2);box-shadow:var(--shadow)}
+.btn--navy{background:var(--navy);color:#fff}
+.btn--navy:hover{background:var(--navy-2)}
+.btn--ghost{background:transparent;color:var(--navy);border-color:var(--navy)}
+.btn--ghost:hover{background:var(--navy);color:#fff}
+.btn--ghost-light{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+.btn--ghost-light:hover{background:#fff;color:var(--navy)}
+.btn--lg{padding:18px 34px;font-size:16px}
+.btn--block{width:100%}
+.btn .ic{width:18px;height:18px;flex:none}
 
-  /* Section base */
-  .sec{max-width:800px;margin:0 auto;padding:64px 24px}
-  .sec-bg{background:var(--ivory);border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200)}
-  .sec h2{font-size:20px;font-weight:900;color:var(--navy);margin-bottom:32px;line-height:1.6;letter-spacing:.02em}
-  .sec h2 .accent{color:var(--red)}
-  .sub-lead{font-size:14px;color:var(--gray-500);margin:-24px 0 32px;line-height:1.8}
+/* ---------- header ---------- */
+.site-header{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.94);backdrop-filter:saturate(160%) blur(8px);
+  -webkit-backdrop-filter:saturate(160%) blur(8px);border-bottom:1px solid var(--gray-200);transition:box-shadow .25s}
+.site-header.is-scrolled{box-shadow:var(--shadow)}
+.header-inner{max-width:1200px;margin:0 auto;min-height:var(--header-h);display:flex;align-items:center;justify-content:space-between;gap:14px;padding:8px 20px}
+.brand{display:flex;flex-direction:column;line-height:1}
+.brand .logo{font-size:22px;font-weight:900;color:var(--navy);letter-spacing:.02em}
+.brand .logo span{color:var(--red)}
+.brand .svc{font-size:10px;font-weight:700;color:var(--gray-500);letter-spacing:.12em;margin-top:4px}
+.header-cta{display:flex;align-items:center;gap:12px}
+.header-tel{display:flex;flex-direction:column;text-align:right;line-height:1.1}
+.header-tel .num{font-size:18px;font-weight:900;color:var(--navy);letter-spacing:.02em}
+.header-tel .lbl{font-size:9.5px;color:var(--gray-500);font-weight:600;margin-top:2px}
+.header-tel--icon{display:none;width:44px;height:44px;border:1px solid var(--gray-200);border-radius:10px;align-items:center;justify-content:center;color:var(--navy)}
+.header-tel--icon svg{width:20px;height:20px}
 
-  /* Divider line */
-  .divider{border:none;border-top:1px solid var(--gray-200);margin:0}
+/* ---------- hero ---------- */
+.hero{position:relative;background:linear-gradient(180deg,#fff 0%,var(--ivory) 100%);overflow:hidden}
+.hero::before{content:"";position:absolute;top:-120px;right:-120px;width:420px;height:420px;border-radius:50%;
+  background:radial-gradient(circle,rgba(26,42,68,.06),transparent 70%);z-index:0}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:60px 0}
+.svc-row{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.svc-name{font-size:30px;font-weight:900;color:var(--navy);letter-spacing:.06em}
+.svc-name b{color:var(--red)}
+.svc-desc{font-size:12.5px;font-weight:700;color:var(--gray-500);letter-spacing:.02em;line-height:1.5}
+.hero h1{font-size:clamp(28px,4.6vw,46px);font-weight:900;color:var(--navy);line-height:1.4;letter-spacing:.01em;margin-bottom:14px}
+.hero h1 .u{background:linear-gradient(transparent 62%,rgba(200,16,46,.16) 62%)}
+.hero .subcopy{font-size:clamp(17px,2.2vw,21px);font-weight:800;color:var(--red);line-height:1.6;margin-bottom:18px}
+.hero .lead{font-size:15.5px;color:var(--gray-700);line-height:2;max-width:560px;margin-bottom:26px}
+.hero .lead strong{color:var(--navy)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px}
+.hero-badges{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:12.5px;color:var(--gray-700);font-weight:700}
+.hero-badges span{display:inline-flex;align-items:center;gap:6px}
+.hero-badges span::before{content:"";width:16px;height:16px;flex:none;border-radius:50%;background:var(--red-soft);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c8102e' stroke-width='3'%3E%3Cpath d='M5 12l5 5L20 6'/%3E%3C/svg%3E");background-size:11px;background-repeat:no-repeat;background-position:center}
 
-  /* Alert */
-  .alert{border-left:4px solid var(--red);padding:24px 28px;background:var(--ivory);margin-bottom:32px}
-  .alert h3{font-size:16px;font-weight:900;color:var(--red);margin-bottom:8px}
-  .alert p{font-size:14px;color:var(--gray-700);line-height:1.9}
+/* hero diagram (before/after) */
+.hero-diagram{background:#fff;border:1px solid var(--gray-200);border-radius:16px;box-shadow:var(--shadow-lg);padding:22px}
+.diag-card{border-radius:12px;padding:18px 20px}
+.diag-card .tag{display:inline-block;font-size:12px;font-weight:800;padding:4px 12px;border-radius:20px;margin-bottom:12px}
+.diag-card h3{font-size:18px;font-weight:900;margin-bottom:10px;line-height:1.4}
+.diag-card ul li{position:relative;padding-left:22px;font-size:13.5px;line-height:1.75;margin-bottom:6px}
+.diag-card ul li::before{content:"";position:absolute;left:0;top:8px;width:12px;height:12px;background-size:12px;background-repeat:no-repeat}
+.diag-before{background:var(--gray-100);border:1px solid var(--gray-200)}
+.diag-before .tag{background:var(--gray-300);color:var(--navy-2)}
+.diag-before h3{color:var(--navy)}
+.diag-before ul li::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237c828c' stroke-width='3'%3E%3Cpath d='M6 6l12 12M18 6L6 18'/%3E%3C/svg%3E")}
+.diag-arrow{display:flex;align-items:center;justify-content:center;margin:12px 0}
+.diag-arrow span{width:40px;height:40px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center}
+.diag-arrow svg{width:20px;height:20px}
+.diag-after{background:var(--red-soft);border:2px solid var(--red)}
+.diag-after .tag{background:var(--red);color:#fff}
+.diag-after h3{color:var(--red-2)}
+.diag-after ul li::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c8102e' stroke-width='3'%3E%3Cpath d='M5 12l5 5L20 6'/%3E%3C/svg%3E")}
 
-  /* Voice list */
-  .voice-list{margin:24px 0 0;display:flex;flex-direction:column;gap:8px}
-  .voice-item{padding:14px 20px;border:1px solid var(--gray-200);border-radius:4px;font-size:14px;color:var(--gray-700);background:#fff}
-  .voice-item::before{content:"\2014 \00a0";color:var(--gray-500)}
+/* ---------- video ---------- */
+.video-wrap{max-width:760px;margin:0 auto}
+.video-frame{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#0c1524;box-shadow:var(--shadow-lg);cursor:pointer}
+.video-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.62}
+.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-badge{position:absolute;top:16px;left:16px;z-index:2;background:rgba(200,16,46,.95);color:#fff;font-size:13px;font-weight:800;padding:7px 15px;border-radius:24px;letter-spacing:.02em}
+.video-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;width:78px;height:78px;border-radius:50%;
+  background:rgba(255,255,255,.95);display:flex;align-items:center;justify-content:center;transition:transform .2s var(--ease),background .2s}
+.video-frame:hover .video-play{transform:translate(-50%,-50%) scale(1.08)}
+.video-play::after{content:"";width:0;height:0;border-style:solid;border-width:13px 0 13px 22px;border-color:transparent transparent transparent var(--red);margin-left:5px}
+.video-caption{text-align:center;margin-top:14px;font-size:13px;color:var(--gray-500)}
 
-  /* Connector */
-  .connector{text-align:center;padding:28px 20px;background:var(--navy);color:#fff;font-weight:700;font-size:15px;line-height:1.7;margin-top:32px}
+/* ---------- problem cards ---------- */
+.card-grid{display:grid;gap:18px}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.problem-card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius);padding:24px 22px;box-shadow:var(--shadow-sm);display:flex;gap:14px;align-items:flex-start}
+.problem-card .ic{flex:none;width:44px;height:44px;border-radius:11px;background:var(--red-soft);color:var(--red);display:flex;align-items:center;justify-content:center}
+.problem-card .ic svg{width:23px;height:23px}
+.problem-card p{font-size:14.5px;color:var(--ink);line-height:1.7;font-weight:600}
 
-  /* Table */
-  .tbl{width:100%;border-collapse:collapse;font-size:13px;margin-top:4px}
-  .tbl th,.tbl td{border:1px solid var(--gray-200);padding:12px 14px;text-align:left;vertical-align:top}
-  .tbl thead th{background:var(--navy);color:#fff;font-weight:700;font-size:12px}
-  .tbl tbody th{background:var(--gray-100);font-weight:700;white-space:nowrap;width:100px}
-  .tbl .hl{background:rgba(200,16,46,.04);border:2px solid var(--red)}
-  .tbl .hl th{background:rgba(200,16,46,.08);color:var(--red)}
-  .badge{display:inline-block;background:var(--red);color:#fff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;margin-left:4px}
+/* ---------- before/after institutional ---------- */
+.ba-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:stretch}
+.ba-col{background:#fff;border:1px solid var(--gray-200);border-radius:14px;padding:28px;box-shadow:var(--shadow-sm)}
+.ba-col.is-after{border:2px solid var(--red);background:#fff}
+.ba-col .ba-tag{display:inline-block;font-size:12.5px;font-weight:800;padding:5px 14px;border-radius:20px;margin-bottom:16px}
+.ba-col.is-before .ba-tag{background:var(--gray-200);color:var(--navy)}
+.ba-col.is-after .ba-tag{background:var(--red);color:#fff}
+.ba-col h3{font-size:18px;font-weight:900;color:var(--navy);margin-bottom:14px;line-height:1.5}
+.ba-col ul li{position:relative;padding-left:24px;font-size:14px;line-height:1.8;margin-bottom:9px;color:var(--gray-700)}
+.ba-col ul li::before{content:"";position:absolute;left:0;top:7px;width:13px;height:13px;background-size:13px;background-repeat:no-repeat}
+.ba-col.is-before ul li::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237c828c' stroke-width='3'%3E%3Cpath d='M6 6l12 12M18 6L6 18'/%3E%3C/svg%3E")}
+.ba-col.is-after ul li::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c8102e' stroke-width='3'%3E%3Cpath d='M5 12l5 5L20 6'/%3E%3C/svg%3E")}
+.ba-mid{display:flex;align-items:center;justify-content:center;color:var(--red)}
+.ba-mid svg{width:34px;height:34px}
+.note-box{margin-top:26px;background:var(--gray-50);border:1px solid var(--gray-200);border-left:4px solid var(--navy);border-radius:8px;padding:16px 20px;font-size:13.5px;color:var(--gray-700);line-height:1.9}
 
-  /* Callout box */
-  .callout{padding:16px 20px;background:var(--ivory);border:1px solid var(--gray-200);font-size:13px;color:var(--gray-700);line-height:1.8;margin-top:16px}
-  .callout strong{color:var(--navy)}
+/* ---------- category compare ---------- */
+.cat2col{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:40px}
+.cat-block{border-radius:16px;padding:30px 28px}
+.cat-block h3{font-size:20px;font-weight:900;margin-bottom:6px}
+.cat-block .cat-sub{font-size:12.5px;font-weight:700;margin-bottom:18px;opacity:.8}
+.cat-block ul li{position:relative;padding-left:26px;font-size:14.5px;line-height:1.75;margin-bottom:11px}
+.cat-block ul li::before{content:"";position:absolute;left:0;top:6px;width:15px;height:15px;background-size:15px;background-repeat:no-repeat}
+.cat-neg{background:var(--gray-100);border:1px solid var(--gray-200)}
+.cat-neg h3{color:var(--navy)}
+.cat-neg ul li::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237c828c' stroke-width='3'%3E%3Cpath d='M6 6l12 12M18 6L6 18'/%3E%3C/svg%3E")}
+.cat-pos{background:linear-gradient(160deg,#1f3050,#16233b);color:#fff}
+.cat-pos h3{color:#fff}
+.cat-pos ul li{color:#e6ebf3}
+.cat-pos ul li::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e7c982' stroke-width='3'%3E%3Cpath d='M5 12l5 5L20 6'/%3E%3C/svg%3E")}
+.cat-pos .cat-badge{display:inline-block;background:var(--red);color:#fff;font-size:11px;font-weight:800;padding:3px 10px;border-radius:20px;margin-bottom:10px}
 
-  /* Merit */
-  .merit-primary{border-left:4px solid var(--red);padding:24px 28px;background:var(--ivory);margin-bottom:24px}
-  .merit-primary h4{font-size:16px;font-weight:900;color:var(--red);margin-bottom:8px}
-  .merit-primary p{font-size:14px;color:var(--gray-700);line-height:1.9}
-  .merit-pair{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .merit-card{border:1px solid var(--gray-200);padding:20px;background:#fff}
-  .merit-card h4{font-size:14px;font-weight:900;color:var(--navy);margin-bottom:6px}
-  .merit-card p{font-size:13px;color:var(--gray-500);line-height:1.8}
+.tbl-title{font-size:16px;font-weight:800;color:var(--navy);margin:8px 0 14px;text-align:center}
+.tbl{width:100%;border-collapse:collapse;font-size:13.5px;background:#fff}
+.tbl th,.tbl td{border:1px solid var(--gray-200);padding:13px 14px;text-align:left;vertical-align:top}
+.tbl thead th{background:var(--navy);color:#fff;font-weight:700;font-size:13px}
+.tbl tbody th{background:var(--gray-100);font-weight:800;white-space:nowrap}
+.tbl .hl{background:rgba(200,16,46,.04)}
+.tbl .hl th{color:var(--red)}
+.tbl .danger{color:var(--red);font-weight:800}
+.badge{display:inline-block;background:var(--red);color:#fff;font-size:10px;font-weight:800;padding:2px 8px;border-radius:4px;margin-left:4px}
+.cat-cards{display:none}
+.cat-card{background:#fff;border:1px solid var(--gray-200);border-radius:12px;padding:18px 18px;margin-bottom:12px}
+.cat-card.hl{border:2px solid var(--red)}
+.cat-card h4{font-size:16px;font-weight:900;color:var(--navy);margin-bottom:10px}
+.cat-card h4 .badge{vertical-align:middle}
+.cat-card dl{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;font-size:13.5px}
+.cat-card dt{color:var(--gray-500);font-weight:700;white-space:nowrap}
+.cat-card dd{color:var(--ink)}
 
-  /* Steps */
-  .steps{display:flex;flex-direction:column;gap:0;counter-reset:step}
-  .step{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid var(--gray-200)}
-  .step:last-child{border-bottom:none}
-  .step-num{flex-shrink:0;width:28px;height:28px;display:flex;align-items:center;justify-content:center;background:var(--navy);color:#fff;border-radius:50%;font-size:13px;font-weight:900;margin-top:2px}
-  .step h4{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:2px}
-  .step p{font-size:13px;color:var(--gray-700);line-height:1.7}
+/* ---------- merits ---------- */
+.merit-hero{background:linear-gradient(160deg,var(--red),var(--red-2));color:#fff;border-radius:16px;padding:34px 34px;margin-bottom:20px;display:flex;gap:22px;align-items:flex-start;box-shadow:var(--shadow)}
+.merit-hero .num{flex:none;font-size:46px;font-weight:900;line-height:.9;opacity:.5}
+.merit-hero h3{font-size:22px;font-weight:900;margin-bottom:10px}
+.merit-hero p{font-size:15px;line-height:1.9;color:#ffe9ec}
+.merit-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.merit-card{background:#fff;border:1px solid var(--gray-200);border-radius:14px;padding:26px 22px;box-shadow:var(--shadow-sm);transition:transform .2s var(--ease),box-shadow .2s}
+.merit-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.merit-card .ic{width:48px;height:48px;border-radius:12px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.merit-card .ic svg{width:24px;height:24px}
+.merit-card .num{font-size:12px;font-weight:800;color:var(--red);letter-spacing:.1em;margin-bottom:6px}
+.merit-card h3{font-size:17px;font-weight:800;color:var(--navy);margin-bottom:8px;line-height:1.5}
+.merit-card p{font-size:14px;color:var(--gray-700);line-height:1.8}
 
-  /* Price */
-  .price-block{text-align:center;padding:40px;border:1px solid var(--gray-200);background:#fff;margin-bottom:20px}
-  .price-label{font-size:13px;color:var(--gray-500);margin-bottom:8px}
-  .price-num{font-size:44px;font-weight:900;color:var(--navy);letter-spacing:.02em}
-  .price-num small{font-size:16px;font-weight:700}
-  .price-sub{font-size:13px;color:var(--gray-500);margin-top:8px}
-  .price-detail{font-size:12px;color:var(--gray-500);line-height:1.8;padding:16px 20px;background:var(--gray-100)}
+/* ---------- business before/after ---------- */
+.biz-ba{display:grid;grid-template-columns:1fr auto 1fr;gap:26px;align-items:center}
+.biz-col{border-radius:16px;padding:28px 26px}
+.biz-col h3{font-size:18px;font-weight:900;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.biz-col h3 .pill{font-size:12px;font-weight:800;padding:3px 12px;border-radius:20px}
+.biz-before{background:var(--gray-100);border:1px solid var(--gray-200)}
+.biz-before h3{color:var(--navy)} .biz-before .pill{background:var(--gray-300);color:var(--navy-2)}
+.biz-after{background:var(--navy);color:#fff}
+.biz-after .pill{background:var(--red);color:#fff}
+.biz-col ul li{position:relative;padding-left:24px;font-size:14px;line-height:1.8;margin-bottom:10px}
+.biz-col ul li::before{content:"";position:absolute;left:0;top:7px;width:13px;height:13px;background-size:13px;background-repeat:no-repeat}
+.biz-before ul li{color:var(--gray-700)}
+.biz-before ul li::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237c828c' stroke-width='3'%3E%3Cpath d='M6 6l12 12M18 6L6 18'/%3E%3C/svg%3E")}
+.biz-after ul li{color:#e6ebf3}
+.biz-after ul li::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e7c982' stroke-width='3'%3E%3Cpath d='M5 12l5 5L20 6'/%3E%3C/svg%3E")}
+.biz-mid{display:flex;align-items:center;justify-content:center;color:var(--red)}
+.biz-mid svg{width:36px;height:36px}
 
-  /* FAQ */
-  .faq-item{border-bottom:1px solid var(--gray-200)}
-  .faq-item:first-of-type{border-top:1px solid var(--gray-200)}
-  .faq-q{padding:18px 36px 18px 0;font-size:14px;font-weight:700;color:var(--navy);cursor:pointer;list-style:none;position:relative;line-height:1.6}
-  .faq-q::after{content:"+";position:absolute;right:0;top:18px;font-size:18px;color:var(--gray-500)}
-  .faq-item[open] .faq-q::after{content:"\2212"}
-  .faq-q::-webkit-details-marker{display:none}
-  .faq-a{padding:0 0 20px;font-size:13px;color:var(--gray-700);line-height:1.9}
-  .faq-a p{margin-bottom:8px}
-  .faq-a ul{margin:8px 0 8px 20px}
-  .faq-a li{margin-bottom:4px}
+/* ---------- steps ---------- */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;counter-reset:st}
+.step{background:#fff;border:1px solid var(--gray-200);border-radius:14px;padding:22px 18px;box-shadow:var(--shadow-sm);position:relative}
+.step .st-num{width:38px;height:38px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px;margin-bottom:14px}
+.step:first-child .st-num{background:var(--red)}
+.step h3{font-size:15.5px;font-weight:800;color:var(--navy);line-height:1.5;margin-bottom:12px;min-height:2.8em}
+.step .role{font-size:12.5px;line-height:1.7;margin-bottom:8px}
+.step .role b{display:block;font-size:11px;font-weight:800;letter-spacing:.04em;margin-bottom:2px}
+.step .role.you b{color:var(--red)}
+.step .role.us b{color:var(--navy)}
+.step .role p{color:var(--gray-700)}
 
-  /* CTA */
-  .cta{background:var(--navy);padding:56px 24px;text-align:center}
-  .cta-inner{max-width:560px;margin:0 auto}
-  .cta h2{font-size:20px;font-weight:900;color:#fff;margin-bottom:12px;line-height:1.7}
-  .cta p{font-size:14px;color:rgba(255,255,255,.55);margin-bottom:28px;line-height:1.8}
-  .cta .btn-primary{margin-bottom:16px}
-  .cta-tel{font-size:13px;color:rgba(255,255,255,.4)}
-  .cta-tel strong{color:#fff;font-size:18px}
+/* ---------- reasons (trust) ---------- */
+.reason-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.reason-card{background:#fff;border:1px solid var(--gray-200);border-radius:12px;padding:22px 20px;display:flex;gap:13px;align-items:flex-start;box-shadow:var(--shadow-sm)}
+.reason-card .ic{flex:none;width:40px;height:40px;border-radius:10px;background:var(--red-soft);color:var(--red);display:flex;align-items:center;justify-content:center}
+.reason-card .ic svg{width:21px;height:21px}
+.reason-card p{font-size:14px;font-weight:600;color:var(--ink);line-height:1.65}
+.license-bar{margin-top:26px;display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.license-chip{background:#fff;border:1px solid var(--gray-200);border-radius:10px;padding:14px 22px;text-align:center;box-shadow:var(--shadow-sm)}
+.license-chip .l-label{font-size:11px;color:var(--gray-500);font-weight:700;margin-bottom:4px}
+.license-chip .l-num{font-size:16px;font-weight:900;color:var(--navy);letter-spacing:.02em}
 
-  /* Disclaimer */
-  .disclaimer{max-width:800px;margin:0 auto;padding:32px 24px;font-size:11px;color:var(--gray-500);line-height:1.8}
+/* ---------- price ---------- */
+.price-box{max-width:760px;margin:0 auto;background:#fff;border:1px solid var(--gray-200);border-radius:16px;padding:38px 34px;text-align:center;box-shadow:var(--shadow-sm)}
+.price-box p.body{font-size:15.5px;color:var(--gray-700);line-height:2;margin-bottom:22px}
+.price-points{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:26px}
+.price-point{background:var(--ivory);border:1px solid var(--gray-200);border-radius:24px;padding:9px 18px;font-size:13.5px;font-weight:700;color:var(--navy);display:inline-flex;align-items:center;gap:8px}
+.price-point::before{content:"";width:16px;height:16px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c8102e' stroke-width='3'%3E%3Cpath d='M5 12l5 5L20 6'/%3E%3C/svg%3E");background-size:14px;background-repeat:no-repeat;background-position:center}
 
-  /* Footer */
-  footer{background:var(--navy-2);color:rgba(255,255,255,.5);padding:28px 24px 14px;font-size:11px;text-align:center;line-height:1.9}
+/* ---------- faq ---------- */
+.faq{max-width:840px;margin:0 auto}
+.faq-cat{font-size:13px;font-weight:800;color:var(--red);letter-spacing:.06em;margin:26px 0 12px;padding-left:2px}
+.faq-cat:first-child{margin-top:0}
+.faq-item{background:#fff;border:1px solid var(--gray-200);border-radius:10px;margin-bottom:10px;overflow:hidden}
+.faq-item.open{border-color:var(--gray-300);box-shadow:var(--shadow-sm)}
+.faq-q{width:100%;text-align:left;background:none;border:0;cursor:pointer;padding:18px 52px 18px 22px;position:relative;font-size:15.5px;font-weight:800;color:var(--navy);line-height:1.6}
+.faq-q::after{content:"";position:absolute;right:22px;top:22px;width:11px;height:11px;border-right:2px solid var(--navy);border-bottom:2px solid var(--navy);transform:rotate(45deg);transition:transform .3s var(--ease)}
+.faq-item.open .faq-q::after{transform:rotate(-135deg)}
+.faq-panel{max-height:0;overflow:hidden;transition:max-height .35s var(--ease)}
+.faq-a{padding:0 22px 20px;font-size:14px;color:var(--gray-700);line-height:1.9}
+.faq-a p{margin-bottom:8px}
+.faq-a ul{margin:6px 0 6px 18px;list-style:disc}
+.faq-a li{margin-bottom:4px}
 
-  /* Note */
-  .note{font-size:11px;color:var(--gray-500);margin-top:8px}
+/* ---------- form ---------- */
+.form-card{max-width:720px;margin:0 auto;background:#fff;border:1px solid var(--gray-200);border-radius:16px;padding:34px 32px;box-shadow:var(--shadow)}
+.form-head{text-align:center;margin-bottom:24px}
+.form-head .pill{display:inline-block;background:var(--red);color:#fff;font-size:12px;font-weight:800;padding:5px 16px;border-radius:20px;margin-bottom:12px}
+.form-head h3{font-size:22px;font-weight:900;color:var(--navy)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column}
+.field.full{grid-column:1 / -1}
+.field label{font-size:13px;font-weight:800;color:var(--navy);margin-bottom:6px}
+.field label .req{color:var(--red);margin-left:4px;font-size:11px}
+.field input,.field select,.field textarea{font-family:inherit;font-size:15px;color:var(--ink);border:1px solid var(--gray-300);border-radius:8px;padding:12px 14px;background:#fff;transition:border-color .15s,box-shadow .15s;width:100%}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(26,42,68,.1)}
+.field textarea{resize:vertical;min-height:110px}
+.form-actions{margin-top:22px;text-align:center}
+.form-note{margin-top:14px;font-size:12px;color:var(--gray-500);line-height:1.8;text-align:center}
+.form-or{margin-top:14px;text-align:center;font-size:13.5px;color:var(--gray-700)}
+.form-or a{color:var(--red);font-weight:800;text-decoration:underline}
 
-  /* Mobile */
-  @media(max-width:768px){
-    .hero h1{font-size:22px}
-    .hero-service{font-size:26px}
-    .merit-pair{grid-template-columns:1fr}
-    .tbl{font-size:11px}
-    .tbl th,.tbl td{padding:8px 10px}
-    .price-num{font-size:36px}
-  }
+/* ---------- cta band ---------- */
+.cta-band{text-align:center}
+.cta-band .lead{max-width:600px;margin:14px auto 26px;font-size:15.5px;line-height:1.9;color:#d6dce6}
+.cta-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.cta-tel{margin-top:18px;font-size:13.5px;color:#aeb8c8}
+.cta-tel strong{color:#fff;font-size:20px;font-weight:900;margin-left:8px}
+
+/* ---------- disclaimer / footer ---------- */
+.disclaimer{max-width:960px;margin:0 auto;padding:34px 22px;font-size:12px;color:var(--gray-500);line-height:1.9}
+.disclaimer strong{color:var(--gray-700)}
+.disclaimer ul{list-style:disc;margin:6px 0 0 18px}
+.site-footer{background:var(--navy-2);color:#aeb8c8;text-align:center;font-size:12.5px;line-height:2;padding:34px 22px 22px}
+.site-footer .f-name{color:#fff;font-weight:800;font-size:14px}
+
+/* ---------- mobile bottom cta ---------- */
+.mobile-cta{position:fixed;left:0;right:0;bottom:0;z-index:1200;display:none;gap:0;background:#fff;box-shadow:0 -4px 18px rgba(26,42,68,.14);border-top:1px solid var(--gray-200)}
+.mobile-cta a{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;padding:14px 8px;font-size:14px;font-weight:800}
+.mobile-cta .m-tel{color:var(--navy);background:#fff}
+.mobile-cta .m-tel svg{width:17px;height:17px}
+.mobile-cta .m-diag{color:#fff;background:var(--red)}
+.mobile-cta a:active{opacity:.85}
+
+/* ---------- responsive ---------- */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr;gap:32px;padding:40px 0}
+  .g3{grid-template-columns:repeat(2,1fr)}
+  .ba-grid{grid-template-columns:1fr;gap:16px}
+  .ba-mid{transform:rotate(90deg)}
+  .biz-ba{grid-template-columns:1fr;gap:16px}
+  .biz-mid{transform:rotate(90deg)}
+  .merit-row{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr;gap:0}
+  .step{display:grid;grid-template-columns:auto 1fr;gap:0 16px;border:0;border-left:2px solid var(--gray-200);border-radius:0;box-shadow:none;padding:0 0 26px 22px;margin-left:18px}
+  .step .st-num{position:absolute;left:-19px;margin-bottom:0}
+  .step h3{min-height:0;grid-column:2;padding-top:6px}
+  .step .st-num{grid-row:1;grid-column:1}
+  .step .roles{grid-column:2}
+  .reason-grid{grid-template-columns:1fr}
+  .cat2col{grid-template-columns:1fr}
+  .form-grid{grid-template-columns:1fr}
+}
+@media(max-width:760px){
+  .header-tel{display:none}
+  .header-tel--icon{display:flex}
+  .header-cta .btn{padding:11px 15px;font-size:13px}
+  .brand .logo{font-size:19px}
+  .mobile-cta{display:flex}
+  body{padding-bottom:60px}
+  .cat-tablewrap{display:none}
+  .cat-cards{display:block}
+  .g3,.g2{grid-template-columns:1fr}
+  .section{padding:52px 0}
+  .merit-hero{flex-direction:column;gap:10px;padding:26px 24px}
+  .hero-actions .btn{width:100%}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
 </style>
 </head>
 <body>
 
-<div class="topbar">
-  <div class="topbar-inner">
-    <div class="logo">hito<span>kiwa</span></div>
-    <div class="top-cta">
-      <div class="top-tel">03-6842-0293</div>
-      <a href="https://hito-kiwa.co.jp/contact/" class="btn-contact" target="_blank">お問い合わせ</a>
+<!-- ===== SVG sprite ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.1a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v5h5"/><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M8 13h8M8 17h6"/></symbol>
+  <symbol id="i-judge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M6 8l-3 6a3 3 0 0 0 6 0L6 8zM18 8l-3 6a3 3 0 0 0 6 0l-3-6zM4 21h16"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M2 20c0-3.3 3-5.5 7-5.5"/><circle cx="17" cy="9" r="2.6"/><path d="M14.5 20c.3-3 2.4-5 5-5 1.6 0 3 .8 3.5 2"/></symbol>
+  <symbol id="i-widen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M4 12l4-4M4 12l4 4M20 12l-4-4M20 12l-4 4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.4 8.5-8 11-4.6-2.5-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-handshake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 17l2 2a1.4 1.4 0 0 0 2 0 1.4 1.4 0 0 0 0-2l1 1a1.5 1.5 0 0 0 2-2l-3.5-3.5-2 1.5a2 2 0 0 1-2.4 0L6 8"/><path d="M3 7l3-2 5 4M21 7l-3-2-3 2"/></symbol>
+  <symbol id="i-support" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></symbol>
+</svg>
+
+<!-- ============ Header ============ -->
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a class="brand" href="#top" aria-label="株式会社ヒトキワ カテル トップ">
+      <span class="logo">hito<span>kiwa</span></span>
+      <span class="svc">カテル｜技人国オンライン申請支援</span>
+    </a>
+    <div class="header-cta">
+      <a class="header-tel" href="tel:0368420293">
+        <span class="num">03-6842-0293</span>
+        <span class="lbl">平日受付・お気軽にご相談ください</span>
+      </a>
+      <a class="header-tel--icon" href="tel:0368420293" aria-label="電話で相談する"><svg><use href="#i-phone"/></svg></a>
+      <a class="btn btn--red" href="#shindan">無料カテゴリー診断</a>
     </div>
   </div>
-</div>
+</header>
 
-<!-- ===== Hero ===== -->
+<!-- ============ 2. Hero ============ -->
 <section class="hero">
-  <div class="hero-top">
-    <div class="hero-service">カテル</div>
-    <div class="hero-dash"></div>
-    <div class="hero-tagline-sm">カテゴリー2にあがって、厳格化に<span style="color:var(--red);font-weight:700">勝てる</span>採用を</div>
-  </div>
-  <h1>技人国ビザが厳格化された今、<br>採用できる人材の幅を<br>狭めないための体制づくり。</h1>
-  <p class="hero-desc">2026年4月15日から、カテゴリー3・4の企業は対人業務の申請で<strong>N2相当の言語能力証明</strong>が必要に。カテルは、御社の申請体制をカテゴリー2相当に引き上げ、この追加要件の対象から外れる仕組みをつくります。</p>
-  <a href="https://hito-kiwa.co.jp/contact/" class="btn-primary" target="_blank">無料相談する</a>
-</section>
-
-<!-- ===== Video ===== -->
-<div class="sec" style="padding-bottom:0">
-  <div style="max-width:640px;margin:0 auto">
-    <div style="aspect-ratio:16/9;border-radius:6px;overflow:hidden;border:1px solid var(--gray-200)">
-      <iframe src="https://www.youtube-nocookie.com/embed/v-jVqY8f2mQ" title="カテル サービス紹介" frameborder="0" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen style="width:100%;height:100%"></iframe>
-    </div>
-  </div>
-</div>
-
-<hr class="divider" style="max-width:800px;margin:48px auto 0">
-
-<!-- ===== What changed ===== -->
-<div class="sec">
-  <h2>何が変わったのか</h2>
-  <div class="alert">
-    <h3>カテゴリー3・4の企業に、N2相当の言語能力証明が追加</h3>
-    <p>通訳・ホテルフロント・接客など、主に日本語の言語能力を使う対人業務で技人国ビザを申請する場合、N2（CEFR B2相当）の証明が必要になりました。</p>
-  </div>
-  <p style="font-size:14px;color:var(--gray-700);line-height:2">しかし実際には、<strong>仕事上のコミュニケーションに問題がなくても、N2までは取得していない方が非常に多い</strong>のが現状です。その結果&#8212;</p>
-  <div class="voice-list">
-    <div class="voice-item">採用したい人がいるのに、ビザ申請が通らない</div>
-    <div class="voice-item">技人国で申請できず、採用を諦めるしかない</div>
-    <div class="voice-item">特定技能に変更したくても、仕事内容が対象外</div>
-    <div class="voice-item">求職者が日本での就職自体を諦めてしまう</div>
-  </div>
-  <div class="connector">この問題を解決する鍵が「カテゴリー2相当」の体制</div>
-</div>
-
-<hr class="divider">
-
-<!-- ===== Category ===== -->
-<div class="sec-bg">
-  <div class="sec">
-    <h2>企業カテゴリーと申請要件</h2>
-    <div style="overflow-x:auto">
-    <table class="tbl">
-      <thead>
-        <tr><th>区分</th><th>該当企業の例</th><th>添付書類</th><th>日本語要件（対人業務）</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th>カテゴリー1</th>
-          <td>上場企業・国/自治体 など</td>
-          <td>大幅に簡素</td>
-          <td>原則不要</td>
-        </tr>
-        <tr class="hl">
-          <th>カテゴリー2 <span class="badge">狙い目</span></th>
-          <td>源泉徴収税額1,000万円以上／<strong>オンライン申請の利用承認を受けた機関</strong></td>
-          <td>簡素</td>
-          <td>原則不要</td>
-        </tr>
-        <tr>
-          <th>カテゴリー3</th>
-          <td>法定調書を提出した企業（1・2以外）</td>
-          <td>多い</td>
-          <td style="color:var(--red);font-weight:700">N2相当の立証が必要</td>
-        </tr>
-        <tr>
-          <th>カテゴリー4</th>
-          <td>新設等で法定調書の提出がない企業</td>
-          <td>最も多い</td>
-          <td style="color:var(--red);font-weight:700">最もハードルが高い</td>
-        </tr>
-      </tbody>
-    </table>
-    </div>
-    <div class="callout" style="margin-top:16px"><strong>中小企業でもカテゴリー2相当になれます。</strong>オンライン申請の利用承認を受けると、カテゴリー2と同様の添付資料で申請できる扱いになります。</div>
-    <p class="note">※ カテゴリー区分・添付書類の取扱いは企業状況・入管庁の判断によります。</p>
-  </div>
-</div>
-
-<!-- ===== Merit ===== -->
-<div class="sec">
-  <h2>カテルで得られる<span class="accent">3つのメリット</span></h2>
-  <div class="merit-primary">
-    <h4>採用できる人材の幅が広がる</h4>
-    <p>カテゴリー3・4に追加されたN2相当の言語能力証明が一律に求められる申請区分から外れるため、実務上の日本語力はあってもN2を取得していない方まで採用候補を広げられます。求職者側から見ても応募できる可能性が広がり、人材が集まりやすい会社になります。</p>
-  </div>
-  <div class="merit-pair">
-    <div class="merit-card">
-      <h4>申請書類を簡略化</h4>
-      <p>カテゴリー2と同様の添付資料で申請できるようになり、採用のたびに準備する書類が大幅に減ります。</p>
-    </div>
-    <div class="merit-card">
-      <h4>申請から入社までがスムーズに</h4>
-      <p>24時間オンラインで申請でき、追加資料にも素早く対応できるため、入社までの流れがスムーズになります。</p>
-    </div>
-    <div class="merit-card">
-      <h4>申請結果を自社で確認できる</h4>
-      <p>ビザ申請の進捗・結果を御社のパソコンからいつでも確認可能。行政書士を通さなくても、自社で状況を把握できます。</p>
-    </div>
-  </div>
-  <p class="note">※ 審査期間の短縮や許可を保証するものではありません。</p>
-</div>
-
-<hr class="divider">
-
-<!-- ===== Service ===== -->
-<div class="sec-bg">
-  <div class="sec">
-    <h2>サポート内容</h2>
-    <p class="sub-lead">申請の代行ではなく、御社が自社で回せる体制を一緒につくります。</p>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div><h4>現状診断</h4><p>現在のカテゴリー・採用状況を整理し、カテゴリー2相当を目指せるかを確認します。</p></div>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <div class="svc-row">
+        <span class="svc-name">カ<b>テ</b>ル</span>
+        <span class="svc-desc">技人国のオンライン申請・<br>カテゴリー2相当化支援サービス</span>
       </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div><h4>必要書類の整理・ご案内</h4><p>カテゴリー2相当に必要な書類を一覧化し、準備をサポートします。</p></div>
+      <h1><span class="u">N2を持っていないだけで、</span><br>採用を諦めていませんか？</h1>
+      <p class="subcopy">中小企業の外国人採用を、カテゴリー2相当の申請体制へ。</p>
+      <p class="lead">2026年4月15日以降、カテゴリー3・4の企業では、通訳・ホテルフロント・接客などの<strong>対人業務</strong>において、N2相当の日本語能力を立証する追加要件が設けられました。カテルは、御社が<strong>自社でオンライン申請を行える体制づくり</strong>を支援します。</p>
+      <div class="hero-actions">
+        <a class="btn btn--red btn--lg" href="#shindan">無料で自社のカテゴリーを確認する</a>
+        <a class="btn btn--ghost btn--lg" href="tel:0368420293"><svg class="ic"><use href="#i-phone"/></svg>電話で相談する</a>
       </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div><h4>担当者の研修手配</h4><p>御社のスタッフに受講いただく研修をご案内します。基本的に1日で完了します。</p></div>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <div><h4>申請手続のサポート</h4><p>カテゴリー2相当の体制を整えるために必要な各種手続をサポートします。</p></div>
-      </div>
-      <div class="step">
-        <div class="step-num">5</div>
-        <div><h4>運用開始までの伴走</h4><p>審査・承認を経て、御社でオンラインでビザ申請ができる状態になるまで伴走します。</p></div>
+      <div class="hero-badges">
+        <span>無料相談</span>
+        <span>導入目安：約2か月</span>
+        <span>オンライン対応</span>
       </div>
     </div>
-    <div class="callout" style="margin-top:24px"><strong>導入期間の目安：</strong>全体で約2ヶ月程度。研修の日程や書類の準備状況により変動します。</div>
-  </div>
-</div>
 
-<!-- ===== Price ===== -->
-<div class="sec">
-  <h2>費用</h2>
-  <div class="price-block">
-    <div class="price-label">サポート料金（1社・税別）</div>
-    <div class="price-num"><small>&yen;</small>80,000</div>
-    <p class="price-sub">初期一括のみ。月額費用はかかりません。</p>
-  </div>
-  <div class="price-detail">
-    <strong>含まれるもの：</strong>現状診断／必要書類の整理・ご案内／担当者研修の手配／各種申請手続のサポート／運用開始までの伴走<br>
-    <strong>別途実費：</strong>研修の受講料・証明書取得費用・郵送費など<br>
-    <strong>別途費用：</strong>個別のビザ申請を行政書士へ依頼する場合の行政書士費用
-  </div>
-</div>
-
-<hr class="divider">
-
-<!-- ===== FAQ ===== -->
-<div class="sec-bg">
-  <div class="sec">
-    <h2>よくあるご質問</h2>
-
-    <details class="faq-item">
-      <summary class="faq-q">カテゴリー2になれば、N2がなくても許可されますか？</summary>
-      <div class="faq-a">
-        <p>ビザの許可を保証するものではありません。正確には、カテゴリー3・4に追加されたN2相当の言語能力証明を一律に提出する申請区分から外れるということです。本人の学歴・職歴・業務内容・給与条件など、技人国本来の審査は引き続き行われます。</p>
-      </div>
-    </details>
-
-    <details class="faq-item">
-      <summary class="faq-q">N2以外で日本語能力を証明する方法はありますか？</summary>
-      <div class="faq-a">
-        <p>N2だけが証明方法ではありません。以下もCEFR B2相当として認められます。</p>
+    <div class="hero-diagram" aria-label="制度変更前後の比較図">
+      <div class="diag-card diag-before">
+        <span class="tag">現在</span>
+        <h3>カテゴリー3・4</h3>
         <ul>
-          <li>BJTビジネス日本語能力テスト 400点以上</li>
-          <li>中長期在留者として20年以上日本に在留</li>
-          <li>日本の大学・高専・専門学校を卒業</li>
-          <li>日本の義務教育を修了し、高校を卒業</li>
+          <li>N2相当の立証が必要になる場合がある</li>
+          <li>添付書類が多い</li>
+          <li>採用候補が限定される</li>
         </ul>
       </div>
-    </details>
-
-    <details class="faq-item">
-      <summary class="faq-q">企業単位ですか？担当者単位ですか？</summary>
-      <div class="faq-a">
-        <p>両方です。カテゴリー2相当の体制は企業単位の取り組みですが、オンライン申請の操作権限は担当スタッフ個人に付与されます。御社のスタッフが研修を受講し、会社として審査を受ける流れです。詳しくはお問い合わせ時にご説明します。</p>
+      <div class="diag-arrow"><span><svg style="width:20px;height:20px;transform:rotate(90deg)"><use href="#i-arrow"/></svg></span></div>
+      <div class="diag-card diag-after">
+        <span class="tag">導入後</span>
+        <h3>カテゴリー2相当の申請体制</h3>
+        <ul>
+          <li>追加された言語能力証明の対象区分から外れる</li>
+          <li>添付資料を簡素化</li>
+          <li>自社でオンライン申請・進捗確認</li>
+        </ul>
       </div>
-    </details>
-
-    <details class="faq-item">
-      <summary class="faq-q">研修を受ける担当者は社員である必要がありますか？</summary>
-      <div class="faq-a">
-        <p>はい。御社に在籍しているスタッフである必要があります。外部の方が御社の担当者としてオンライン申請を行うことはできません。</p>
-      </div>
-    </details>
-
-    <details class="faq-item">
-      <summary class="faq-q">担当者が退職した場合は？</summary>
-      <div class="faq-a">
-        <p>新しい担当者を決め、研修の受講と所定の手続を行います。長期在籍予定の正社員や人事担当の方に受講いただくのがおすすめです。複数名を登録しておくことも可能です。</p>
-      </div>
-    </details>
-
-    <details class="faq-item">
-      <summary class="faq-q">どのくらいの期間で利用開始できますか？</summary>
-      <div class="faq-a">
-        <p>約2ヶ月程度が目安です。研修の受講 → 必要な手続 → 審査 → 承認後、利用開始という流れです。研修の開催日や書類の準備状況により前後します。</p>
-      </div>
-    </details>
-
-    <details class="faq-item">
-      <summary class="faq-q">今いる外国人社員の更新にも関係しますか？</summary>
-      <div class="faq-a">
-        <p>同じ会社で同じ業務を継続している通常の更新であれば、直ちに全員がN2を求められるわけではありません。ただし、新規採用・転職入社・業務内容変更・接客業務への配置変更などは対象になる可能性があります。今後に備える仕組みとして整えておくメリットがあります。</p>
-      </div>
-    </details>
-
-    <details class="faq-item">
-      <summary class="faq-q">行政書士は必要ですか？</summary>
-      <div class="faq-a">
-        <p>カテルで体制を整えた後は、御社のスタッフが自社でオンラインでビザ申請を行えます。ただし、初めての申請、専攻と業務の関連性が弱い場合、過去に不許可がある場合などは行政書士への依頼をおすすめします。カテルは申請体制をつくるサポートであり、個別のビザ申請の代行とは別のサービスです。</p>
-      </div>
-    </details>
-
-    <details class="faq-item">
-      <summary class="faq-q">利用期間に期限はありますか？</summary>
-      <div class="faq-a">
-        <p>承認日から3年間です。継続利用する場合は、期限前に更新手続が必要です。</p>
-      </div>
-    </details>
-
-  </div>
-</div>
-
-<!-- ===== CTA ===== -->
-<section class="cta">
-  <div class="cta-inner">
-    <h2>まずは御社のカテゴリーを確認しませんか</h2>
-    <p>現在のカテゴリーと必要書類を確認し、どのくらいのメリットがあるかを具体的にご提案します。</p>
-    <a href="https://hito-kiwa.co.jp/contact/" class="btn-primary" target="_blank">無料相談する</a>
-    <div class="cta-tel"><br>TEL: <strong>03-6842-0293</strong></div>
+    </div>
   </div>
 </section>
 
-<!-- ===== Disclaimer ===== -->
+<!-- ============ 3. Video ============ -->
+<section class="section">
+  <div class="wrap video-wrap">
+    <div class="video-frame" id="video" role="button" tabindex="0" aria-label="サービス紹介動画を再生する（3分で分かるカテル）"
+         data-embed="https://www.youtube.com/embed/1Ad4_y-LjPU?rel=0&autoplay=1"
+         data-title="【カテル】技人国ビザ厳格化に負けない採用へ｜カテゴリー2相当の申請体制づくり｜株式会社ヒトキワ">
+      <span class="video-badge">3分で分かる「カテル」</span>
+      <img src="https://i.ytimg.com/vi/1Ad4_y-LjPU/hqdefault.jpg" alt="カテル サービス紹介動画のサムネイル" loading="lazy" decoding="async" width="480" height="360">
+      <span class="video-play" aria-hidden="true"></span>
+    </div>
+    <p class="video-caption">▶ クリックすると、この場で動画を再生します</p>
+  </div>
+</section>
+
+<!-- ============ 4. 企業の悩み ============ -->
+<section class="section section--ivory">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">CHECK</span>
+      <h2>外国人採用で、このようなお悩みはありませんか？</h2>
+    </div>
+    <div class="card-grid g3">
+      <div class="problem-card"><span class="ic"><svg><use href="#i-user"/></svg></span><p>採用したい人がいるのに、N2を持っていない</p></div>
+      <div class="problem-card"><span class="ic"><svg><use href="#i-judge"/></svg></span><p>技人国で申請できるか判断できず、採用を止めている</p></div>
+      <div class="problem-card"><span class="ic"><svg><use href="#i-doc"/></svg></span><p>採用のたびに多くの書類を準備している</p></div>
+      <div class="problem-card"><span class="ic"><svg><use href="#i-phone"/></svg></span><p>申請状況を行政書士へ毎回確認している</p></div>
+      <div class="problem-card"><span class="ic"><svg><use href="#i-refresh"/></svg></span><p>制度変更にどう対応すればよいか分からない</p></div>
+      <div class="problem-card"><span class="ic"><svg><use href="#i-monitor"/></svg></span><p>社内にオンライン申請を扱える担当者がいない</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. 何が変わったか ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">2026.4.15 –</span>
+      <h2>2026年4月15日から、<span class="accent">何が変わったか</span></h2>
+      <p>通訳・ホテルフロント・接客など、主に日本語の言語能力を使う対人業務で技人国ビザを申請する場合、N2（CEFR B2相当）の証明が必要になりました。</p>
+    </div>
+    <div class="ba-grid">
+      <div class="ba-col is-before">
+        <span class="ba-tag">制度変更前</span>
+        <h3>本人の状況をもとに幅広く検討できた</h3>
+        <ul>
+          <li>業務内容や本人の経歴などをもとに審査</li>
+          <li>N2未取得者も採用候補として検討しやすかった</li>
+        </ul>
+      </div>
+      <div class="ba-mid"><svg><use href="#i-arrow"/></svg></div>
+      <div class="ba-col is-after">
+        <span class="ba-tag">2026年4月15日以降</span>
+        <h3>対人業務で言語能力証明が追加</h3>
+        <ul>
+          <li>カテゴリー3・4の企業が対人業務で申請する場合、N2相当の言語能力証明が追加</li>
+          <li>採用候補が限定される可能性がある</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note-box narrow" style="margin-left:auto;margin-right:auto">
+      本人の学歴・職歴・専攻と業務の関連性・給与条件など、技人国本来の審査は引き続き行われます。
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. カテゴリー比較 ============ -->
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">COMPARISON</span>
+      <h2>カテゴリー3・4と<span class="accent">カテゴリー2相当</span>の違い</h2>
+    </div>
+    <div class="cat2col">
+      <div class="cat-block cat-neg">
+        <h3>カテゴリー3・4</h3>
+        <div class="cat-sub">現在の多くの中小企業</div>
+        <ul>
+          <li>N2相当の立証が必要になる場合がある</li>
+          <li>添付資料が多い</li>
+          <li>採用できる人材が限定される可能性</li>
+          <li>紙やメールでのやり取りが中心になりやすい</li>
+        </ul>
+      </div>
+      <div class="cat-block cat-pos">
+        <span class="cat-badge">カテルが目指す体制</span>
+        <h3>カテゴリー2相当の申請体制</h3>
+        <div class="cat-sub">オンライン申請の利用承認を受けた体制</div>
+        <ul>
+          <li>追加された言語能力証明の対象区分から外れる</li>
+          <li>添付資料を簡素化</li>
+          <li>自社からオンライン申請</li>
+          <li>自社PCから進捗確認</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="tbl-title">企業カテゴリーの詳しい比較</p>
+    <div class="cat-tablewrap">
+      <table class="tbl">
+        <thead>
+          <tr><th>区分</th><th>該当企業の例</th><th>添付書類</th><th>日本語要件（対人業務）</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>カテゴリー1</th><td>上場企業・国／自治体 など</td><td>大幅に簡素</td><td>原則不要</td></tr>
+          <tr class="hl"><th>カテゴリー2<span class="badge">狙い目</span></th><td>源泉徴収税額1,000万円以上／オンライン申請の利用承認を受けた機関</td><td>簡素</td><td>原則不要</td></tr>
+          <tr><th>カテゴリー3</th><td>法定調書を提出した企業（1・2以外）</td><td>多い</td><td class="danger">N2相当の立証が必要</td></tr>
+          <tr><th>カテゴリー4</th><td>新設等で法定調書の提出がない企業</td><td>最も多い</td><td class="danger">最もハードルが高い</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- スマホ用 縦型カード -->
+    <div class="cat-cards">
+      <div class="cat-card"><h4>カテゴリー1</h4><dl><dt>該当例</dt><dd>上場企業・国／自治体 など</dd><dt>添付書類</dt><dd>大幅に簡素</dd><dt>日本語要件</dt><dd>原則不要</dd></dl></div>
+      <div class="cat-card hl"><h4>カテゴリー2<span class="badge">狙い目</span></h4><dl><dt>該当例</dt><dd>源泉徴収税額1,000万円以上／オンライン申請の利用承認を受けた機関</dd><dt>添付書類</dt><dd>簡素</dd><dt>日本語要件</dt><dd>原則不要</dd></dl></div>
+      <div class="cat-card"><h4>カテゴリー3</h4><dl><dt>該当例</dt><dd>法定調書を提出した企業（1・2以外）</dd><dt>添付書類</dt><dd>多い</dd><dt>日本語要件</dt><dd style="color:var(--red);font-weight:800">N2相当の立証が必要</dd></dl></div>
+      <div class="cat-card"><h4>カテゴリー4</h4><dl><dt>該当例</dt><dd>新設等で法定調書の提出がない企業</dd><dt>添付書類</dt><dd>最も多い</dd><dt>日本語要件</dt><dd style="color:var(--red);font-weight:800">最もハードルが高い</dd></dl></div>
+    </div>
+    <div class="note-box">オンライン申請の利用承認を受けると、カテゴリー2と同様の添付資料で申請できる扱いになります。カテゴリー区分・添付書類の取扱いは、企業状況・入管庁の判断によります。</div>
+
+    <div style="text-align:center;margin-top:34px"><a class="btn btn--red btn--lg" href="#shindan">無料で自社のカテゴリーを確認する</a></div>
+  </div>
+</section>
+
+<!-- ============ 7. メリット（4つ） ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">MERIT</span>
+      <h2>カテルで<span class="accent">変わる4つのこと</span></h2>
+    </div>
+    <div class="merit-hero">
+      <span class="num">01</span>
+      <div>
+        <h3>採用できる人材の幅を広げられる</h3>
+        <p>カテゴリー3・4に追加されたN2相当の言語能力証明が一律に求められる申請区分から外れるため、実務上の日本語力はあってもN2を取得していない方まで、採用候補を広げられる可能性があります。求職者側から見ても応募できる可能性が広がります。</p>
+      </div>
+    </div>
+    <div class="merit-row">
+      <div class="merit-card">
+        <span class="ic"><svg><use href="#i-doc"/></svg></span>
+        <div class="num">MERIT 02</div>
+        <h3>添付資料を簡素化できる</h3>
+        <p>カテゴリー2と同様の添付資料で申請できる扱いを目指せるため、採用のたびに準備する書類を簡素化できます。</p>
+      </div>
+      <div class="merit-card">
+        <span class="ic"><svg><use href="#i-monitor"/></svg></span>
+        <div class="num">MERIT 03</div>
+        <h3>自社で申請できる体制をつくれる</h3>
+        <p>御社のスタッフが、自社でオンライン申請を行える体制を整えられます。</p>
+      </div>
+      <div class="merit-card">
+        <span class="ic"><svg><use href="#i-support"/></svg></span>
+        <div class="num">MERIT 04</div>
+        <h3>申請状況を自社で確認できる</h3>
+        <p>申請の進捗・状況を、御社のパソコンからいつでも確認できます。</p>
+      </div>
+    </div>
+    <div class="note-box">審査期間の短縮や、在留資格の許可、カテゴリー2相当の承認を保証するものではありません。</div>
+  </div>
+</section>
+
+<!-- ============ 8. Before / After（業務） ============ -->
+<section class="section section--ivory">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">BEFORE / AFTER</span>
+      <h2>導入前と導入後で、<span class="accent">採用業務がこう変わります</span></h2>
+    </div>
+    <div class="biz-ba">
+      <div class="biz-col biz-before">
+        <h3><span class="pill">Before</span>導入前</h3>
+        <ul>
+          <li>N2未取得者を候補から外している</li>
+          <li>採用のたびに多くの企業書類を準備</li>
+          <li>行政書士へ申請状況を毎回確認</li>
+          <li>社内にオンライン申請の知識がない</li>
+        </ul>
+      </div>
+      <div class="biz-mid"><svg><use href="#i-arrow"/></svg></div>
+      <div class="biz-col biz-after">
+        <h3><span class="pill">After</span>導入後</h3>
+        <ul>
+          <li>実務上の日本語力も含めて採用候補を検討しやすくなる</li>
+          <li>カテゴリー2と同様の添付資料で申請できる扱いを目指せる</li>
+          <li>自社で申請状況を確認できる</li>
+          <li>自社でオンライン申請を運用できる体制が整う</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. サポート内容・導入の流れ ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">FLOW</span>
+      <h2>サポート内容・<span class="accent">導入の流れ</span></h2>
+      <p>申請の代行ではなく、御社が自社で申請を回せる体制を一緒につくります。各ステップで「御社が行うこと」と「カテルが支援すること」を明確にします。</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="st-num">1</div>
+        <h3>無料カテゴリー診断</h3>
+        <div class="roles">
+          <div class="role you"><b>御社</b><p>現在の採用状況や企業情報を共有</p></div>
+          <div class="role us"><b>カテル</b><p>現在のカテゴリーと対象可否を確認</p></div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="st-num">2</div>
+        <h3>必要書類の確認・整理</h3>
+        <div class="roles">
+          <div class="role you"><b>御社</b><p>自社の書類を用意</p></div>
+          <div class="role us"><b>カテル</b><p>必要書類を一覧化し、整理をご案内</p></div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="st-num">3</div>
+        <h3>担当スタッフの研修受講</h3>
+        <div class="roles">
+          <div class="role you"><b>御社</b><p>在籍スタッフが研修を受講</p></div>
+          <div class="role us"><b>カテル</b><p>研修日程の手配・受講をご案内</p></div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="st-num">4</div>
+        <h3>利用申出・必要手続</h3>
+        <div class="roles">
+          <div class="role you"><b>御社</b><p>申出に必要な情報を提供</p></div>
+          <div class="role us"><b>カテル</b><p>手続の準備・進め方をサポート</p></div>
+        </div>
+      </div>
+      <div class="step">
+        <div class="st-num">5</div>
+        <h3>審査・承認後に運用開始</h3>
+        <div class="roles">
+          <div class="role you"><b>御社</b><p>自社でオンライン申請を運用</p></div>
+          <div class="role us"><b>カテル</b><p>運用開始まで伴走してサポート</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="note-box">導入期間の目安は約2か月です。研修日程、書類準備、審査状況により前後します。</div>
+    <div style="text-align:center;margin-top:30px"><a class="btn btn--red btn--lg" href="#shindan">無料で自社のカテゴリーを確認する</a></div>
+  </div>
+</section>
+
+<!-- ============ 10. 選ばれる理由・信頼材料 ============ -->
+<section class="section section--tint">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">TRUST</span>
+      <h2>外国人採用を支援する<span class="accent">ヒトキワ</span>だからできること</h2>
+    </div>
+    <div class="reason-grid">
+      <div class="reason-card"><span class="ic"><svg><use href="#i-people"/></svg></span><p>外国人材の紹介から入社支援まで対応</p></div>
+      <div class="reason-card"><span class="ic"><svg><use href="#i-badge"/></svg></span><p>技人国・特定技能の採用支援に対応</p></div>
+      <div class="reason-card"><span class="ic"><svg><use href="#i-shield"/></svg></span><p>有料職業紹介事業の許可を取得</p></div>
+      <div class="reason-card"><span class="ic"><svg><use href="#i-shield"/></svg></span><p>登録支援機関として外国人雇用を支援</p></div>
+      <div class="reason-card"><span class="ic"><svg><use href="#i-handshake"/></svg></span><p>必要に応じて行政書士等の専門家と連携</p></div>
+      <div class="reason-card"><span class="ic"><svg><use href="#i-support"/></svg></span><p>採用だけでなく入社後の支援も相談可能</p></div>
+    </div>
+    <div class="license-bar">
+      <div class="license-chip"><div class="l-label">有料職業紹介事業 許可番号</div><div class="l-num">13-ユ-316856</div></div>
+      <div class="license-chip"><div class="l-label">登録支援機関 登録番号</div><div class="l-num">24登-010827</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11. 料金 ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">PRICE</span>
+      <h2>料金について</h2>
+    </div>
+    <div class="price-box">
+      <p class="body">企業規模、現在の申請体制、登録する担当者数などにより、必要なサポート内容が異なります。<strong>無料カテゴリー診断後に、必要な支援内容とお見積もりをご案内します。</strong></p>
+      <div class="price-points">
+        <span class="price-point">無料診断の時点では費用は発生しません</span>
+        <span class="price-point">内容を確認してから導入を判断できます</span>
+      </div>
+      <a class="btn btn--red btn--lg" href="#shindan">無料診断後に見積もりを確認する</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 12. FAQ ============ -->
+<section class="section section--ivory">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">FAQ</span>
+      <h2>よくあるご質問</h2>
+    </div>
+    <div class="faq">
+
+      <div class="faq-cat">日本語要件について</div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">カテゴリー2相当になれば、N2がなくても許可されますか？</button>
+        <div class="faq-panel"><div class="faq-a"><p>ビザの許可を保証するものではありません。正確には、カテゴリー3・4に追加されたN2相当の言語能力証明を一律に提出する申請区分から外れる、ということです。本人の学歴・職歴・業務内容・給与条件など、技人国本来の審査は引き続き行われます。</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">N2以外で日本語能力を証明する方法はありますか？</button>
+        <div class="faq-panel"><div class="faq-a"><p>N2だけが証明方法ではありません。以下もCEFR B2相当として認められます。</p><ul><li>BJTビジネス日本語能力テスト 400点以上</li><li>中長期在留者として20年以上日本に在留</li><li>日本の大学・高専・専門学校を卒業</li><li>日本の義務教育を修了し、高校を卒業</li></ul></div></div>
+      </div>
+
+      <div class="faq-cat">企業カテゴリーについて</div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">今いる外国人社員の更新にも関係しますか？</button>
+        <div class="faq-panel"><div class="faq-a"><p>同じ会社で同じ業務を継続している通常の更新であれば、直ちに全員がN2を求められるわけではありません。ただし、新規採用・転職入社・業務内容変更・接客業務への配置変更などは対象になる可能性があります。今後に備える仕組みとして整えておくメリットがあります。</p></div></div>
+      </div>
+
+      <div class="faq-cat">研修・担当者について</div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">企業単位ですか？担当者単位ですか？</button>
+        <div class="faq-panel"><div class="faq-a"><p>両方です。カテゴリー2相当の体制は企業単位の取り組みですが、オンライン申請の操作権限は担当スタッフ個人に付与されます。御社のスタッフが研修を受講し、会社として審査を受ける流れです。詳しくはお問い合わせ時にご説明します。</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">研修を受ける担当者は社員である必要がありますか？</button>
+        <div class="faq-panel"><div class="faq-a"><p>はい。御社に在籍しているスタッフである必要があります。外部の方が御社の担当者としてオンライン申請を行うことはできません。</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">担当者が退職した場合は？</button>
+        <div class="faq-panel"><div class="faq-a"><p>新しい担当者を決め、研修の受講と所定の手続を行います。長期在籍予定の正社員や人事担当の方に受講いただくのがおすすめです。複数名を登録しておくことも可能です。</p></div></div>
+      </div>
+
+      <div class="faq-cat">導入期間について</div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">どのくらいの期間で利用開始できますか？</button>
+        <div class="faq-panel"><div class="faq-a"><p>約2か月程度が目安です。研修の受講 → 必要な手続 → 審査 → 承認後、利用開始という流れです。研修の開催日や書類の準備状況により前後します。</p></div></div>
+      </div>
+
+      <div class="faq-cat">行政書士との違い</div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">行政書士は必要ですか？カテルは申請の代行ですか？</button>
+        <div class="faq-panel"><div class="faq-a"><p>カテルは、御社が自社でオンライン申請を行える体制づくりを支援するサービスであり、<strong>個別のビザ申請を代行するものではありません</strong>。体制を整えた後は、御社のスタッフが自社でオンライン申請を行えます。ただし、初めての申請、専攻と業務の関連性が弱い場合、過去に不許可がある場合などは、行政書士等の専門家への依頼をおすすめします。</p></div></div>
+      </div>
+
+      <div class="faq-cat">利用期間について</div>
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">利用期間に期限はありますか？</button>
+        <div class="faq-panel"><div class="faq-a"><p>承認日から3年間です。継続して利用する場合は、期限前に更新手続が必要です。</p></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 13. フォーム（無料診断） ============ -->
+<section class="section" id="shindan">
+  <div class="wrap">
+    <div class="form-card">
+      <div class="form-head">
+        <span class="pill">30秒で完了</span>
+        <h3>無料カテゴリー診断</h3>
+      </div>
+      <!-- TODO(送信先): action を御社のフォーム受信先に設定してください。
+           現状は入力後、お問い合わせページ https://hito-kiwa.co.jp/contact/ へ遷移します。
+           架空のAPIには接続していません。 -->
+      <form action="https://hito-kiwa.co.jp/contact/" method="post" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="f-company">会社名<span class="req">必須</span></label>
+            <input id="f-company" name="company" type="text" autocomplete="organization" required>
+          </div>
+          <div class="field">
+            <label for="f-name">ご担当者名<span class="req">必須</span></label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-tel">電話番号<span class="req">必須</span></label>
+            <input id="f-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" required>
+          </div>
+          <div class="field">
+            <label for="f-email">メールアドレス<span class="req">必須</span></label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field full">
+            <label for="f-count">現在または今後の外国人採用人数</label>
+            <select id="f-count" name="hiring_count">
+              <option value="">選択してください</option>
+              <option>1名</option>
+              <option>2〜5名</option>
+              <option>6〜10名</option>
+              <option>11名以上</option>
+              <option>未定・検討中</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="f-message">相談内容</label>
+            <textarea id="f-message" name="message" placeholder="採用予定の職種・現在の状況・お困りごとなど、ご自由にご記入ください。"></textarea>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn--red btn--lg btn--block" type="submit">無料で自社のカテゴリーを確認する</button>
+          <p class="form-note">無料診断の時点では費用は発生しません。内容を確認してから導入をご判断いただけます。</p>
+          <p class="form-or">うまく送信できない場合は <a href="https://hito-kiwa.co.jp/contact/" target="_blank" rel="noopener noreferrer">お問い合わせページ</a> または お電話（<a href="tel:0368420293">03-6842-0293</a>）からご連絡ください。</p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 最終CTA ============ -->
+<section class="section section--navy cta-band">
+  <div class="wrap">
+    <span class="eyebrow">FREE DIAGNOSIS</span>
+    <h2 style="color:#fff;font-size:clamp(23px,3.4vw,32px);font-weight:900;line-height:1.45">まずは御社のカテゴリーを確認しませんか</h2>
+    <p class="lead">現在のカテゴリーと必要書類を確認し、どのくらいのメリットがあるかを具体的にご提案します。ご相談は無料です。</p>
+    <div class="cta-actions">
+      <a class="btn btn--red btn--lg" href="#shindan">無料で自社のカテゴリーを確認する</a>
+      <a class="btn btn--ghost-light btn--lg" href="tel:0368420293"><svg class="ic"><use href="#i-phone"/></svg>電話で相談する</a>
+    </div>
+    <p class="cta-tel">お電話でのご相談 <strong>03-6842-0293</strong></p>
+  </div>
+</section>
+
+<!-- ============ 14. 注意事項・フッター ============ -->
 <div class="disclaimer">
-  <p><strong>出典：</strong>出入国在留管理庁 公表資料（在留資格「技術・人文知識・国際業務」カテゴリー区分・添付資料、オンライン申請手続に関するQ&A 等）</p>
-  <p><strong>注意事項：</strong>カテゴリー2相当の取扱い・承認の可否は、企業状況・提出資料・入管庁の審査により判断されます。ビザの許可を保証するものではありません。申請業務は必要に応じて行政書士等の専門家と連携します。</p>
+  <p><strong>出典：</strong>出入国在留管理庁 公表資料（在留資格「技術・人文知識・国際業務」カテゴリー区分・添付資料、オンライン申請手続に関するQ&amp;A 等）</p>
+  <p><strong>注意事項：</strong></p>
+  <ul>
+    <li>カテゴリー2相当の取扱いや承認の可否は、企業状況・提出資料・入管庁の審査により判断されます。</li>
+    <li>在留資格の許可を保証するものではありません。</li>
+    <li>カテルは自社でオンライン申請を行える体制づくりを支援するサービスであり、個別のビザ申請の代行ではありません。個別申請については、必要に応じて行政書士等の専門家と連携します。</li>
+  </ul>
 </div>
 
-<footer>
-  株式会社ヒトキワ｜〒102-0083 東京都千代田区麹町4丁目3-5 7階｜TEL: 03-6842-0293<br>
+<footer class="site-footer">
+  <div class="f-name">株式会社ヒトキワ</div>
+  〒102-0083 東京都千代田区麹町4丁目3-5 7階｜TEL：<a href="tel:0368420293" style="color:#fff">03-6842-0293</a><br>
   有料職業紹介事業許可番号 13-ユ-316856｜登録支援機関登録番号 24登-010827<br>
-  &copy; 2026 hitokiwa Inc. All rights reserved.
+  <span style="display:inline-block;margin-top:10px;color:#8a95a8">&copy; 2026 株式会社ヒトキワ All Rights Reserved.</span>
 </footer>
 
+<!-- ============ スマホ下部固定CTA ============ -->
+<nav class="mobile-cta" aria-label="お問い合わせ">
+  <a class="m-tel" href="tel:0368420293"><svg><use href="#i-phone"/></svg>電話相談</a>
+  <a class="m-diag" href="#shindan">無料カテゴリー診断</a>
+</nav>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  document.addEventListener("DOMContentLoaded", function(){
+
+    /* header shadow on scroll */
+    var header = document.querySelector(".site-header");
+    if(header){
+      var onScroll=function(){ header.classList.toggle("is-scrolled", window.pageYOffset>8); };
+      window.addEventListener("scroll", onScroll, {passive:true}); onScroll();
+    }
+
+    /* smooth scroll with header offset (for in-page anchors) */
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){
+      var id=a.getAttribute("href");
+      if(!id || id==="#" || id.length<2) return;
+      a.addEventListener("click", function(e){
+        var t=document.querySelector(id);
+        if(!t) return;
+        e.preventDefault();
+        var offset=(header?header.offsetHeight:0)+10;
+        var y=t.getBoundingClientRect().top+window.pageYOffset-offset;
+        window.scrollTo({top:y, behavior: reduce ? "auto":"smooth"});
+      });
+    });
+
+    /* FAQ accordion (smooth) */
+    document.querySelectorAll(".faq-item").forEach(function(item){
+      var btn=item.querySelector(".faq-q");
+      var panel=item.querySelector(".faq-panel");
+      if(!btn||!panel) return;
+      btn.addEventListener("click", function(){
+        var isOpen=item.classList.contains("open");
+        if(isOpen){
+          panel.style.maxHeight=panel.scrollHeight+"px";
+          requestAnimationFrame(function(){ panel.style.maxHeight="0px"; });
+          item.classList.remove("open");
+          btn.setAttribute("aria-expanded","false");
+        }else{
+          item.classList.add("open");
+          btn.setAttribute("aria-expanded","true");
+          panel.style.maxHeight=panel.scrollHeight+"px";
+          panel.addEventListener("transitionend", function te(){
+            if(item.classList.contains("open")) panel.style.maxHeight="none";
+            panel.removeEventListener("transitionend", te);
+          });
+        }
+      });
+    });
+    // recalc open panels on resize
+    window.addEventListener("resize", function(){
+      document.querySelectorAll(".faq-item.open .faq-panel").forEach(function(p){ p.style.maxHeight="none"; });
+    });
+
+    /* click-to-load YouTube (performance) */
+    var v=document.getElementById("video");
+    if(v){
+      var load=function(){
+        if(v.dataset.loaded) return;
+        v.dataset.loaded="1";
+        var f=document.createElement("iframe");
+        f.src=v.dataset.embed;
+        f.title=v.dataset.title||"サービス紹介動画";
+        f.setAttribute("allow","accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+        f.setAttribute("referrerpolicy","strict-origin-when-cross-origin");
+        f.setAttribute("allowfullscreen","");
+        v.innerHTML="";
+        v.appendChild(f);
+        v.style.cursor="default";
+      };
+      v.addEventListener("click", load);
+      v.addEventListener("keydown", function(e){ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); load(); } });
+    }
+
+  });
+})();
+</script>
 </body>
 </html>

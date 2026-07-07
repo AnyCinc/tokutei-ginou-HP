@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>給料そんしてない？診断｜ひと際 Hitokiwa</title>
+<style>
+  :root{
+    --red:#c8102e; --red-2:#9d0a23; --navy:#1a2a44; --navy-2:#0f1c30;
+    --ivory:#faf7f2; --gold:#c9a961; --black:#1a1a1a;
+    --gray-700:#4a4f57; --gray-500:#8a8f97; --gray-200:#e5e7eb; --gray-100:#f3f4f6;
+    --green:#1f9d55;
+    --shadow-sm:0 2px 8px rgba(26,42,68,.06);
+    --shadow:0 4px 20px rgba(26,42,68,.10);
+    --sans:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP","Yu Gothic Medium","Meiryo",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--ivory);color:var(--black);font-family:var(--sans);-webkit-font-smoothing:antialiased;line-height:1.6}
+  .wrap{max-width:480px;margin:0 auto;padding:0 16px 60px}
+  /* header */
+  .topbar{background:#fff;border-bottom:1px solid var(--gray-200);position:sticky;top:0;z-index:100;box-shadow:var(--shadow-sm)}
+  .topbar-in{max-width:480px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;justify-content:space-between}
+  .logo{font-weight:900;font-size:20px;color:var(--navy);letter-spacing:.04em}
+  .logo span{color:var(--red)}
+  .lang{font-size:12px;color:var(--gray-500);border:1px solid var(--gray-200);border-radius:20px;padding:4px 10px;background:#fff}
+  /* hero */
+  .hero{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;padding:28px 20px 30px;text-align:center;border-radius:0 0 20px 20px}
+  .hero .tag{display:inline-block;background:var(--red);color:#fff;font-size:12px;font-weight:900;padding:5px 14px;border-radius:20px;letter-spacing:.08em;margin-bottom:14px}
+  .hero h1{font-size:25px;font-weight:900;line-height:1.35;letter-spacing:.01em}
+  .hero h1 em{color:var(--gold);font-style:normal}
+  .hero p{font-size:13px;color:#cdd5e1;margin-top:12px}
+  .hero .meta{font-size:11px;color:#8a96a8;margin-top:14px}
+  /* progress */
+  .prog{display:flex;gap:6px;margin:22px 0 18px}
+  .prog i{flex:1;height:6px;border-radius:6px;background:var(--gray-200);transition:.3s}
+  .prog i.on{background:var(--red)}
+  /* card */
+  .card{background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:24px 20px;margin-top:4px}
+  .qno{font-size:12px;font-weight:900;color:var(--red);letter-spacing:.1em}
+  .q{font-size:19px;font-weight:900;color:var(--navy);margin:6px 0 4px;line-height:1.4}
+  .q small{display:block;font-size:13px;color:var(--gray-500);font-weight:600;margin-top:4px}
+  .opts{display:flex;flex-direction:column;gap:10px;margin-top:18px}
+  .opt{border:2px solid var(--gray-200);border-radius:12px;padding:15px 16px;font-size:16px;font-weight:700;color:var(--black);background:#fff;cursor:pointer;text-align:left;transition:.15s;display:flex;align-items:center;justify-content:space-between}
+  .opt:hover{border-color:var(--red);background:#fff7f8}
+  .opt.sel{border-color:var(--red);background:#fff1f3}
+  .opt .chk{width:22px;height:22px;border-radius:50%;border:2px solid var(--gray-200);flex:0 0 auto}
+  .opt.sel .chk{border-color:var(--red);background:var(--red);box-shadow:inset 0 0 0 4px #fff}
+  .nav{display:flex;gap:10px;margin-top:22px}
+  .btn{flex:1;border:none;border-radius:12px;padding:15px;font-size:16px;font-weight:900;cursor:pointer;font-family:inherit;transition:.15s}
+  .btn-back{background:var(--gray-100);color:var(--gray-700);flex:0 0 90px}
+  .btn-next{background:var(--red);color:#fff;box-shadow:0 4px 14px rgba(200,16,46,.3)}
+  .btn-next:hover{background:var(--red-2)}
+  .btn-next:disabled{background:var(--gray-200);color:var(--gray-500);box-shadow:none;cursor:not-allowed}
+  /* result */
+  .result{display:none}
+  .result.show{display:block;animation:fade .4s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .rtag{display:inline-block;background:var(--red);color:#fff;font-size:12px;font-weight:900;padding:6px 16px;border-radius:20px;margin-bottom:14px}
+  .rmain{font-size:15px;font-weight:800;color:var(--navy);text-align:center}
+  .bignum{text-align:center;margin:14px 0 6px}
+  .bignum .lbl{font-size:13px;color:var(--gray-500);font-weight:700}
+  .bignum .v{font-size:46px;font-weight:900;color:var(--red);line-height:1.05;letter-spacing:-.02em}
+  .bignum .v small{font-size:20px}
+  .bignum .yr{font-size:14px;color:var(--gray-700);font-weight:800;margin-top:4px}
+  .compare{display:flex;gap:10px;margin:22px 0 6px}
+  .cbox{flex:1;border-radius:14px;padding:16px 12px;text-align:center}
+  .cbox.now{background:var(--gray-100);color:var(--gray-700)}
+  .cbox.aft{background:linear-gradient(180deg,#eafaf0,#d8f3e3);color:var(--navy);border:2px solid var(--green)}
+  .cbox .ct{font-size:12px;font-weight:800;margin-bottom:6px}
+  .cbox .cv{font-size:30px;font-weight:900;line-height:1}
+  .cbox .cv small{font-size:14px}
+  .cbox.aft .cv{color:var(--green)}
+  .arrow{display:flex;align-items:center;font-size:22px;color:var(--green);font-weight:900}
+  .points{background:var(--ivory);border-radius:12px;padding:14px 16px;margin:18px 0}
+  .points h4{font-size:13px;font-weight:900;color:var(--navy);margin-bottom:8px}
+  .points li{list-style:none;font-size:14px;color:var(--gray-700);padding:4px 0 4px 24px;position:relative}
+  .points li::before{content:"⚠";position:absolute;left:0;color:var(--red)}
+  .points li.ok::before{content:"✓";color:var(--green)}
+  .cta{background:#fff;border:2px solid var(--red);border-radius:16px;padding:20px;text-align:center;margin-top:18px}
+  .cta h3{font-size:18px;font-weight:900;color:var(--navy);line-height:1.4}
+  .cta p{font-size:13px;color:var(--gray-700);margin:8px 0 16px}
+  .cta-btn{display:block;width:100%;background:var(--green);color:#fff;border:none;border-radius:12px;padding:17px;font-size:17px;font-weight:900;text-decoration:none;box-shadow:0 4px 14px rgba(31,157,85,.3);cursor:pointer;font-family:inherit}
+  .cta-btn.line{background:#06c755}
+  .cta-sub{display:block;margin-top:10px;background:#fff;color:var(--red);border:2px solid var(--red);border-radius:12px;padding:14px;font-size:15px;font-weight:900;text-decoration:none;cursor:pointer}
+  .disc{font-size:11px;color:var(--gray-500);margin-top:16px;line-height:1.5;text-align:center}
+  .restart{display:block;margin:14px auto 0;background:none;border:none;color:var(--gray-500);font-size:13px;text-decoration:underline;cursor:pointer;font-family:inherit}
+  .trust{display:flex;justify-content:center;gap:18px;margin-top:18px;flex-wrap:wrap}
+  .trust div{font-size:11px;color:var(--gray-500);text-align:center}
+  .trust b{display:block;font-size:18px;color:var(--navy);font-weight:900}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-in">
+    <div class="logo">ひと<span>際</span> Hitokiwa</div>
+    <div class="lang">🌐 日本語 / Tiếng Việt</div>
+  </div>
+</div>
+
+<div class="hero">
+  <span class="tag">30秒 むりょう しんだん</span>
+  <h1>あなたの給料、<br><em>そん</em>していませんか？</h1>
+  <p>3つの質問に答えるだけ。<br>今の働き方を「相場」とくらべて診断します。</p>
+  <div class="meta">特定技能（外食）の方むけ ／ 入力は約30秒</div>
+</div>
+
+<div class="wrap">
+
+  <!-- 質問パート -->
+  <div id="quiz">
+    <div class="prog">
+      <i class="on" data-p="0"></i><i data-p="1"></i><i data-p="2"></i><i data-p="3"></i><i data-p="4"></i>
+    </div>
+    <div class="card" id="qcard"></div>
+  </div>
+
+  <!-- 結果パート -->
+  <div class="result" id="result">
+    <div class="card">
+      <div style="text-align:center"><span class="rtag">診断結果</span></div>
+      <p class="rmain" id="rmain">あなたは今の職場で…</p>
+      <div class="bignum">
+        <div class="lbl">1年間で およそ</div>
+        <div class="v" id="lossYear">― <small>万円</small></div>
+        <div class="yr" id="lossMonth">（毎月 ― 万円ぶん）</div>
+      </div>
+
+      <div class="compare">
+        <div class="cbox now">
+          <div class="ct">今の給料</div>
+          <div class="cv" id="nowVal">―<small>万</small></div>
+        </div>
+        <div class="arrow">→</div>
+        <div class="cbox aft">
+          <div class="ct">ひと際の紹介後（目安）</div>
+          <div class="cv" id="aftVal">―<small>万</small></div>
+        </div>
+      </div>
+
+      <div class="points">
+        <h4>あなたの「損ポイント」</h4>
+        <ul id="pointList"></ul>
+      </div>
+
+      <div class="trust">
+        <div><b>5万人</b>が働く<br>特定技能（外食）</div>
+        <div><b>+4万円</b>給料アップ<br>の事例も</div>
+        <div><b>0円</b>あなたの<br>相談・紹介費</div>
+      </div>
+
+      <div class="cta">
+        <h3>もっと稼げる会社、<br>紹介します。</h3>
+        <p>福利厚生のしっかりした企業だけをご案内。<br>まずはLINEで「今より損しない求人」を見てみませんか？</p>
+        <a class="cta-btn line" href="#line">LINEで無料相談する</a>
+        <a class="cta-sub" href="#form">求人を見る（メールで受け取る）</a>
+        <div class="disc">
+          ※ 平均値は出入国在留管理庁・各種公開統計をもとにした目安です。実際の給料は経験・勤務地・企業により異なります。<br>
+          ※ ひと際（Hitokiwa）は登録支援機関／人材紹介サービスです。
+        </div>
+        <button class="restart" onclick="restart()">もう一度診断する</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+/* ====== 設問データ ====== */
+const QUESTIONS = [
+  {
+    no:"Q1 / 5", q:"今の月給は いくらですか？", sub:"手取りではなく「額面」でだいたいでOK",
+    key:"salary",
+    opts:[
+      {t:"〜20万円", v:19},
+      {t:"20〜23万円", v:21.5},
+      {t:"23〜26万円", v:24.5},
+      {t:"26万円〜", v:27}
+    ]
+  },
+  {
+    no:"Q2 / 5", q:"残業は どれくらい？", sub:"1か月の残業時間",
+    key:"overtime",
+    opts:[
+      {t:"ほとんどない", v:0},
+      {t:"月20時間くらい", v:1},
+      {t:"月40時間以上 多い", v:2}
+    ]
+  },
+  {
+    no:"Q3 / 5", q:"お休みは 週に何日？", sub:"",
+    key:"holiday",
+    opts:[
+      {t:"週2日 ある", v:0},
+      {t:"週1日", v:1},
+      {t:"週1日より少ない", v:2}
+    ]
+  },
+  {
+    no:"Q4 / 5", q:"ボーナス・手当・寮費は？", sub:"あてはまるものに近いもの",
+    key:"benefit",
+    opts:[
+      {t:"ボーナスも手当もある", v:0},
+      {t:"どちらか だけ", v:1},
+      {t:"ボーナスなし・寮費が高い", v:2}
+    ]
+  },
+  {
+    no:"Q5 / 5", q:"今 働いている場所は？", sub:"",
+    key:"area",
+    opts:[
+      {t:"東京・大阪などの都市", v:0},
+      {t:"地方・田舎のほう", v:1}
+    ]
+  }
+];
+
+const AVG = 22;        // 特定技能(外食)の平均月給 目安(万円)
+let step = 0;
+const answers = {};
+
+const qcard = document.getElementById('qcard');
+
+function renderQ(){
+  const Q = QUESTIONS[step];
+  const cur = answers[Q.key];
+  qcard.innerHTML = `
+    <div class="qno">${Q.no}</div>
+    <div class="q">${Q.q}${Q.sub?`<small>${Q.sub}</small>`:''}</div>
+    <div class="opts">
+      ${Q.opts.map((o,i)=>`
+        <button class="opt ${cur!==undefined && cur.i===i?'sel':''}" onclick="pick(${i})">
+          <span>${o.t}</span><span class="chk"></span>
+        </button>`).join('')}
+    </div>
+    <div class="nav">
+      ${step>0?`<button class="btn btn-back" onclick="prev()">もどる</button>`:''}
+      <button class="btn btn-next" id="nextBtn" ${cur===undefined?'disabled':''} onclick="next()">
+        ${step===QUESTIONS.length-1?'結果を見る':'つぎへ'}
+      </button>
+    </div>`;
+  document.querySelectorAll('.prog i').forEach((el,i)=>el.classList.toggle('on', i<=step));
+}
+
+function pick(i){
+  const Q = QUESTIONS[step];
+  answers[Q.key] = {i, v:Q.opts[i].v, t:Q.opts[i].t};
+  renderQ();
+}
+function next(){
+  if(answers[QUESTIONS[step].key]===undefined) return;
+  if(step < QUESTIONS.length-1){ step++; renderQ(); window.scrollTo({top:0,behavior:'smooth'}); }
+  else showResult();
+}
+function prev(){ if(step>0){ step--; renderQ(); } }
+
+function showResult(){
+  // 現在給料
+  const now = answers.salary.v;
+  // 紹介後の目安：地方は都市部水準へ、平均以上の人にも +α
+  let after = Math.max(now + 4, 26);            // 最低でも+4万 or 都内26万
+  if(answers.area.v===1) after = Math.max(after, 27); // 地方→都内はさらに伸びしろ
+  if(now>=27) after = now + 3;                  // 既に高めの人も +3万の余地
+  const diffM = Math.round((after - now)*10)/10;
+  const diffY = Math.round(diffM*12);
+
+  document.getElementById('nowVal').innerHTML = now + '<small>万</small>';
+  document.getElementById('aftVal').innerHTML = after + '<small>万</small>';
+  document.getElementById('lossYear').innerHTML = '約' + diffY + ' <small>万円</small>';
+  document.getElementById('lossMonth').textContent = '（毎月 約' + diffM + ' 万円ぶん）';
+
+  // メッセージ
+  const rmain = document.getElementById('rmain');
+  if(now < AVG){
+    rmain.innerHTML = 'あなたの給料は <b style="color:var(--red)">相場より低い</b> 可能性があります。';
+  } else {
+    rmain.innerHTML = '今でも悪くありません。でも <b style="color:var(--green)">もっと稼げる余地</b> があります。';
+  }
+
+  // 損ポイント
+  const pl = document.getElementById('pointList');
+  const pts = [];
+  if(now < AVG) pts.push(['給料が平均（約22万円）より低い', false]);
+  if(answers.overtime.v>=2) pts.push(['残業が多いわりに給料が見合っていない', false]);
+  if(answers.holiday.v>=1) pts.push(['休みが週1日以下＝休日も相場より少ない', false]);
+  if(answers.benefit.v>=1) pts.push(['ボーナス・手当・寮費の条件が弱い', false]);
+  if(answers.area.v===1) pts.push(['都市部の求人なら給料が上がりやすい', false]);
+  if(pts.length===0) pts.push(['昇進・特定技能2号で、さらに収入を伸ばせます', true]);
+  pl.innerHTML = pts.map(p=>`<li class="${p[1]?'ok':''}">${p[0]}</li>`).join('');
+
+  document.getElementById('quiz').style.display='none';
+  document.getElementById('result').classList.add('show');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function restart(){
+  step=0;
+  for(const k in answers) delete answers[k];
+  document.getElementById('result').classList.remove('show');
+  document.getElementById('quiz').style.display='block';
+  renderQ();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+renderQ();
+</script>
+</body>
+</html>
