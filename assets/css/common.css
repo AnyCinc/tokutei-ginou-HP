@@ -1,0 +1,245 @@
+@charset "UTF-8";
+/* ============================================================
+   株式会社ヒトキワ｜共通スタイル common.css
+   全ページ共通：トークン / ヘッダー / ナビ / ボタン / CTA /
+   パンくず / フッター / 表 / 注意ボックス / FAQ / アニメーション
+   メイン=濃紺 / アクセント=赤（重要箇所のみ）
+============================================================ */
+
+/* ---------- Design tokens ---------- */
+:root{
+  --navy:#1a2a44;
+  --navy-2:#0f1c30;
+  --navy-line:#27395a;
+  --red:#c8102e;
+  --red-2:#9d0a23;
+  --red-soft:#fdf2f3;
+  --ivory:#faf7f2;
+  --gold:#c9a961;
+  --ink:#222831;
+  --gray-700:#4a4f57;
+  --gray-500:#7c828c;
+  --gray-300:#cdd1d6;
+  --gray-200:#e6e8ec;
+  --gray-100:#f3f4f6;
+  --gray-50:#f8f9fb;
+  --white:#fff;
+
+  --shadow-sm:0 1px 4px rgba(26,42,68,.06);
+  --shadow:0 4px 18px rgba(26,42,68,.08);
+  --shadow-lg:0 16px 44px rgba(26,42,68,.14);
+
+  --sans:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP","Yu Gothic Medium","Meiryo",sans-serif;
+
+  --wrap:1140px;
+  --wrap-article:920px;
+  --header-h:74px;
+  --header-h-scrolled:60px;
+  --radius:10px;
+
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+
+/* ---------- Reset ---------- */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--white);color:var(--ink);font-family:var(--sans);
+  line-height:1.85;font-size:16px;-webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+button{font-family:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:2px}
+
+/* ---------- Layout helpers ---------- */
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.section{padding:88px 0}
+.section--tint{background:var(--gray-50)}
+.section--ivory{background:var(--ivory)}
+.section--navy{background:var(--navy);color:#fff}
+.eyebrow{display:inline-block;font-size:13px;font-weight:800;letter-spacing:.18em;color:var(--red);text-transform:uppercase;margin-bottom:14px}
+.section--navy .eyebrow{color:var(--gold)}
+.section-head{max-width:760px;margin-bottom:50px}
+.section-head--center{margin-left:auto;margin-right:auto;text-align:center}
+.section-title{font-size:31px;font-weight:900;color:var(--navy);line-height:1.45;letter-spacing:.01em}
+.section--navy .section-title{color:#fff}
+.section-title .accent{color:var(--red)}
+.section-lead{margin-top:18px;font-size:16px;color:var(--gray-700);line-height:1.95}
+.section--navy .section-lead{color:#d6dce6}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-weight:800;font-size:15px;line-height:1.2;padding:15px 28px;border-radius:var(--radius);
+  border:2px solid transparent;cursor:pointer;text-align:center;
+  transition:transform .2s var(--ease),background .2s var(--ease),box-shadow .2s var(--ease),color .2s var(--ease);
+}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn--red{background:var(--red);color:#fff;box-shadow:var(--shadow-sm)}
+.btn--red:hover{background:var(--red-2);box-shadow:var(--shadow)}
+.btn--navy{background:var(--navy);color:#fff}
+.btn--navy:hover{background:var(--navy-2)}
+.btn--ghost{background:transparent;color:var(--navy);border-color:var(--navy)}
+.btn--ghost:hover{background:var(--navy);color:#fff}
+.btn--ghost-light{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+.btn--ghost-light:hover{background:#fff;color:var(--navy)}
+.btn--lg{padding:18px 36px;font-size:16px}
+.btn--block{width:100%}
+
+/* ============================================================
+   Header（全ページ共通）
+============================================================ */
+.site-header{
+  position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.92);
+  backdrop-filter:saturate(160%) blur(8px);-webkit-backdrop-filter:saturate(160%) blur(8px);
+  border-bottom:1px solid transparent;transition:box-shadow .28s var(--ease),background .28s var(--ease),border-color .28s var(--ease);
+}
+.site-header.is-scrolled{background:#fff;box-shadow:var(--shadow);border-bottom-color:var(--gray-200)}
+.header-inner{
+  max-width:1280px;margin:0 auto;min-height:var(--header-h);
+  display:flex;align-items:center;gap:14px;padding:8px 24px;
+  transition:min-height .28s var(--ease);
+}
+.site-header.is-scrolled .header-inner{min-height:var(--header-h-scrolled)}
+.brand{display:flex;flex-direction:column;line-height:1;flex:none}
+.brand-logo{font-size:24px;font-weight:900;color:var(--navy);letter-spacing:.02em}
+.brand-logo span{color:var(--red)}
+.brand-sub{font-size:10.5px;font-weight:700;color:var(--gray-500);letter-spacing:.14em;margin-top:5px}
+
+.global-nav{margin-left:auto}
+.global-nav ul{display:flex;align-items:center;gap:0}
+.global-nav a{display:block;padding:8px 9px;font-size:13px;font-weight:700;color:var(--navy);border-radius:6px;transition:color .15s,background .15s;white-space:nowrap}
+.global-nav a:hover{color:var(--red);background:var(--gray-50)}
+
+.header-cta{display:flex;align-items:center;gap:12px;flex:none}
+.header-tel{display:flex;flex-direction:column;line-height:1.1;text-align:right}
+.header-tel .num{font-size:19px;font-weight:900;color:var(--navy);letter-spacing:.02em}
+.header-tel .lbl{font-size:10px;font-weight:600;color:var(--gray-500);margin-top:3px}
+
+.nav-toggle{display:none;width:44px;height:44px;border:1px solid var(--gray-200);background:#fff;border-radius:8px;cursor:pointer;position:relative;flex:none}
+.nav-toggle span,.nav-toggle span::before,.nav-toggle span::after{content:"";position:absolute;left:50%;width:22px;height:2px;background:var(--navy);transform:translateX(-50%);transition:transform .25s var(--ease),opacity .2s;border-radius:2px}
+.nav-toggle span{top:50%;margin-top:-1px}
+.nav-toggle span::before{top:-7px}
+.nav-toggle span::after{top:7px}
+.nav-toggle[aria-expanded="true"] span{background:transparent}
+.nav-toggle[aria-expanded="true"] span::before{transform:translateX(-50%) translateY(7px) rotate(45deg)}
+.nav-toggle[aria-expanded="true"] span::after{transform:translateX(-50%) translateY(-7px) rotate(-45deg)}
+.nav-overlay{position:fixed;inset:0;background:rgba(15,28,48,.5);opacity:0;visibility:hidden;transition:opacity .25s;z-index:1100}
+.nav-overlay.is-open{opacity:1;visibility:visible}
+
+/* ============================================================
+   Breadcrumb（全ページ共通）
+============================================================ */
+.breadcrumb{background:#fff;border-bottom:1px solid var(--gray-200)}
+.breadcrumb-inner{max-width:var(--wrap);margin:0 auto;padding:11px 24px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.crumbs{font-size:13px;color:var(--gray-500);line-height:1.6}
+.crumbs a{color:var(--navy);font-weight:700}
+.crumbs a:hover{color:var(--red)}
+.crumbs .sep{margin:0 8px;color:var(--gray-300)}
+.crumbs .cur{color:var(--gray-700)}
+.back-home{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:800;color:var(--navy);white-space:nowrap}
+.back-home:hover{color:var(--red)}
+
+/* ============================================================
+   Image frame（実画像コンテナ：はみ出しトリミングと角丸を担当）
+============================================================ */
+.ph-frame{position:relative;overflow:hidden;background:#eef1f5;isolation:isolate}
+.ph-frame > img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;object-position:center}
+/* 画像読み込み失敗時：imgを隠す（背景色のみ表示） */
+.ph-frame > img.img-broken{display:none}
+
+/* ============================================================
+   動画（YouTubeクリック読み込み・全ページ共通）
+============================================================ */
+.hkv{max-width:800px;margin:0 auto}
+.hkv-frame{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#0c1524;box-shadow:var(--shadow-lg);cursor:pointer}
+.hkv-frame>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.66}
+.hkv-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.hkv-badge{position:absolute;top:14px;left:14px;z-index:2;background:rgba(200,16,46,.95);color:#fff;font-size:13px;font-weight:800;padding:7px 15px;border-radius:24px;letter-spacing:.02em}
+.hkv-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:2;width:76px;height:76px;border-radius:50%;background:rgba(255,255,255,.95);display:flex;align-items:center;justify-content:center;transition:transform .2s var(--ease)}
+.hkv-frame:hover .hkv-play{transform:translate(-50%,-50%) scale(1.08)}
+.hkv-play::after{content:"";width:0;height:0;border-style:solid;border-width:12px 0 12px 20px;border-color:transparent transparent transparent var(--red);margin-left:5px}
+.hkv-cap{text-align:center;margin-top:12px;font-size:13px;color:var(--gray-500)}
+
+/* ============================================================
+   CTA バンド（全ページ共通）
+============================================================ */
+.cta-band{background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#fff;text-align:center}
+.cta-band .section-title{color:#fff}
+.cta-band p.lead{font-size:16px;color:#d6dce6;max-width:620px;margin:18px auto 34px;line-height:1.95}
+.cta-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:16px}
+.cta-tel{margin-top:24px;font-size:14px;color:#aeb8c8}
+.cta-tel strong{color:#fff;font-size:22px;font-weight:900;letter-spacing:.03em;margin-left:8px}
+
+/* ============================================================
+   Footer（全ページ共通）
+============================================================ */
+.site-footer{background:var(--navy-2);color:#c3cbd8;font-size:14px;padding:64px 0 28px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid var(--navy-line)}
+.footer-brand .brand-logo{color:#fff;font-size:24px}
+.footer-brand .f-addr{margin-top:18px;line-height:1.9;color:#aeb8c8;font-size:13.5px}
+.footer-brand .f-addr a{color:#aeb8c8}
+.footer-brand .f-addr a:hover{color:#fff}
+.footer-brand .f-license{margin-top:14px;font-size:12.5px;color:#8a95a8;line-height:1.8}
+.footer-col h4{font-size:13px;font-weight:800;color:#fff;letter-spacing:.08em;margin-bottom:16px}
+.footer-col ul li{margin-bottom:11px}
+.footer-col a{color:#c3cbd8;font-size:13.5px;transition:color .15s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:24px}
+.footer-bottom .legal a{color:#8a95a8;font-size:12.5px;margin-right:20px}
+.footer-bottom .legal a:hover{color:#fff}
+.footer-bottom .copy{font-size:12.5px;color:#8a95a8}
+
+/* ============================================================
+   共通アニメーション（フェードアップ / 時間差 / 画像ズーム）
+============================================================ */
+/* JSが有効なときだけ非表示にする（JS無効/失敗時は常に表示） */
+html.js [data-animate]{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease);will-change:opacity,transform}
+html.js [data-animate].is-visible{opacity:1;transform:none}
+html.js [data-animate="zoom"]{opacity:0;transform:scale(1.04)}
+html.js [data-animate="zoom"].is-visible{opacity:1;transform:scale(1)}
+[data-animate].d1{transition-delay:.08s}
+[data-animate].d2{transition-delay:.16s}
+[data-animate].d3{transition-delay:.24s}
+[data-animate].d4{transition-delay:.32s}
+[data-animate].d5{transition-delay:.40s}
+
+/* ============================================================
+   Responsive（共通）
+============================================================ */
+@media (max-width:1200px){
+  .global-nav,.header-tel{display:none}
+  .nav-toggle{display:block}
+  .global-nav{
+    position:fixed;top:0;right:0;width:min(82vw,360px);height:100dvh;background:#fff;margin-left:0;
+    box-shadow:var(--shadow-lg);transform:translateX(100%);transition:transform .3s var(--ease);
+    z-index:1200;padding:84px 24px 32px;overflow-y:auto;
+  }
+  .global-nav.is-open{transform:translateX(0)}
+  .global-nav ul{flex-direction:column;align-items:stretch;gap:2px}
+  .global-nav a{padding:14px 12px;font-size:16px;border-bottom:1px solid var(--gray-100);border-radius:0}
+  .global-nav .nav-mobile-cta{margin-top:20px;display:flex;flex-direction:column;gap:12px}
+  .global-nav .nav-mobile-cta a{border:none;padding:0}
+  .header-cta .btn--red{display:none}
+}
+@media (max-width:680px){
+  .section{padding:60px 0}
+  .wrap{padding:0 18px}
+  .section-title{font-size:24px}
+  .footer-grid{grid-template-columns:1fr}
+  .cta-actions .btn{flex:1 1 100%}
+}
+@media (max-width:400px){
+  .header-inner{gap:12px;padding:8px 16px}
+  .brand-logo{font-size:20px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none !important;animation:none !important}
+  [data-animate]{opacity:1 !important;transform:none !important}
+}

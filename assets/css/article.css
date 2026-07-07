@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/* ============================================================
+   株式会社ヒトキワ｜業種別・記事ページ共通 article.css
+   ※ 各ページ固有のインライン<style>より前に読み込み、
+      新規に追加した共通パーツ（関連分野リンク等）を整える。
+      既存記事レイアウトは壊さない方針（追加クラス中心）。
+============================================================ */
+
+/* 関連分野リンク（記事末尾・フッター前に挿入） */
+.related-fields{background:var(--ivory);border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);padding:52px 0}
+.related-fields .rf-inner{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.related-fields h2{font-size:22px;font-weight:900;color:var(--navy);margin-bottom:6px}
+.related-fields p.rf-lead{font-size:14px;color:var(--gray-700);margin-bottom:24px}
+.rf-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.rf-card{position:relative;display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--gray-200);border-radius:10px;padding:14px 16px;transition:transform .2s var(--ease),box-shadow .2s var(--ease),border-color .2s}
+.rf-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--gray-300)}
+.rf-card .rf-ic{flex:none;width:38px;height:38px;border-radius:9px;background:var(--red-soft);color:var(--red);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:13px}
+.rf-card .rf-name{font-size:14.5px;font-weight:800;color:var(--navy)}
+.rf-card .rf-arrow{margin-left:auto;color:var(--gray-300);font-size:16px;transition:transform .2s var(--ease),color .2s}
+.rf-card:hover .rf-arrow{color:var(--red);transform:translateX(3px)}
+.rf-card .stretched{position:absolute;inset:0}
+
+/* 記事末の総合トップ導線 */
+.article-bottom-cta{text-align:center;padding:44px 24px 8px}
+.article-bottom-cta .btn{margin:4px}
+
+@media (max-width:1080px){.rf-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:680px){
+  .related-fields{padding:40px 0}
+  .rf-grid{grid-template-columns:1fr}
+}

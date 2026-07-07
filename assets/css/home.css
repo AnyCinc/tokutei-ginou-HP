@@ -1,0 +1,278 @@
+@charset "UTF-8";
+/* ============================================================
+   株式会社ヒトキワ｜トップページ専用 home.css
+   ファーストビュー / 人物ストリップ / 信頼バー / 対応分野モザイク /
+   選ばれる理由(可変) / 採用フロー(画像付き)
+============================================================ */
+
+/* ============================================================
+   ファーストビュー（人物写真を主役に）
+============================================================ */
+/* 背景 = 白→アイボリー→薄グレーの明るいグラデ（3層構造の第1層） */
+.hero{position:relative;background:linear-gradient(158deg,#ffffff 0%,var(--ivory) 50%,#eceff4 100%);color:var(--ink);overflow:hidden}
+/* 第2層：右上=赤／右下=ネイビーの薄いグロー（右側だけ・写真周辺を色づける） */
+.hero::before{content:"";position:absolute;top:-12%;right:-8%;width:62%;height:124%;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(34% 30% at 76% 20%,rgba(200,16,46,.12),transparent 60%),
+    radial-gradient(40% 38% at 94% 86%,rgba(26,42,68,.15),transparent 62%)}
+/* ごく薄いドット（右側だけ・左へフェードアウト） */
+.hero::after{content:"";position:absolute;top:0;right:0;width:44%;height:100%;z-index:0;pointer-events:none;opacity:.55;
+  background-image:radial-gradient(rgba(26,42,68,.16) 1px,transparent 1.5px);background-size:20px 20px;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 60%);mask-image:linear-gradient(90deg,transparent,#000 60%)}
+.hero-inner{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:0 24px;
+  display:grid;grid-template-columns:1.02fr .98fr;gap:48px;align-items:center;min-height:600px}
+.hero-copy{padding:72px 0}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(26,42,68,.05);border:1px solid rgba(26,42,68,.12);
+  color:var(--navy);font-size:12.5px;font-weight:800;letter-spacing:.08em;padding:7px 16px;border-radius:30px;margin-bottom:22px}
+.hero-tag .dot{width:8px;height:8px;border-radius:50%;background:var(--red)}
+.hero h1{font-size:44px;font-weight:900;line-height:1.38;letter-spacing:.01em;margin-bottom:22px;color:var(--navy)}
+.hero h1 .br-accent{color:var(--red)}
+.hero p.lead{font-size:17px;line-height:1.95;color:var(--gray-700);max-width:540px;margin-bottom:30px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:26px}
+.hero-cred{display:flex;flex-wrap:wrap;gap:10px 22px;font-size:12.5px;color:var(--gray-700);font-weight:600}
+.hero-cred span{display:inline-flex;align-items:center;gap:7px}
+.hero-cred span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
+
+/* 人物写真モザイク（PC） */
+.hero-mosaic{position:relative;height:520px;align-self:center}
+/* 第3層：写真の後ろの大きな半透明の円 */
+.hero-mosaic::before{content:"";position:absolute;left:52%;top:50%;transform:translate(-50%,-50%);
+  width:min(600px,116%);aspect-ratio:1;border-radius:50%;z-index:0;pointer-events:none;
+  background:radial-gradient(circle at 50% 46%,rgba(255,255,255,.9),rgba(26,42,68,.06) 58%,transparent 73%);
+  box-shadow:0 30px 80px rgba(26,42,68,.09)}
+.hero-photo{position:absolute;border-radius:18px;overflow:hidden;box-shadow:var(--shadow-lg);border:4px solid rgba(255,255,255,.9)}
+.hero-photo.p-main{width:54%;aspect-ratio:3/4;left:22%;top:6%;z-index:3}
+.hero-photo.p-tr{width:34%;aspect-ratio:1/1;right:0;top:0;z-index:4;border-radius:50%}
+.hero-photo.p-bl{width:38%;aspect-ratio:4/5;left:0;bottom:4%;z-index:4;border-radius:14px}
+.hero-photo.p-br{width:30%;aspect-ratio:4/3;right:2%;bottom:10%;z-index:5;border-radius:12px}
+.hero-photo .ph-frame{width:100%;height:100%}
+/* 人物の顔が切れないよう object-position を個別調整 */
+.hero-photo.p-main img{object-position:center 28%}
+.hero-photo.p-tr img{object-position:center 25%}
+.hero-photo.p-bl img{object-position:center 22%}
+.hero-photo.p-br img{object-position:center 30%}
+
+/* ============================================================
+   人物・対応職種 横スクロール（マーキー）
+============================================================ */
+.people-strip{background:var(--ivory);border-bottom:1px solid var(--gray-200);padding:30px 0;overflow:hidden}
+.people-strip .strip-label{max-width:var(--wrap);margin:0 auto 16px;padding:0 24px;font-size:13px;font-weight:800;letter-spacing:.1em;color:var(--gray-500)}
+.marquee{position:relative;width:100%;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.marquee-track{display:flex;gap:18px;width:max-content;animation:marquee 38s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.person-card{flex:0 0 auto;width:200px}
+.person-card .pic{aspect-ratio:3/4;border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm)}
+.person-card .pic .ph-frame{width:100%;height:100%}
+.person-card .pic img{object-position:center 22%}
+.person-card .meta{margin-top:10px}
+.person-card .job{font-size:14px;font-weight:800;color:var(--navy)}
+.person-card .sub{font-size:12px;color:var(--gray-500);margin-top:2px}
+/* スマホ：スワイプ可能なスクロール（JS無しでも横並び表示） */
+@media (max-width:680px){
+  .marquee{overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity}
+  .marquee-track{animation:none;gap:14px;padding:0 18px}
+  .person-card{width:150px;scroll-snap-align:start}
+}
+
+/* ============================================================
+   信頼情報バー
+============================================================ */
+.trust{background:#fff}
+.trust-inner{max-width:var(--wrap);margin:0 auto;padding:0 24px;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--gray-200);
+  border:1px solid var(--gray-200);border-radius:var(--radius);overflow:hidden}
+.trust-item{background:#fff;padding:22px 22px}
+.trust-item .t-label{font-size:11.5px;font-weight:700;color:var(--gray-500);letter-spacing:.06em;margin-bottom:6px}
+.trust-item .t-value{font-size:15px;font-weight:800;color:var(--navy);line-height:1.5}
+.trust-item .t-value a{color:var(--navy)}
+.trust-note{max-width:var(--wrap);margin:14px auto 0;padding:0 24px;font-size:12px;color:var(--gray-500)}
+
+/* ============================================================
+   サービス概要 / 支援内容カード
+============================================================ */
+.support-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.support-card{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius);padding:28px 22px;transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .25s var(--ease)}
+.support-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--gray-300)}
+.support-card .ico-wrap{width:46px;height:46px;border-radius:10px;background:var(--red-soft);color:var(--red);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.support-card .ico-wrap svg{width:24px;height:24px}
+.support-card .step{font-size:11px;font-weight:800;color:var(--gold);letter-spacing:.12em;margin-bottom:6px}
+.support-card h3{font-size:16px;font-weight:800;color:var(--navy);margin-bottom:8px;line-height:1.5}
+.support-card p{font-size:13.5px;color:var(--gray-700);line-height:1.8}
+
+.support-feature{display:grid;grid-template-columns:.95fr 1.05fr;gap:44px;align-items:center;margin-bottom:8px}
+.support-feature .sf-media{position:relative;aspect-ratio:4/3;border-radius:14px;overflow:hidden;box-shadow:var(--shadow)}
+.support-feature .sf-media .ph-frame{width:100%;height:100%}
+
+/* ============================================================
+   企業の課題
+============================================================ */
+.problem-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.problem-card{background:#fff;border:1px solid var(--gray-200);border-left:4px solid var(--navy);border-radius:var(--radius);padding:26px 28px;box-shadow:var(--shadow-sm);display:flex;gap:16px;align-items:flex-start}
+.problem-card .q{flex:none;width:38px;height:38px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:17px}
+.problem-card h3{font-size:17px;font-weight:800;color:var(--navy);line-height:1.6;margin-bottom:6px}
+.problem-card p{font-size:14.5px;color:var(--gray-700);line-height:1.85}
+.problem-bridge{margin-top:36px;text-align:center;font-size:18px;font-weight:800;color:var(--navy);line-height:1.8}
+.problem-bridge .accent{color:var(--red)}
+
+/* ============================================================
+   選ばれる理由（3パターン可変レイアウト）
+============================================================ */
+.reasons{display:flex;flex-direction:column;gap:96px}
+.reason{position:relative}
+.reason .ghost-num{position:absolute;font-size:200px;font-weight:900;line-height:1;color:var(--navy);opacity:.05;z-index:0;letter-spacing:-.04em;pointer-events:none}
+
+/* REASON 01 : 左に縦長写真（はみ出す）＋右に大見出し */
+.reason--01{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
+.reason--01 .ghost-num{left:38%;top:-70px}
+.reason--01 .r-media{position:relative;aspect-ratio:3/4;border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);margin-top:-32px;margin-bottom:-32px}
+.reason--01 .r-media .ph-frame{width:100%;height:100%}
+.reason--01 .r-text{position:relative;z-index:1}
+
+/* REASON 02 : 左に文章＋右に写真（背後に補助写真を重ねる） */
+.reason--02{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.reason--02 .ghost-num{right:30%;top:-60px}
+.reason--02 .r-stack{position:relative;aspect-ratio:4/3}
+.reason--02 .r-stack .r-main{position:absolute;width:82%;aspect-ratio:4/3;right:0;top:0;border-radius:14px;overflow:hidden;box-shadow:var(--shadow-lg);z-index:2}
+.reason--02 .r-stack .r-sub{position:absolute;width:50%;aspect-ratio:1/1;left:0;bottom:-6%;border-radius:14px;overflow:hidden;box-shadow:var(--shadow);z-index:3;border:4px solid #fff}
+.reason--02 .r-stack .ph-frame{width:100%;height:100%}
+
+/* REASON 03 : 横長写真の上に白い文章ボックスを重ねる */
+.reason--03{position:relative}
+.reason--03 .ghost-num{left:2%;top:-70px}
+.reason--03 .r-banner{position:relative;aspect-ratio:21/9;border-radius:18px;overflow:hidden;box-shadow:var(--shadow-lg)}
+.reason--03 .r-banner .ph-frame{width:100%;height:100%}
+.reason--03 .r-box{position:relative;z-index:2;background:#fff;box-shadow:var(--shadow-lg);border-radius:14px;padding:36px 40px;max-width:520px;margin:-90px 0 0 6%}
+
+.reason .num{font-size:13px;font-weight:900;color:var(--red);letter-spacing:.12em;margin-bottom:12px}
+.reason h3{font-size:25px;font-weight:900;color:var(--navy);line-height:1.5;margin-bottom:16px}
+.reason p{font-size:15px;color:var(--gray-700);line-height:2}
+
+/* ============================================================
+   対応分野（モザイク：大小・横長を混在）
+============================================================ */
+.fields-mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:18px}
+.fcard{position:relative;border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+.fcard:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.fcard:focus-within{box-shadow:var(--shadow-lg)}
+.fcard .ph-frame{position:absolute;inset:0;width:100%;height:100%}
+.fcard .ph-frame > img{transition:transform .5s var(--ease);object-position:center 30%}
+.fcard:hover .ph-frame > img{transform:scale(1.06)}
+.fcard .scrim{position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(15,28,48,.05) 30%,rgba(15,28,48,.78) 100%)}
+.fcard .fbody{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:20px 22px;color:#fff}
+.fcard .fname{font-size:20px;font-weight:900;letter-spacing:.02em;text-shadow:0 1px 8px rgba(0,0,0,.3)}
+.fcard .fdesc{font-size:12.5px;color:#e8edf4;line-height:1.7;margin-top:4px;max-height:0;opacity:0;overflow:hidden;transition:max-height .3s var(--ease),opacity .3s var(--ease),margin .3s var(--ease)}
+.fcard:hover .fdesc,.fcard:focus-within .fdesc{max-height:80px;opacity:1;margin-top:6px}
+.fcard .farrow{position:absolute;top:16px;right:16px;z-index:3;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.92);color:var(--navy);display:flex;align-items:center;justify-content:center;font-size:16px;transition:transform .25s var(--ease),background .25s}
+.fcard:hover .farrow{transform:translateX(4px);background:var(--red);color:#fff}
+.fcard .stretched{position:absolute;inset:0;z-index:4}
+/* サイズ変化：先頭2枚を大きく、一部を横長に */
+.fcard.big{grid-row:span 2}
+.fcard.wide{grid-column:span 2}
+
+/* 準備中 */
+.prep-heading{margin-top:54px;margin-bottom:18px;font-size:18px;font-weight:800;color:var(--navy)}
+.prep-heading small{display:block;font-size:13px;font-weight:600;color:var(--gray-500);margin-top:4px}
+.fields-prep{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.prep-card{background:var(--gray-100);border:1px dashed var(--gray-300);border-radius:8px;padding:18px 16px;text-align:center;cursor:not-allowed}
+.prep-card .name{font-size:14px;font-weight:800;color:var(--gray-500)}
+.prep-card .tag{display:inline-block;margin-top:6px;font-size:11px;font-weight:700;color:#fff;background:var(--gray-300);padding:2px 10px;border-radius:20px}
+
+/* ============================================================
+   採用フロー（画像付き・交互配置）
+============================================================ */
+.flow{display:flex;flex-direction:column;gap:22px}
+.flow-step{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;background:#fff;border:1px solid var(--gray-200);border-radius:16px;overflow:hidden;box-shadow:var(--shadow-sm)}
+.flow-step:nth-child(even) .flow-media{order:2}
+.flow-media{position:relative;aspect-ratio:16/10;min-height:240px}
+.flow-media .ph-frame{position:absolute;inset:0;width:100%;height:100%}
+.flow-text{padding:36px 40px}
+.flow-step .stepno{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:900;color:var(--red);letter-spacing:.1em;margin-bottom:12px}
+.flow-step .stepno b{width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px}
+.flow-text h3{font-size:21px;font-weight:900;color:var(--navy);margin-bottom:10px;line-height:1.5}
+.flow-text p{font-size:14.5px;color:var(--gray-700);line-height:1.9}
+
+/* ============================================================
+   制度ガイド / カテル promo
+============================================================ */
+.promo{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;background:#fff;border:1px solid var(--gray-200);border-radius:16px;padding:44px;box-shadow:var(--shadow-sm)}
+.promo .promo-list{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;margin:20px 0 26px}
+.promo .promo-list li{font-size:14px;color:var(--gray-700);font-weight:600;display:flex;gap:8px;align-items:baseline}
+.promo .promo-list li::before{content:"";flex:none;width:7px;height:7px;border-radius:2px;background:var(--red);transform:translateY(-1px)}
+.promo-media{position:relative;aspect-ratio:4/3;border-radius:12px;overflow:hidden}
+.promo-media .ph-frame{width:100%;height:100%}
+.kateru-note{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:#3a2e10;font-size:12px;font-weight:800;padding:5px 14px;border-radius:20px;margin-bottom:14px;letter-spacing:.04em}
+
+.fields16-banner{background:var(--navy);color:#fff;border-radius:16px;padding:44px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.fields16-banner h3{font-size:24px;font-weight:900;line-height:1.5}
+.fields16-banner p{font-size:15px;color:#cfd6e2;margin-top:10px;max-width:560px}
+
+/* ============================================================
+   FAQ
+============================================================ */
+.faq{max-width:860px;margin:0 auto}
+.faq-item{background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius);margin-bottom:14px;overflow:hidden}
+.faq-item[open]{box-shadow:var(--shadow-sm);border-color:var(--gray-300)}
+.faq-item summary{list-style:none;cursor:pointer;padding:20px 56px 20px 24px;position:relative;font-size:16px;font-weight:800;color:var(--navy);line-height:1.6}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"";position:absolute;right:24px;top:26px;width:11px;height:11px;border-right:2px solid var(--navy);border-bottom:2px solid var(--navy);transform:rotate(45deg);transition:transform .25s var(--ease)}
+.faq-item[open] summary::after{transform:rotate(-135deg)}
+.faq-body{padding:0 24px 22px;font-size:14.5px;color:var(--gray-700);line-height:1.95}
+
+.final-tel{margin-top:24px;font-size:14px;color:#aeb8c8}
+.final-tel strong{color:#fff;font-size:22px;font-weight:900;letter-spacing:.03em;margin-left:8px}
+
+/* ============================================================
+   Responsive（home）
+============================================================ */
+@media (max-width:1080px){
+  .support-grid{grid-template-columns:repeat(2,1fr)}
+  .fields-mosaic{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px}
+  .fcard.wide{grid-column:span 2}
+  .fcard.big{grid-row:span 1}
+  .fields-prep{grid-template-columns:repeat(4,1fr)}
+  .trust-inner{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:860px){
+  .hero-inner{grid-template-columns:1fr;min-height:0}
+  .hero-copy{padding:44px 0 8px}
+  .hero-mosaic{height:380px;margin-bottom:40px}
+  /* 装飾を控えめに：グローは弱く、円は写真中心へ */
+  .hero::before{width:88%;opacity:.85}
+  .hero-mosaic::before{width:min(440px,96%)}
+  .reason--01,.reason--02{grid-template-columns:1fr;gap:28px}
+  .reason--01 .r-media{margin:0;max-width:420px}
+  .reason--01 .ghost-num,.reason--02 .ghost-num,.reason--03 .ghost-num{font-size:130px;top:-40px}
+  .reason--02 .r-stack{order:-1;max-width:460px}
+  .reason--03 .r-box{margin:-60px auto 0;max-width:90%}
+  .reasons{gap:64px}
+  .flow-step{grid-template-columns:1fr}
+  .flow-step:nth-child(even) .flow-media{order:0}
+  .promo{grid-template-columns:1fr;padding:32px 28px}
+  .promo .promo-media{order:-1}
+  .support-feature{grid-template-columns:1fr;gap:24px}
+  .support-feature .sf-media{order:-1}
+}
+@media (max-width:680px){
+  .hero h1{font-size:30px}
+  .hero p.lead{font-size:15.5px}
+  .hero-actions .btn{flex:1 1 100%}
+  .hero-mosaic{height:320px}
+  /* スマホ：ドットは非表示、文章と写真の視認性を優先 */
+  .hero::after{display:none}
+  .problem-grid{grid-template-columns:1fr}
+  .support-grid{grid-template-columns:1fr}
+  .fields-mosaic{grid-template-columns:1fr;grid-auto-rows:200px}
+  .fcard.wide{grid-column:span 1}
+  .fcard .fdesc{max-height:80px;opacity:1;margin-top:6px}
+  .fields-prep{grid-template-columns:repeat(2,1fr)}
+  .trust-inner{grid-template-columns:1fr}
+  .promo .promo-list{grid-template-columns:1fr}
+  .fields16-banner{padding:32px 24px;flex-direction:column;align-items:flex-start}
+  .flow-text{padding:26px 24px}
+  .reason h3{font-size:20px}
+  .reason--03 .r-box{padding:26px 24px}
+}
+@media (max-width:400px){
+  .hero-mosaic{height:280px}
+}
